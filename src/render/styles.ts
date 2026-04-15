@@ -12,11 +12,22 @@ body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); f
 a { color: var(--link); text-decoration: none; }
 a:visited { color: var(--link-visited); }
 a:hover { text-decoration: underline; }
-.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header { background: var(--accent); }
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.header-left { display: flex; align-items: center; gap: 1rem; min-width: 0; }
 .header a { color: #000; font-weight: bold; }
 .header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
 .header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
 .header nav a { color: #000; }
+.header-github { font-size: 1.2rem; white-space: nowrap; }
 .main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
 .story-list { list-style: none; }
 .story-item { display: flex; align-items: baseline; padding: 0.3rem 0; gap: 0.5rem; }

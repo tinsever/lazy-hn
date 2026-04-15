@@ -46,12 +46,23 @@ a:hover {
   text-decoration: underline;
 }
 
-.header {
-  background: var(--accent);
-  padding: 0.4rem 1rem;
+.header { background: var(--accent); }
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-left {
   display: flex;
   align-items: center;
   gap: 1rem;
+  min-width: 0;
 }
 
 .header a {
@@ -75,6 +86,11 @@ a:hover {
 
 .header nav a {
   color: #000;
+}
+
+.header-github {
+  font-size: 1.2rem;
+  white-space: nowrap;
 }
 
 .main {
