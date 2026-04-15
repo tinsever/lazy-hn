@@ -1,0 +1,13 @@
+name = "lazy-hn"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+[vars]
+ENVIRONMENT = "production"
+
+[[kv_namespaces]]
+binding = "HN_CACHE"
+id = "f0d7efed63a84a58bad84b165a8fdf81"
+
+[triggers]
+crons = ["*/2 * * * *"]
