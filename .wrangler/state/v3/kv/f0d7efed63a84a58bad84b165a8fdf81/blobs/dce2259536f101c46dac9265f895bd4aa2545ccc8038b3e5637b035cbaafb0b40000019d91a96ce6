@@ -1,1 +1,0 @@
-{"by":"notnullorvoid","id":47779579,"parent":47776796,"text":"I might be in the minority, but I think the best way to learn how to write a compiler is to try writing one without books or tutorials. Keep it very small in scope at first, small enough that you can scrap the entire implementation and rewrite in an afternoon or less.","time":1776263622,"type":"comment"}

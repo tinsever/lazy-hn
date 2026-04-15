@@ -1,1 +1,0 @@
-{"by":"rwmj","id":47770068,"parent":47768788,"text":"Compared to OpenSSL 3 this transition has been very smooth.  Only dropping of &quot;Engines&quot; was a problem at all, and in Fedora most of those dependencies have been changed.","time":1776194112,"type":"comment"}
