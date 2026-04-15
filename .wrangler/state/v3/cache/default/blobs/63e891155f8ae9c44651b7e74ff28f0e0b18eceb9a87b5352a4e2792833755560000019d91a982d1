@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.story-list { list-style: none; }
+.story-item { display: flex; align-items: baseline; padding: 0.3rem 0; gap: 0.5rem; }
+.story-rank { color: var(--muted); min-width: 3rem; text-align: right; font-size: 1.3rem; }
+.story-info { flex: 1; }
+.story-title a { font-size: 1.4rem; }
+.story-domain { color: var(--muted); font-size: 1.1rem; margin-left: 0.3rem; }
+.story-meta { font-size: 1.1rem; color: var(--muted); }
+.story-meta a { color: var(--muted); }
+.story-meta a:hover { text-decoration: underline; }
+.story-comments-link { color: var(--muted); font-size: 1.1rem; }
+.pagination { padding: 1rem 0; font-size: 1.3rem; }
+.pagination a { margin-right: 1rem; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.comment-tree { margin-left: 2rem; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.user-page { max-width: 85vw; margin: 0 auto; }
+.user-header h1 { font-size: 1.6rem; }
+.user-detail { font-size: 1.3rem; color: var(--muted); margin: 0.3rem 0; }
+.user-about { margin: 0.5rem 0; padding: 0.5rem; background: var(--comment-bg); border: 1px solid var(--border); }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">Y</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <ol class="story-list">
+      <li class="story-item">
+  <span class="story-rank">31.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://code.claude.com/docs/en/routines" rel="noopener noreferrer">Claude Code Routines</a> <span class="story-domain">(code.claude.com)</span></div>
+    <div class="story-meta">682 points &bull; <a href="/user/matthieu_bl">matthieu_bl</a> &bull; 22 hours ago &bull; <a href="/item/47768133" class="story-comments-link">380&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">32.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.spiegl.org/rocket/flare/flare.html" rel="noopener noreferrer">What Is in Road Flares?</a> <span class="story-domain">(spiegl.org)</span></div>
+    <div class="story-meta">33 points &bull; <a href="/user/hyperific">hyperific</a> &bull; 3 days ago &bull; <a href="/item/47734629" class="story-comments-link">19&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">33.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/" rel="noopener noreferrer">Turn your best AI prompts into one-click tools in Chrome</a> <span class="story-domain">(blog.google)</span></div>
+    <div class="story-meta">183 points &bull; <a href="/user/xnx">xnx</a> &bull; 21 hours ago &bull; <a href="/item/47768339" class="story-comments-link">100&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">34.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://kb.databasedesignbook.com/posts/5nf/" rel="noopener noreferrer">5NF and Database Design</a> <span class="story-domain">(kb.databasedesignbook.com)</span></div>
+    <div class="story-meta">186 points &bull; <a href="/user/petalmind">petalmind</a> &bull; 22 hours ago &bull; <a href="/item/47767676" class="story-comments-link">69&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">35.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://techcrunch.com/2026/04/13/thousands-of-rare-concert-recordings-are-landing-on-the-internet-archive-listen-now/" rel="noopener noreferrer">Rare concert recordings are landing on the Internet Archive</a> <span class="story-domain">(techcrunch.com)</span></div>
+    <div class="story-meta">680 points &bull; <a href="/user/jrm-veris">jrm-veris</a> &bull; 1 day ago &bull; <a href="/item/47765604" class="story-comments-link">199&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">36.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://mceglowski.substack.com/p/lets-talk-space-toilets" rel="noopener noreferrer">Let&#x27;s talk space toilets</a> <span class="story-domain">(mceglowski.substack.com)</span></div>
+    <div class="story-meta">206 points &bull; <a href="/user/zdw">zdw</a> &bull; 1 day ago &bull; <a href="/item/47758870" class="story-comments-link">54&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">37.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.worseonpurpose.com/p/your-backpack-got-worse-on-purpose" rel="noopener noreferrer">Your Backpack Got Worse on Purpose</a> <span class="story-domain">(worseonpurpose.com)</span></div>
+    <div class="story-meta">123 points &bull; <a href="/user/113">113</a> &bull; 4 hours ago &bull; <a href="/item/47777209" class="story-comments-link">110&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">38.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://guide.world/" rel="noopener noreferrer">Guide.world: A compendium of travel guides</a> <span class="story-domain">(guide.world)</span></div>
+    <div class="story-meta">136 points &bull; <a href="/user/firloop">firloop</a> &bull; 5 days ago &bull; <a href="/item/47707382" class="story-comments-link">22&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">39.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.cnbc.com/2026/04/15/allbirds-bird-stock-shoes-ai.html" rel="noopener noreferrer">Allbirds announces pivot from shoes to AI, stock explodes 175%</a> <span class="story-domain">(cnbc.com)</span></div>
+    <div class="story-meta">21 points &bull; <a href="/user/1vuio0pswjnm7">1vuio0pswjnm7</a> &bull; 1 hour ago &bull; <a href="/item/47778762" class="story-comments-link">8&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">40.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://taoofmac.com/space/reviews/2026/04/11/1900" rel="noopener noreferrer">The Orange Pi 6 Plus</a> <span class="story-domain">(taoofmac.com)</span></div>
+    <div class="story-meta">214 points &bull; <a href="/user/rcarmo">rcarmo</a> &bull; 3 days ago &bull; <a href="/item/47732535" class="story-comments-link">176&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">41.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://vjay15.github.io/blog/apikeys/" rel="noopener noreferrer">My adventure in designing API keys</a> <span class="story-domain">(vjay15.github.io)</span></div>
+    <div class="story-meta">89 points &bull; <a href="/user/vjay15">vjay15</a> &bull; 3 days ago &bull; <a href="/item/47739278" class="story-comments-link">70&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">42.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.eff.org/deeplinks/2026/04/dangers-californias-legislation-censor-3d-printing" rel="noopener noreferrer">The dangers of California&#x27;s legislation to censor 3D printing</a> <span class="story-domain">(eff.org)</span></div>
+    <div class="story-meta">466 points &bull; <a href="/user/salkahfi">salkahfi</a> &bull; 1 day ago &bull; <a href="/item/47759420" class="story-comments-link">410&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">43.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://gothamist.com/news/here-comes-the-sun-new-bill-would-let-new-yorkers-hang-solar-panels-from-windows" rel="noopener noreferrer">New bill would let New Yorkers hang solar panels from windows</a> <span class="story-domain">(gothamist.com)</span></div>
+    <div class="story-meta">57 points &bull; <a href="/user/geox">geox</a> &bull; 3 hours ago &bull; <a href="/item/47777882" class="story-comments-link">71&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">44.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://hypirion.com/musings/understanding-persistent-vector-pt-1" rel="noopener noreferrer">Understanding Clojure&#x27;s Persistent Vectors, pt. 1 (2013)</a> <span class="story-domain">(hypirion.com)</span></div>
+    <div class="story-meta">104 points &bull; <a href="/user/mirzap">mirzap</a> &bull; 4 days ago &bull; <a href="/item/47721076" class="story-comments-link">26&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">45.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://keepandroidopen.org/cta/" rel="noopener noreferrer">Keep Android Open</a> <span class="story-domain">(keepandroidopen.org)</span></div>
+    <div class="story-meta">157 points &bull; <a href="/user/bjornroberg">bjornroberg</a> &bull; 2 hours ago &bull; <a href="/item/47778274" class="story-comments-link">47&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">46.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.colino.net/wordpress/archives/2026/04/10/pcbway-sponsorship-full-size-sd-module-for-arduino-projects/" rel="noopener noreferrer">PCBWay sponsorship: full-size SD module for Arduino projects</a> <span class="story-domain">(colino.net)</span></div>
+    <div class="story-meta">33 points &bull; <a href="/user/ibobev">ibobev</a> &bull; 4 days ago &bull; <a href="/item/47722731" class="story-comments-link">32&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">47.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://techtrenches.dev/p/the-snake-that-ate-itself-what-claude" rel="noopener noreferrer">What Claude Code&#x27;s Source Revealed About AI Engineering Culture</a> <span class="story-domain">(techtrenches.dev)</span></div>
+    <div class="story-meta">50 points &bull; <a href="/user/lucketone">lucketone</a> &bull; 16 hours ago &bull; <a href="/item/47772282" class="story-comments-link">30&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">48.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.blackmagicdesign.com/products/davinciresolve/photo" rel="noopener noreferrer">DaVinci Resolve – Photo</a> <span class="story-domain">(blackmagicdesign.com)</span></div>
+    <div class="story-meta">1111 points &bull; <a href="/user/thebiblelover7">thebiblelover7</a> &bull; 1 day ago &bull; <a href="/item/47760529" class="story-comments-link">284&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">49.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://developers.google.com/search/blog/2026/04/back-button-hijacking" rel="noopener noreferrer">A new spam policy for “back button hijacking”</a> <span class="story-domain">(developers.google.com)</span></div>
+    <div class="story-meta">888 points &bull; <a href="/user/zdw">zdw</a> &bull; 1 day ago &bull; <a href="/item/47760764" class="story-comments-link">499&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">50.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.businesswire.com/news/home/20260414237496/en/Amazon-to-Acquire-Globalstar-and-Expand-Amazon-Leo-Satellite-Network" rel="noopener noreferrer">Amazon to acquire Globalstar and expand Amazon Leo satellite network</a> <span class="story-domain">(businesswire.com)</span></div>
+    <div class="story-meta">109 points &bull; <a href="/user/homarp">homarp</a> &bull; 9 hours ago &bull; <a href="/item/47775183" class="story-comments-link">88&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">51.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://honeypot.net/2026/04/14/i-wrote-to-flocks-privacy.html" rel="noopener noreferrer">I wrote to Flock&#x27;s privacy contact to opt out of their domestic spying program</a> <span class="story-domain">(honeypot.net)</span></div>
+    <div class="story-meta">637 points &bull; <a href="/user/speckx">speckx</a> &bull; 21 hours ago &bull; <a href="/item/47768813" class="story-comments-link">246&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">52.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="/item/47769796">Tell HN: Fiverr left customer files public and searchable</a></div>
+    <div class="story-meta">765 points &bull; <a href="/user/morpheuskafka">morpheuskafka</a> &bull; 20 hours ago &bull; <a href="/item/47769796" class="story-comments-link">209&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">53.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them/" rel="noopener noreferrer">Someone bought 30 WordPress plugins and planted a backdoor in all of them</a> <span class="story-domain">(anchor.host)</span></div>
+    <div class="story-meta">1169 points &bull; <a href="/user/speckx">speckx</a> &bull; 1 day ago &bull; <a href="/item/47755629" class="story-comments-link">327&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">54.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.lesswrong.com/posts/6SaZ7z2fpKRYEBdff/the-alphafold-moment-for-materials-is-not-any-time-soon" rel="noopener noreferrer">The AlphaFold moment for materials is not any time soon</a> <span class="story-domain">(lesswrong.com)</span></div>
+    <div class="story-meta">5 points &bull; <a href="/user/gmays">gmays</a> &bull; 1 hour ago &bull; <a href="/item/47778521" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">55.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://rozumem.xyz/posts/14" rel="noopener noreferrer">Troubleshooting Email Delivery to Microsoft Users</a> <span class="story-domain">(rozumem.xyz)</span></div>
+    <div class="story-meta">79 points &bull; <a href="/user/rozumem">rozumem</a> &bull; 3 days ago &bull; <a href="/item/47738962" class="story-comments-link">22&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">56.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://support.claude.com/en/articles/14328960-identity-verification-on-claude" rel="noopener noreferrer">Claude may require identity verification in some cases</a> <span class="story-domain">(support.claude.com)</span></div>
+    <div class="story-meta">91 points &bull; <a href="/user/zxilly">zxilly</a> &bull; 7 hours ago &bull; <a href="/item/47775633" class="story-comments-link">75&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">57.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.stylewarning.com/posts/not-all-elementary/" rel="noopener noreferrer">Not all elementary functions can be expressed with exp-minus-log</a> <span class="story-domain">(stylewarning.com)</span></div>
+    <div class="story-meta">121 points &bull; <a href="/user/mmastrac">mmastrac</a> &bull; 13 hours ago &bull; <a href="/item/47773788" class="story-comments-link">99&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">58.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://github.com/citguru/openduck" rel="noopener noreferrer">Distributed DuckDB Instance</a> <span class="story-domain">(github.com)</span></div>
+    <div class="story-meta">181 points &bull; <a href="/user/citguru">citguru</a> &bull; 1 day ago &bull; <a href="/item/47761997" class="story-comments-link">34&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">59.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.thetypicalset.com/blog/grammar-parser-maintenance-contract" rel="noopener noreferrer">The M×N problem of tool calling and open-source models</a> <span class="story-domain">(thetypicalset.com)</span></div>
+    <div class="story-meta">156 points &bull; <a href="/user/remilouf">remilouf</a> &bull; 5 days ago &bull; <a href="/item/47704729" class="story-comments-link">47&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">60.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://github.com/openssl/openssl/releases/tag/openssl-4.0.0" rel="noopener noreferrer">OpenSSL 4.0.0</a> <span class="story-domain">(github.com)</span></div>
+    <div class="story-meta">271 points &bull; <a href="/user/petecooper">petecooper</a> &bull; 21 hours ago &bull; <a href="/item/47768788" class="story-comments-link">83&nbsp;comments</a></div>
+  </div>
+</li>
+    </ol>
+    <div class="pagination"><a href="/">&lt; prev</a> <a href="/news?p=3">next &gt;</a></div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

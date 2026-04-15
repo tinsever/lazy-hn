@@ -1,0 +1,1 @@
+{"by":"ape4","id":47777771,"parent":47776796,"text":"Would a practical approach be parsing the source into clang&#x27;s AST format.  Then let it make the actual executable.","time":1776253535,"type":"comment"}

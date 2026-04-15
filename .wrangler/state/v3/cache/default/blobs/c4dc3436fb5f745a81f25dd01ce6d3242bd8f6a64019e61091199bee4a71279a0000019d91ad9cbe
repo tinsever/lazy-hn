@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nothing Ever Happens: Polymarket bot that always buys No on non-sports markets | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://github.com/sterlingcrispin/nothing-ever-happens" rel="noopener noreferrer">Nothing Ever Happens: Polymarket bot that always buys No on non-sports markets</a> <span class="story-domain">(github.com)</span></span>
+        <div class="item-meta">
+          463 points &bull; <a href="/user/m-hodges">m-hodges</a> &bull; 1 day ago &bull; 268 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47753472">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47754370">
+  <div class="comment_head"><a href="/user/tekno45">tekno45</a> 1 day ago</div>
+  <div class="comment_text"><a href="https:&#x2F;&#x2F;x.com&#x2F;sterlingcrispin&#x2F;status&#x2F;2043723823678382254" rel="nofollow">https:&#x2F;&#x2F;x.com&#x2F;sterlingcrispin&#x2F;status&#x2F;2043723823678382254</a><p>They admit no returns.<p>But it does seem like a fun project and nowhere does it say anything about returns or profits so not scammy imo just funny meme backed code</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47754370,this)">6 replies</button>
+  <div class="replies-container" id="replies-47754370"></div>
+</div>
+<div class="comment" id="comment-47755315">
+  <div class="comment_head"><a href="/user/slg">slg</a> 1 day ago</div>
+  <div class="comment_text">It&#x27;s interesting that this is explicitly for non-sports markets because I see no reason why this would be less applicable there. Sports betters have long talked about that the winning strategy is usually to bet the under (i.e. the no) on most bets.  The over (i.e. the yes) is generally a more exciting and fun outcome which causes it to attract more betters which in turns makes that side overpriced.<p>Like with this bot, I have no idea if that will still lead to actual positive returns.  This might just be a remnant from a time when these betting lines were set less intelligently.  But all things being equal, it seems logical that &quot;boring&quot; bets would have a better return in the long run than &quot;exciting&quot; bets as long as some betters are at least partially motivated by entertainment.<p>There&#x27;s probably a lot of knowledge like this that sports betters have built up over decades that could apply to these new forms of non-sports gambling.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47755315,this)">2 replies</button>
+  <div class="replies-container" id="replies-47755315"></div>
+</div>
+<div class="comment" id="comment-47754894">
+  <div class="comment_head"><a href="/user/cordwainersmith">cordwainersmith</a> 1 day ago</div>
+  <div class="comment_text">The contrarian bet is fun but I wonder how it actually holds up. Prediction markets do tend to overprice dramatic outcomes, so &quot;always bet no&quot; isn&#x27;t as dumb as it sounds. Would love to see real P&amp;L over a few months, not just the thesis.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47754894,this)">2 replies</button>
+  <div class="replies-container" id="replies-47754894"></div>
+</div>
+<div class="comment" id="comment-47754091">
+  <div class="comment_head"><a href="/user/wormpilled">wormpilled</a> 1 day ago</div>
+  <div class="comment_text">Basically arbitraging human imagination. People love coming up with fantastical concepts because they get attention, but the more exciting a market is, the less likely it is to actually happen. Reality is usually boring.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47754091,this)">4 replies</button>
+  <div class="replies-container" id="replies-47754091"></div>
+</div>
+<div class="comment" id="comment-47756209">
+  <div class="comment_head"><a href="/user/krashidov">krashidov</a> 1 day ago</div>
+  <div class="comment_text">Isn&#x27;t this just picking up pennies on an active railroad track? You&#x27;ll win small bets and then get run over once a long tail event completely wipes you out.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47756209,this)">4 replies</button>
+  <div class="replies-container" id="replies-47756209"></div>
+</div>
+<div class="comment" id="comment-47761074">
+  <div class="comment_head"><a href="/user/kwar13">kwar13</a> 1 day ago</div>
+  <div class="comment_text">Betting &quot;no&quot; on an outcome, is bettering &quot;yes&quot; on ALL other possible outcomes. There is even an operation for it: 
+<a href="https:&#x2F;&#x2F;docs.polymarket.com&#x2F;advanced&#x2F;neg-risk" rel="nofollow">https:&#x2F;&#x2F;docs.polymarket.com&#x2F;advanced&#x2F;neg-risk</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47761074,this)">2 replies</button>
+  <div class="replies-container" id="replies-47761074"></div>
+</div>
+<div class="comment" id="comment-47754746">
+  <div class="comment_head"><a href="/user/sambaumann">sambaumann</a> 1 day ago</div>
+  <div class="comment_text">Related: <a href="https:&#x2F;&#x2F;www.jbecker.dev&#x2F;research&#x2F;prediction-market-microstructure" rel="nofollow">https:&#x2F;&#x2F;www.jbecker.dev&#x2F;research&#x2F;prediction-market-microstru...</a> (previous discussion: <a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46680515">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46680515</a>)</div>
+  
+  <div class="replies-container" id="replies-47754746"></div>
+</div>
+<div class="comment" id="comment-47754146">
+  <div class="comment_head"><a href="/user/throwaway2027">throwaway2027</a> 1 day ago</div>
+  <div class="comment_text">Already priced in.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47754146,this)">4 replies</button>
+  <div class="replies-container" id="replies-47754146"></div>
+</div>
+<div class="comment" id="comment-47754378">
+  <div class="comment_head"><a href="/user/hodder">hodder</a> 1 day ago</div>
+  <div class="comment_text">Basically, realized vol is lower than implied vol over time. Yes.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47754378,this)">1 replies</button>
+  <div class="replies-container" id="replies-47754378"></div>
+</div>
+<div class="comment" id="comment-47766195">
+  <div class="comment_head"><a href="/user/mzelling">mzelling</a> 1 day ago</div>
+  <div class="comment_text">The fact that the strategy makes zero returns suggests that Polymarket is unbiased — this is moderately interesting.<p>Has anybody looked into the repo in more detail? I imagine it&#x27;s useful for infrastructure inspiration to build your own bot pursuing more differentiated trading strategies.</div>
+  
+  <div class="replies-container" id="replies-47766195"></div>
+</div>
+<div class="comment" id="comment-47754052">
+  <div class="comment_head"><a href="/user/tekno45">tekno45</a> 1 day ago</div>
+  <div class="comment_text">any stats on your returns so far?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47754052,this)">2 replies</button>
+  <div class="replies-container" id="replies-47754052"></div>
+</div>
+<div class="comment" id="comment-47755837">
+  <div class="comment_head"><a href="/user/clayhacks">clayhacks</a> 1 day ago</div>
+  <div class="comment_text">Someone needs to make a market on whether or not this is profitable</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47755837,this)">1 replies</button>
+  <div class="replies-container" id="replies-47755837"></div>
+</div>
+<div class="comment" id="comment-47755566">
+  <div class="comment_head"><a href="/user/Retr0id">Retr0id</a> 1 day ago</div>
+  <div class="comment_text">Someone has (had?) a bot on Manifold that does the same thing, and it is profitable: <a href="https:&#x2F;&#x2F;manifold.markets&#x2F;dcxStep" rel="nofollow">https:&#x2F;&#x2F;manifold.markets&#x2F;dcxStep</a><p>(Manifold doesn&#x27;t use real money, so there&#x27;s more &quot;free money&quot; lying around waiting to be picked up than on most real-money markets)</div>
+  
+  <div class="replies-container" id="replies-47755566"></div>
+</div>
+<div class="comment" id="comment-47754155">
+  <div class="comment_head"><a href="/user/thatnerd">thatnerd</a> 1 day ago</div>
+  <div class="comment_text">I think we&#x27;ve collectively DDoSed it. I&#x27;m getting a 504 timeout.<p>The author [page](<a href="https:&#x2F;&#x2F;github.com&#x2F;sterlingcrispin" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;sterlingcrispin</a>) is there on github, but I can&#x27;t even find his full list of his repos to confirm it&#x27;s still there (I also get a 504 on that).</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47754155,this)">2 replies</button>
+  <div class="replies-container" id="replies-47754155"></div>
+</div>
+<div class="comment" id="comment-47755307">
+  <div class="comment_head"><a href="/user/fooker">fooker</a> 1 day ago</div>
+  <div class="comment_text">Don’t be gullible enough to fall for this bad math.<p>Say 70% of the time it resolves to ‘no’, you still don’t make money by blindly choosing ‘no’.<p>Guess why?<p>Hint: This strategy is also described with the macabre analogy: picking up pennies in front of a steamroller.<p>Do you want to pick up pennies in front of a steamroller?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47755307,this)">4 replies</button>
+  <div class="replies-container" id="replies-47755307"></div>
+</div>
+<div class="comment" id="comment-47765694">
+  <div class="comment_head"><a href="/user/ZeroGravitas">ZeroGravitas</a> 1 day ago</div>
+  <div class="comment_text">Has anyone opened a &quot;Will the Bot  buy &quot;no&quot; on this?&quot; market yet?</div>
+  
+  <div class="replies-container" id="replies-47765694"></div>
+</div>
+<div class="comment" id="comment-47755498">
+  <div class="comment_head"><a href="/user/modeless">modeless</a> 1 day ago</div>
+  <div class="comment_text">Polymarket already has &quot;Nothing Ever Happens&quot; markets where you can bet on a set of events all not happening together. Because why not.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47755498,this)">1 replies</button>
+  <div class="replies-container" id="replies-47755498"></div>
+</div>
+<div class="comment" id="comment-47755488">
+  <div class="comment_head"><a href="/user/chrisgd">chrisgd</a> 1 day ago</div>
+  <div class="comment_text">Very cool. The opposite of the black swan or turkey corollary. Every day the turkey gets fed and is happy until Thanksgiving rolls around.</div>
+  
+  <div class="replies-container" id="replies-47755488"></div>
+</div>
+<div class="comment" id="comment-47754949">
+  <div class="comment_head"><a href="/user/swyx">swyx</a> 1 day ago</div>
+  <div class="comment_text">&gt; Heroku Workflow
+The shell helpers use either an explicit app name argument or HEROKU_APP_NAME.<p>nice to see heroku still alive...</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47754949,this)">1 replies</button>
+  <div class="replies-container" id="replies-47754949"></div>
+</div>
+<div class="comment" id="comment-47754247">
+  <div class="comment_head"><a href="/user/thetailrisk">thetailrisk</a> 1 day ago</div>
+  <div class="comment_text">What&#x27;s the data situation like if you wanted to backtest a model like this? Is it easily accessible?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47754247,this)">2 replies</button>
+  <div class="replies-container" id="replies-47754247"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47753472?all=1">Show all 268 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask HN: Who needs contributors? (April 2026) | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-text {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  line-height: 1.55;
+  white-space: normal;
+}
+.item-text p { margin-bottom: 0.8rem; }
+.item-text a { text-decoration: underline; }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title">Ask HN: Who needs contributors? (April 2026)</span>
+        <div class="item-meta">
+          18 points &bull; <a href="/user/Kathan2651">Kathan2651</a> &bull; 1 day ago &bull; 7 comments
+        </div>
+        <div class="item-text">Looking for contributors to your project? Feel free to post any project that may interest HN readers, with a strong preference towards open source. Please follow this general format:<p>Project name<p>Project description<p>What do you hope to build this month?<p>What kind of skills do you need?<p>How to contact you?<p>Link to your GitHub or somewhere else you&#x27;d like to onboard new contributors, like your project management software or chat room.</div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47765746">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47766963">
+  <div class="comment_head"><a href="/user/lyfeninja">lyfeninja</a> 23 hours ago</div>
+  <div class="comment_text">Project name: BlkBolt
+Project description: Experimental ML-based data encoding system. No keys, no traditional crypto primitives, just learned unique representations. Early stage and looking for collaboration.<p>This month: Design and market research on &quot;know your agent&quot; products<p>Skills: ML, crypto, security folks for independent validation stress testing and just general support. Would love someone to try and forge or break our signatures.<p>Link: <a href="https:&#x2F;&#x2F;lyfe.ninja&#x2F;projects" rel="nofollow">https:&#x2F;&#x2F;lyfe.ninja&#x2F;projects</a> (or find us on LinkedIn)</div>
+  
+  <div class="replies-container" id="replies-47766963"></div>
+</div>
+<div class="comment" id="comment-47765786">
+  <div class="comment_head"><a href="/user/kalturnbull">kalturnbull</a> 1 day ago</div>
+  <div class="comment_text">Plotline<p>An upcoming open-source initiative to put your health data where it belongs: with you.<p>Looking to speak with engineers with healthtech experience.<p><a href="https:&#x2F;&#x2F;plotline.care" rel="nofollow">https:&#x2F;&#x2F;plotline.care</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47765786,this)">1 replies</button>
+  <div class="replies-container" id="replies-47765786"></div>
+</div>
+<div class="comment" id="comment-47772375">
+  <div class="comment_head"><a href="/user/gaurangt">gaurangt</a> 16 hours ago</div>
+  <div class="comment_text">Project - docmancer<p>Description - An open-source, MIT-licensed, local-first tool that fetches and indexes technical docs on your machine so coding agents can query it directly. The goal is to become a local, version-aware alternative to tools like Context7.<p>Contributions welcome - Python, RAG, developers who want to get their first open-source PR<p>GitHub - <a href="https:&#x2F;&#x2F;github.com&#x2F;docmancer&#x2F;docmancer" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;docmancer&#x2F;docmancer</a><p>Website - <a href="https:&#x2F;&#x2F;www.docmancer.dev&#x2F;" rel="nofollow">https:&#x2F;&#x2F;www.docmancer.dev&#x2F;</a></div>
+  
+  <div class="replies-container" id="replies-47772375"></div>
+</div>
+<div class="comment" id="comment-47770019">
+  <div class="comment_head"><a href="/user/rrr_oh_man">rrr_oh_man</a> 19 hours ago</div>
+  <div class="comment_text">Looking for contributors:<p>- <a href="https:&#x2F;&#x2F;itter.sh" rel="nofollow">https:&#x2F;&#x2F;itter.sh</a> (social networking in the terminal)<p>- <a href="https:&#x2F;&#x2F;withoutcms.com&#x2F;" rel="nofollow">https:&#x2F;&#x2F;withoutcms.com&#x2F;</a> (Git-based, open, free, non-technical user-friendly CMS)</div>
+  
+  <div class="replies-container" id="replies-47770019"></div>
+</div>
+<div class="comment" id="comment-47767538">
+  <div class="comment_head"><a href="/user/tikimcfee">tikimcfee</a> 22 hours ago</div>
+  <div class="comment_text">Hello folks! Thanks for taking the time to read &lt;3<p>Project name: glpyh3d-js<p>Project description<p>- High performance, high quality text rendering in true 3d space<p>- Original implementation in Swift + Metal, ported to raw JS and Three.js usage<p>- Totally agent friendly with a local loopback service to remotely control the application state, move cameras, update glyph collections live, with the first few steps of &#x27;watching an agent move around files&#x27; live and in testing; works off of a generic command server and exposed internals for true hackery shenanigans.<p>What do you hope to build this month?<p>- I have been working on a proof of concept IDE using the rendering backend. It&#x27;s live and you can play with it:<p>- <a href="https:&#x2F;&#x2F;ivanlugo.dev&#x2F;app&#x2F;ide.html" rel="nofollow">https:&#x2F;&#x2F;ivanlugo.dev&#x2F;app&#x2F;ide.html</a><p>- OR, https:&#x2F;&#x2F;ivanlugo.dev&#x2F;ide&#x2F;&lt;github_owner&gt;&#x2F;&lt;repo_name&gt;, e.g., <a href="https:&#x2F;&#x2F;ivanlugo.dev&#x2F;ide&#x2F;tikimcfee&#x2F;glyph3d-js" rel="nofollow">https:&#x2F;&#x2F;ivanlugo.dev&#x2F;ide&#x2F;tikimcfee&#x2F;glyph3d-js</a><p>What kind of skills do you need?<p>- Folks that are interested in 3D layout, visiospatial relationships of files, text, and navigating large corpuses of data.<p>- Anyone that&#x27;s able to slog through weird 3D paradigms and graphics rendering libraries to turn typical 2D canvas rendering and text editing into a fully realized, high-performance 3D arena.<p>How to contact you?<p>- Email me at ivan.lugo.dev@pm.me, star the repo and leave an issue &#x2F; discussion, or stalk me through the innermanetz and find something I forgot was public.<p>- It&#x27;s OSS, through and through, and the repo itself is both the code, the IDE, and my personal page. I&#x27;ll get it split eventually, but I&#x27;ll do that when I have folks helping that don&#x27;t need all that cruft alongside ;)<p>Linkees:
+- <a href="https:&#x2F;&#x2F;ivanlugo.dev" rel="nofollow">https:&#x2F;&#x2F;ivanlugo.dev</a>
+- <a href="https:&#x2F;&#x2F;github.com&#x2F;tikimcfee" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;tikimcfee</a>
+- <a href="https:&#x2F;&#x2F;github.com&#x2F;tikimcfee&#x2F;glyph3d" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;tikimcfee&#x2F;glyph3d</a>
+- <a href="https:&#x2F;&#x2F;github.com&#x2F;tikimcfee&#x2F;glyph3d-js" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;tikimcfee&#x2F;glyph3d-js</a></div>
+  
+  <div class="replies-container" id="replies-47767538"></div>
+</div>
+<div class="comment" id="comment-47770745">
+  <div class="comment_head"><a href="/user/moralestapia">moralestapia</a> 19 hours ago</div>
+  <div class="comment_text">Name: HTTP State<p>Description: Store and retrieve state from any app&#x2F;platform&#x2F;stack<p>What do you hope to build this month?: Android widgets and libraries for C&#x2F;C++ and Swift.<p>What kind of skills do you need?: Anything goes, this project touches a lot of things.<p>How to contact you?
+email in profile, also at the bottom of the project&#x27;s website<p>Links<p><a href="https:&#x2F;&#x2F;httpstate.com" rel="nofollow">https:&#x2F;&#x2F;httpstate.com</a><p><a href="https:&#x2F;&#x2F;github.com&#x2F;httpstate&#x2F;httpstate" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;httpstate&#x2F;httpstate</a></div>
+  
+  <div class="replies-container" id="replies-47770745"></div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 12 hours ago</div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 10 hours ago</div>
+</div>
+<div class="comment deleted">
+  <div class="comment_head">[deleted] 11 hours ago</div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 3 hours ago</div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 22 hours ago</div>
+</div>
+      </div>
+      
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

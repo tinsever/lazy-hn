@@ -31,7 +31,7 @@ listRoute.get("/news", async (c) => {
 });
 
 async function handleList(c: import("hono").Context<{ Bindings: EnvBindings }>, type: string, page = 1) {
-  const hit = await matchEdgeHtml(new URL(c.req.url).toString());
+  const hit = await matchEdgeHtml(new URL(c.req.url).toString(), c.env.DISABLE_HTML_CACHE ?? false);
   if (hit) return hit;
 
   const { fetchStories } = await import("../hn/lists.ts");

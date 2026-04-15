@@ -10,6 +10,7 @@ const hostname = Bun.env.HOST ?? "0.0.0.0";
 const jobIntervalMs = Number(Bun.env.JOB_INTERVAL_MS ?? DEFAULT_JOB_INTERVAL_MS);
 const env: EnvBindings = {
   HN_CACHE: new MemoryKVStore(),
+  DISABLE_HTML_CACHE: true,
 };
 
 const backgroundTasks = new Set<Promise<unknown>>();

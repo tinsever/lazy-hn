@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jj – the CLI for Jujutsu | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://steveklabnik.github.io/jujutsu-tutorial/introduction/what-is-jj-and-why-should-i-care.html" rel="noopener noreferrer">jj – the CLI for Jujutsu</a> <span class="story-domain">(steveklabnik.github.io)</span></span>
+        <div class="item-meta">
+          531 points &bull; <a href="/user/tigerlily">tigerlily</a> &bull; 1 day ago &bull; 469 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47763759">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47772652">
+  <div class="comment_head"><a href="/user/ibejoeb">ibejoeb</a> 15 hours ago</div>
+  <div class="comment_text">A lot of the discussion focuses on differences from git and how it uses the git storage strategy under the hood. Honestly, I think you should just ignore all of that. Don&#x27;t think about git. Here&#x27;s a workflow that&#x27;ll get you through your daily usage:<p>On a clean repo:<p><pre><code>    $ jj
+    The working copy has no changes.
+    Working copy  (@) : abcdef a53ff9ba (empty) (no description set)
+    Parent commit (@-): qrstuv 4bc1bf34 the last thing you did
+
+</code></pre>
+Make some changes.<p><pre><code>    $ jj # shows status (new, modified, deleted, moved, etc.)
+</code></pre>
+If you&#x27;re satisfied with your changes,<p><pre><code>    $ jj commit -m &quot;made changes&quot;
+    </code></pre>
+Now `jj` is back to clean state. You don&#x27;t need to do `jj new` to continue working linearly. Just make your next changes and commit. If you realize that you messed something up, fix it, then `jj squash` and it gets incorporated into that last commit.<p>You only `jj new -r lmnop` if you want to do some work based on the state of the codebase at revision lmnop, rather than the previous revision, which is a figurative branch. No need to manually create and name branches.<p>As for git history: just do `git log` to see what&#x27;s actually going on. It&#x27;s a clean history reflecting your `jj commit`s. You&#x27;re not going to see all of the stuff the jj machinery does.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47772652,this)">3 replies</button>
+  <div class="replies-container" id="replies-47772652"></div>
+</div>
+<div class="comment" id="comment-47765042">
+  <div class="comment_head"><a href="/user/tiborsaas">tiborsaas</a> 1 day ago</div>
+  <div class="comment_text">Does JJ really prefer for me to think backwards? It wants me to start with the new and describe command, but with git I first make the changes and name the changeset at the end of the workflow.<p>I also often end up with in a dirty repo state with multiple changes belonging to separate features or abstractions. I usually just pick the changes I want to group into a commit and clean up the state.<p>Since it&#x27;s git compatible, it feels like it must work to add files and keep files uncommitted, but just by reading this tutorial I&#x27;m unsure.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47765042,this)">19 replies</button>
+  <div class="replies-container" id="replies-47765042"></div>
+</div>
+<div class="comment" id="comment-47764486">
+  <div class="comment_head"><a href="/user/tom_alexander">tom_alexander</a> 1 day ago</div>
+  <div class="comment_text">I&#x27;m giving jj a try but one aspect of it I dislike is edits to files are automatically committed, so you need to defensively create empty new commits for your changes. As in, want to browse the repo from a commit 2 weeks ago? Well if you just checkout that commit and then edit a file, you&#x27;ve automatically changed that commit in your repo and rebased everything after it on top of your new changes. So instead you create a new branch off of the old commit and add an empty commit to that branch so any file changes don&#x27;t end up rewriting the past 2 weeks of history. git is much nicer in that I can do whatever I want to the files and it won&#x27;t change the repo until _I tell it to_.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764486,this)">11 replies</button>
+  <div class="replies-container" id="replies-47764486"></div>
+</div>
+<div class="comment" id="comment-47764401">
+  <div class="comment_head"><a href="/user/dgb23">dgb23</a> 1 day ago</div>
+  <div class="comment_text">The last paragraph might be the most important one:<p>&gt; There&#x27;s one other reason you should be interested in giving jj a try: it has a git compatible backend, and so you can use jj on your own, without requiring anyone else you&#x27;re working with to convert too. This means that there&#x27;s no real downside to giving it a shot; if it&#x27;s not for you, you&#x27;re not giving up all of the history you wrote with it, and can go right back to git with no issues.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764401,this)">4 replies</button>
+  <div class="replies-container" id="replies-47764401"></div>
+</div>
+<div class="comment" id="comment-47765923">
+  <div class="comment_head"><a href="/user/BeetleB">BeetleB</a> 1 day ago</div>
+  <div class="comment_text">One of my favorite jj features is &quot;jj absorb&quot;.<p>For each change you&#x27;ve made in the current revision, it finds the last commit where you made a change near there, and moves your changes to that commit.<p>Really handy when you forgot to make a change to some config file or .gitignore. You just &quot;jj new&quot;, make the changes, and &quot;jj absorb&quot;. No need to make a new commit or figure out where to rebase to.<p>Oh, and not having to deal with merge conflicts <i>now</i> is awesome. My repository still has merge conflicts from months ago. I&#x27;ll probably go and delete those branches as I have no intention to resolve them.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47765923,this)">3 replies</button>
+  <div class="replies-container" id="replies-47765923"></div>
+</div>
+<div class="comment" id="comment-47766421">
+  <div class="comment_head"><a href="/user/steveklabnik">steveklabnik</a> 1 day ago</div>
+  <div class="comment_text">Hey folks!<p>So, I haven&#x27;t updated the tutorial in a long time. My intent is to upstream it, but I&#x27;ve been very very busy at the startup I&#x27;m at, ersc.io, and haven&#x27;t had the chance. I&#x27;m still using jj every day, and loving it.<p>Happy to answer any questions!</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766421,this)">2 replies</button>
+  <div class="replies-container" id="replies-47766421"></div>
+</div>
+<div class="comment" id="comment-47766877">
+  <div class="comment_head"><a href="/user/compiler-guy">compiler-guy</a> 23 hours ago</div>
+  <div class="comment_text">One of the things that makes jj worth trying out is simply the fact that it is different than git, and having exposure to more than one way of doing things is a good thing.<p>Even if you don&#x27;t adopt it (and I didn&#x27;t), it&#x27;s easy to think that &quot;this way is the only way&quot;, and seeing how systems other than your own preferred one manage workflows and issues is very useful for perspective.<p>That doesn&#x27;t mean you should try everything regardless (we all only have so much time), but part of being a good engineer is understanding the options and tradeoffs, even of well loved and totally functional workflows.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766877,this)">1 replies</button>
+  <div class="replies-container" id="replies-47766877"></div>
+</div>
+<div class="comment" id="comment-47766862">
+  <div class="comment_head"><a href="/user/jiggunjer">jiggunjer</a> 23 hours ago</div>
+  <div class="comment_text">I think the mental model is like C vs python. 
+Git gives you a forensic trace back in time. jj gives you a story with chapters. Look under the hood you&#x27;ll still see forensic map of state transitions, but this not what we want to navigate most of the time. Sometimes we need to rewrite an early chapter to make the latest chapter make more sense.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766862,this)">1 replies</button>
+  <div class="replies-container" id="replies-47766862"></div>
+</div>
+<div class="comment" id="comment-47766145">
+  <div class="comment_head"><a href="/user/kevin_nisbet">kevin_nisbet</a> 1 day ago</div>
+  <div class="comment_text">I really wanted to like JJ, it was handy for a few months when I used it. But for me in the end I reverted back to regular git.<p>What triggered me to go back was I never got a really clean mental model for how to keep ontop of Github PRs, bring in changes from origin&#x2F;main, and ended up really badly mangling a feature branch that multiple contributors were working on when we did want to pull it in. I&#x27;ll probably try it again at some point, but working in a team through Github PRs that was my main barrier to entry.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766145,this)">3 replies</button>
+  <div class="replies-container" id="replies-47766145"></div>
+</div>
+<div class="comment" id="comment-47765869">
+  <div class="comment_head"><a href="/user/zingar">zingar</a> 1 day ago</div>
+  <div class="comment_text">&quot;It&#x27;s more powerful and easier&quot; is a great claim, but I need examples in this opening page to convince me of the pain I could save myself or the awesome things I&#x27;m living without.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47765869,this)">9 replies</button>
+  <div class="replies-container" id="replies-47765869"></div>
+</div>
+<div class="comment" id="comment-47766496">
+  <div class="comment_head"><a href="/user/rs545837">rs545837</a> 1 day ago</div>
+  <div class="comment_text">jj is genuinely great and I think it deserves way more adoption than it has right now. The mental model is so much cleaner than git, undo actually works the way you&#x27;d expect it to, and working with stacked changes feels natural instead of that constant low-grade anxiety of actually breaking something. It&#x27;s probably the best frontend for version control that exists today.<p>For the last few months though I&#x27;ve been thinking a lot about what you said at the end there. What if version control actually understood the code it was tracking, not as lines of text but as the actual structures we write and think in, functions, classes, methods, the real building blocks? A rename happening on one branch and an unrelated function addition on another aren&#x27;t a real conflict in any meaningful sense, they only look like one because every tool we have today treats source code as flat text files.<p>For enhancing this kind of structural intelligence I started working on <a href="https:&#x2F;&#x2F;github.com&#x2F;ataraxy-labs&#x2F;sem" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;ataraxy-labs&#x2F;sem</a>, which uses tree-sitter to parse code into semantic entities and operates at that level instead of lines. When you start thinking of code not as text there&#x27;s another dimension where things can go, even a lot of logic at the comiler level with call graphs becomes useful.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766496,this)">1 replies</button>
+  <div class="replies-container" id="replies-47766496"></div>
+</div>
+<div class="comment" id="comment-47766022">
+  <div class="comment_head"><a href="/user/jrockway">jrockway</a> 1 day ago</div>
+  <div class="comment_text">jj is great and while it was an adjustment at first, I&#x27;ve never looked back.  I feel like when you&#x27;re working with other people, things never get reviewed and merged as quickly as you&#x27;d like.  With jj, it&#x27;s pretty low-cost to have a bunch of PRs open at once, and you can do something like `jj new &lt;pr1&gt; &lt;pr2&gt; &lt;pr3&gt;` to build stuff that requires all 3.  This lets me do things like... not do a big refactoring in the same PR as adding a feature.  I can have them both self-contained, but still start on the next step before they&#x27;re all merged.  It&#x27;s easy to add changes on top, switching between the individual PRs as comments come up, etc.<p>I always liked doing things like this.  At Google where we used a custom fork of Perforce, I told myself &quot;NEVER DO STACKED CLs HAVE YOU NOT LEARNED YOUR LESSON YET?&quot;  If one CL depended on another... don&#x27;t do it.  With git... I told myself the same thing, as I sat in endless interactive rebases and merge conflict commits (&quot;git rebase abort&quot; might have been my most-used command).  With jj, it&#x27;s not a problem.  There are merge conflicts.  You can resolve them with the peace of mind as a separate commit to track your resolution.  `jj new -d &#x27;resolve merge conflict` -A @` to add a new commit after the conflicted one.  Hack on your resolution until you&#x27;re happy.  jj squash --into @-.  Merge conflict resolved.<p>It is truly a beautiful model.  Really a big mental health saver.  It just makes it so easy to work with other people.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766022,this)">1 replies</button>
+  <div class="replies-container" id="replies-47766022"></div>
+</div>
+<div class="comment" id="comment-47778833">
+  <div class="comment_head"><a href="/user/hi-im-buggy">hi-im-buggy</a> 1 hour ago</div>
+  <div class="comment_text">jj&#x27;s mental model maps really well to Gerrit&#x27;s code review system.
+It&#x27;s also really nice to have `jj undo` and automatic rebasing.</div>
+  
+  <div class="replies-container" id="replies-47778833"></div>
+</div>
+<div class="comment" id="comment-47768014">
+  <div class="comment_head"><a href="/user/acoustics">acoustics</a> 22 hours ago</div>
+  <div class="comment_text">jj has made me much more comfortable using non-linear DAGs in my trunk-based development workflow. Several changes with the same parent, changes with several different parents, etc.<p>I used to have a habit of imposing an unnecessary ordering structure on my work product. My stack of changes would look like A -&gt; B -&gt; C -&gt; D, even if the order of B and C was logically interchangeable.<p>jj makes DAGs easier to work with because of how it handles conflicts and merges. Now I feel empowered to be more expressive and accurate about what a change actually depends on. In turn, this makes review and submission more efficient.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768014,this)">1 replies</button>
+  <div class="replies-container" id="replies-47768014"></div>
+</div>
+<div class="comment" id="comment-47767138">
+  <div class="comment_head"><a href="/user/pheggs">pheggs</a> 23 hours ago</div>
+  <div class="comment_text">I was already pretty happy with svn to be honest, I dont see myself switching away from the industry standard today for no substantial reason. in my opinion git was only able to change the standard thanks to github and a popular author (i love git and its branching, but I dont think it would have been enough if it was just for that). I personally believe its going to be very difficult for jj to replicate that.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767138,this)">2 replies</button>
+  <div class="replies-container" id="replies-47767138"></div>
+</div>
+<div class="comment" id="comment-47767135">
+  <div class="comment_head"><a href="/user/misnome">misnome</a> 23 hours ago</div>
+  <div class="comment_text">The problems with jj that led me to abandon are:<p>- All of everything good about it breaks down the instant you want to share work with the outside world. It&#x27;s git on the backend! Except there isn&#x27;t any concept of a remote jj so you have to go through the painful steps of manually naming commits, pushing, pulling, then manually advancing the current working point to match. And in doing so, you lose almost everything that gives it value in the first place - the elegant multi branch handling, anonymous commits, the evolog. Even if you want to work on the same project on two machines your only choice for this is without breaking everything via git is to rsync the folder. Yes, you can write alias to do all this like git. I might as well use git if I can&#x27;t use the nice features.<p>- All files automatically committed is great until you accidentally put a secret in an unignored file in the repository folder. And then there is no way to ensure that it&#x27;s purged (unlike in git) - the community response as far as I can tell is &quot;Don&#x27;t do this, never put a file that isn&#x27;t in gitignore&quot;.<p>- And adding to .gitignore fails if you ever want to wind back in history - if you go back before a file was added to .gitignore, then whoops now it isn&#x27;t ignored, is all part of your immutable history, and disappears if you ever switch off of that new commit state.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767135,this)">1 replies</button>
+  <div class="replies-container" id="replies-47767135"></div>
+</div>
+<div class="comment" id="comment-47767281">
+  <div class="comment_head"><a href="/user/Aperocky">Aperocky</a> 23 hours ago</div>
+  <div class="comment_text">With agents, my go to is now have multiple of the same repository and each agents must work on a separate one.<p>Preventing dirty workspace by solving the co-work problem to start with. merges are much more trivial than trying to make agents remember which branch or which folder it is supposed to work on. Disk space is cheaper than mental anguish and token usage.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767281,this)">2 replies</button>
+  <div class="replies-container" id="replies-47767281"></div>
+</div>
+<div class="comment" id="comment-47765780">
+  <div class="comment_head"><a href="/user/justinmayer">justinmayer</a> 1 day ago</div>
+  <div class="comment_text">Many folks aren’t aware that there is also an open-source, cross-platform desktop GUI application for Jujutsu called GG: <a href="https:&#x2F;&#x2F;github.com&#x2F;gulbanana&#x2F;gg" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;gulbanana&#x2F;gg</a><p>I mention it because while the <i>jj</i> command line interface is excellent, there are certain tasks that I find easier to perform with a graphical user interface. For example, I often want to quickly tap on various revisions and see their diffs. GG makes that kind of repository browsing — and certain squash operations — much more efficient for me.<p>If you’re interested in more information about GG, my co-host and I talked about it in a recent episode of the Abstractions podcast at about the 8:17 mark: <a href="https:&#x2F;&#x2F;shows.arrowloop.com&#x2F;@abstractions&#x2F;episodes&#x2F;052-they-deserve-the-dunks" rel="nofollow">https:&#x2F;&#x2F;shows.arrowloop.com&#x2F;@abstractions&#x2F;episodes&#x2F;052-they-...</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47765780,this)">1 replies</button>
+  <div class="replies-container" id="replies-47765780"></div>
+</div>
+<div class="comment" id="comment-47776096">
+  <div class="comment_head"><a href="/user/aubanel">aubanel</a> 6 hours ago</div>
+  <div class="comment_text">Does jj work well with parallel agents?<p>The current problem that I often have is that I want to work on several things in parallel through several agents, always forget to do worktrees, then the different branches of work tend to step on each other
+Does JJ make it simpler?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47776096,this)">1 replies</button>
+  <div class="replies-container" id="replies-47776096"></div>
+</div>
+<div class="comment" id="comment-47764712">
+  <div class="comment_head"><a href="/user/shuyang">shuyang</a> 1 day ago</div>
+  <div class="comment_text">Has anyone found a good code review workflow with `jj`? My problem is that GitHub doesn&#x27;t remember the content of the last reviewed SHA, so every time I push a new change from jj, reviewers lose the delta from their last reviewed commit.<p>To work around this I stopped moving revs (squash&#x2F;rebase) after review starts, which creates awkward local graphs if I have to merge from main for merge conflicts. Graphite works but it&#x27;s $$$, and phabricator&#x2F;reviewable&#x2F;gerritt all have significant onboarding hurdles.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764712,this)">5 replies</button>
+  <div class="replies-container" id="replies-47764712"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47763759?all=1">Show all 469 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile: Stevvo | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+}
+html { font-size: 10px; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: 85vw; margin: 0 auto; padding: 1rem 0; }
+.user-page { max-width: 85vw; margin: 0 auto; }
+.user-header h1 { font-size: 1.6rem; }
+.user-detail { font-size: 1.3rem; color: var(--muted); margin: 0.3rem 0; }
+.user-about { margin: 0.5rem 0; padding: 0.5rem; background: var(--comment-bg); border: 1px solid var(--border); }
+.user-submissions { margin-top: 1rem; }
+.user-submissions h2 { font-size: 1.4rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">Y</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="user-page">
+      <div class="user-header">
+        <h1>Stevvo</h1>
+      </div>
+      <div class="user-detail">created: 7 years ago</div>
+      <div class="user-detail">karma: 3261</div>
+      
+      <div class="user-submissions">
+        <h2>Submissions</h2>
+        <p>1292 items submitted</p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

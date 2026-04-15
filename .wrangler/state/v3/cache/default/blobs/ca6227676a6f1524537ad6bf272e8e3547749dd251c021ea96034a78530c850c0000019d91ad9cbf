@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spain to expand internet blocks to tennis, golf, movies broadcasting times | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://bandaancha.eu/articulos/telefonica-consigue-bloqueos-ips-11731" rel="noopener noreferrer">Spain to expand internet blocks to tennis, golf, movies broadcasting times</a> <span class="story-domain">(bandaancha.eu)</span></span>
+        <div class="item-meta">
+          424 points &bull; <a href="/user/akyuu">akyuu</a> &bull; 22 hours ago &bull; 428 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47768195">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47768843">
+  <div class="comment_head"><a href="/user/0x_rs">0x_rs</a> 21 hours ago</div>
+  <div class="comment_text">Seems obvious at this point there needs to be EU-level regulations against individual countries, such as Spain and Italy, implementing these absurd restrictions. It would at least make lobbying from those sports companies more difficult. These same companies have been pushing for banning VPNs -- <i>consumer VPNs</i> -- as they easily circumvent half the internet going dark because of some dumb sports event, and they&#x27;re going to be targeted next when everyone&#x27;s using them. It doesn&#x27;t help &quot;piracy&quot; always ends up being an excellent excuse to undermine everyone&#x27;s privacy.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768843,this)">8 replies</button>
+  <div class="replies-container" id="replies-47768843"></div>
+</div>
+<div class="comment" id="comment-47770276">
+  <div class="comment_head"><a href="/user/artyom">artyom</a> 19 hours ago</div>
+  <div class="comment_text">If you know Spain, you know this makes total sense:<p>- Half the country or more just doesn&#x27;t work or do anything else when there&#x27;s an important match anyway.<p>- There&#x27;s a big intersection between &quot;people that doesn&#x27;t care about soccer&quot; and &quot;people that knows how to use a VPN&quot;<p>- Matches are usually at night, past 7pm. It&#x27;s well after the average citizen work hours.<p>- There&#x27;s not really huge internet companies there that can lobby the other way around (e.g. infrastructure collapse because of the block).<p>So in short, the ruling is incredibly stupid because they&#x27;re allowed to do so, save for the vocal minority, the vast majority of the population doesn&#x27;t care: they&#x27;re watching the match.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770276,this)">3 replies</button>
+  <div class="replies-container" id="replies-47770276"></div>
+</div>
+<div class="comment" id="comment-47768740">
+  <div class="comment_head"><a href="/user/llbbdd">llbbdd</a> 21 hours ago</div>
+  <div class="comment_text">Assuming that &quot;piracy is a service problem, not a pricing problem&quot; is still the prevailing wisdom, what is Spain &#x2F; La Liga doing wrong that sports piracy is so prevalent as to warrant this? It seems like a no-brainer to expand stream availability and charge appropriately for it vs. scheduling daily kneecaps of other economic activity.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768740,this)">12 replies</button>
+  <div class="replies-container" id="replies-47768740"></div>
+</div>
+<div class="comment" id="comment-47769521">
+  <div class="comment_head"><a href="/user/giantg2">giantg2</a> 20 hours ago</div>
+  <div class="comment_text">This is how greed works. The players want as much money as they can get. The owners want to charge as much as they can for everything while paying the least possible amount. The networks that buy the broadcasting and other rights want to most they can charge for them.<p>Sports have gotten way out of hand, even without the betting aspect. People criticize gambling, porn, and other less desirable forms of entertainment while giving (commercialized) sports a free pass. It&#x27;s not that different when you really get into it at this point.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47769521,this)">2 replies</button>
+  <div class="replies-container" id="replies-47769521"></div>
+</div>
+<div class="comment" id="comment-47768801">
+  <div class="comment_head"><a href="/user/electronsoup">electronsoup</a> 21 hours ago</div>
+  <div class="comment_text">At what point does spanish internet become too unreliable? There was a thread the other day about someone&#x27;s CI jobs failing due too this.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768801,this)">4 replies</button>
+  <div class="replies-container" id="replies-47768801"></div>
+</div>
+<div class="comment" id="comment-47770918">
+  <div class="comment_head"><a href="/user/iamzenitraM">iamzenitraM</a> 18 hours ago</div>
+  <div class="comment_text">Oh hi HN, I&#x27;m one of the folks behind <a href="https:&#x2F;&#x2F;hayahora.futbol" rel="nofollow">https:&#x2F;&#x2F;hayahora.futbol</a>, we monitor the blocks via a varying set of homelab infrastructure to at least try to make a bit more transparent when they occur and what gets blocked (which isn&#x27;t public, and we have to guess). Feel free to AMA!</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770918,this)">2 replies</button>
+  <div class="replies-container" id="replies-47770918"></div>
+</div>
+<div class="comment" id="comment-47769152">
+  <div class="comment_head"><a href="/user/bubblethink">bubblethink</a> 20 hours ago</div>
+  <div class="comment_text">News like this makes you realize that these countries have just given up entirely on the idea of progress or innovation. Peak tourist town mentality.</div>
+  
+  <div class="replies-container" id="replies-47769152"></div>
+</div>
+<div class="comment" id="comment-47769257">
+  <div class="comment_head"><a href="/user/connorboyle">connorboyle</a> 20 hours ago</div>
+  <div class="comment_text">&gt; The announcement speaks of blocking domains, URLs and IP addresses, the latter of which affects legitimate services if the addresses belong to CDN services such as Cloudflare.<p>&gt; La información habla tanto de bloqueos de dominios, URLs y de direcciones IP, caso este último que, cuando se produce, afecta a servicios legítimos si se trata de direcciones pertenecientes a servicios CDN como Cloudflare.<p>Another casualty of the centralized internet of our time</div>
+  
+  <div class="replies-container" id="replies-47769257"></div>
+</div>
+<div class="comment" id="comment-47776379">
+  <div class="comment_head"><a href="/user/nemoniac">nemoniac</a> 6 hours ago</div>
+  <div class="comment_text">Finland was the first country to grant its citizens the right to internet access in law.<p>Other countries including Spain have laws &quot;ensuring that access is broadly available and preventing unreasonable restrictions.&quot;<p>Something has to give.<p><a href="https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Right_to_Internet_access#Ensuring_that_access_is_broadly_available_and_preventing_unreasonable_restrictions" rel="nofollow">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Right_to_Internet_access#Ensur...</a></div>
+  
+  <div class="replies-container" id="replies-47776379"></div>
+</div>
+<div class="comment" id="comment-47768829">
+  <div class="comment_head"><a href="/user/ilaksh">ilaksh</a> 21 hours ago</div>
+  <div class="comment_text">Can Spaniards work around this with a VPN? I know that causes other issues though.<p>To what degree is it feasible for a startup to move around in Europe? This is the sort of heavy-handed, tech-illiterate, authoritarian activity that might make me seriously consider moving my infrastructure or headquarters if I was a Spanish startup.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768829,this)">7 replies</button>
+  <div class="replies-container" id="replies-47768829"></div>
+</div>
+<div class="comment" id="comment-47768591">
+  <div class="comment_head"><a href="/user/jwr">jwr</a> 21 hours ago</div>
+  <div class="comment_text">This is incredibly stupid, but don&#x27;t laugh at Spaniards: your (and my) lawmakers are equally likely to enact similarly stupid laws. It&#x27;s mind-boggling how stupid the world can be sometimes.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768591,this)">8 replies</button>
+  <div class="replies-container" id="replies-47768591"></div>
+</div>
+<div class="comment" id="comment-47769960">
+  <div class="comment_head"><a href="/user/embedding-shape">embedding-shape</a> 19 hours ago</div>
+  <div class="comment_text">Ironically, I live in Spain, and at this very minute, there is a football game going on (Atlético Madrid vs Barcelona) which I literally just learned about because I could just hear my neighbors scream about the 0-1 score, and with Vodafone ISP I&#x27;m not experiencing the block of Cloudflare right now. <a href="https:&#x2F;&#x2F;hayahora.futbol&#x2F;" rel="nofollow">https:&#x2F;&#x2F;hayahora.futbol&#x2F;</a> also shows &quot;NO&quot; incorrectly (if you&#x27;re being strict about the title+domain). I&#x27;m guessing it&#x27;s specifically because it isn&#x27;t a La Liga game, it&#x27;s UEFA Champions League. At least ISPs aren&#x27;t indiscriminately blocking things without court orders, which seems to have been specifically about La Liga.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47769960,this)">2 replies</button>
+  <div class="replies-container" id="replies-47769960"></div>
+</div>
+<div class="comment" id="comment-47769580">
+  <div class="comment_head"><a href="/user/elcapitan">elcapitan</a> 20 hours ago</div>
+  <div class="comment_text">The internet was a mistake anyway, they should just ban it completely and be done with it.</div>
+  
+  <div class="replies-container" id="replies-47769580"></div>
+</div>
+<div class="comment" id="comment-47771177">
+  <div class="comment_head"><a href="/user/btown">btown</a> 18 hours ago</div>
+  <div class="comment_text">Are there any ways in Cloudflare to mitigate against this? If all sports matches basically mean &quot;our clients can&#x27;t access our Cloudflare backed app in Spain&quot; then it&#x27;s worse than fewer-nines; it&#x27;s a correlated event that could disrupt things like travel checkins, etc. - and it&#x27;s a hard pitch to say &quot;Cloudflare costs us money and it has no solution for its network putting our Spanish arrivals at risk.&quot;</div>
+  
+  <div class="replies-container" id="replies-47771177"></div>
+</div>
+<div class="comment" id="comment-47771263">
+  <div class="comment_head"><a href="/user/mgilroy">mgilroy</a> 18 hours ago</div>
+  <div class="comment_text">One of the issues is that you can&#x27;t watch what you want on one paid for service.<p>I would happily watch my football team play on the telly if I could watch all the games for a reasonable price. However, you can&#x27;t pay to watch all the games from a single service and you generally have to sign up for a prolonged period or pay significantly more than I&#x27;m willing to pay to watch the game if I&#x27;ve got the time.<p>The reality is that the value that the media companies place on watching a game on telly is significantly higher than the value I get from watching a game. I understand that others place a higher value on being able to watch a match or any other sport. I don&#x27;t.<p>Paying hundreds of euro or pounds per season to attend a match is one thing. I accept that paying for police stewards and ambulances cost a lot of money. Paying the same to watch some games across multiple companies is of no interest to me.<p>Let me watch all my teams games for a tenth the cost of a season ticket and I&#x27;ll probably pay.</div>
+  
+  <div class="replies-container" id="replies-47771263"></div>
+</div>
+<div class="comment" id="comment-47775503">
+  <div class="comment_head"><a href="/user/rcarmo">rcarmo</a> 8 hours ago</div>
+  <div class="comment_text">These people are going to make Docker (and many other infrastructure-related sites) unusable for companies in Spain. Going to be fun to watch their lobby burn down when their companies stop operating during matches.</div>
+  
+  <div class="replies-container" id="replies-47775503"></div>
+</div>
+<div class="comment" id="comment-47769390">
+  <div class="comment_head"><a href="/user/joshmn">joshmn</a> 20 hours ago</div>
+  <div class="comment_text">I ran a sports streaming service (&quot;pirated sports streaming service&quot; ?). The US Government said I was making $250k MRR as a solo indie dev (I wasn&#x27;t, but that&#x27;s great validation). I&#x27;m pretty qualified to talk about this.<p>The shitty part about what Spain is doing is that it punishes its own residents who have nothing to do with piracy.<p>Sports piracy is fundamentally different than music or movie piracy. The Spotify analogy that gets tossed around is wrong. Steam is less wrong but still wrong. Music piracy got &quot;solved&quot; because the labels decided that some revenue was better than no revenue, and the math works when you have a bunch of product in your back pocket that cost you nothing to distribute; gaben made piracy slightly less convenient to those in developed countries.<p>Sports rights are valuable because they&#x27;re exclusive and because they&#x27;re live. In the US, there are blackouts around sports: if you&#x27;re physically located in New York (at least, according to whatever IP address data vendor a platform is using), you&#x27;re unable to watch the New York Knicks using league-sanctioned products. That&#x27;s the US version of this—restricting access to the content itself to protect the rights holder&#x27;s revenue. It&#x27;s internal logic and fundamentally sound (though infuriating) if you&#x27;re one of them.<p>This is without a doubt categorically worse. A blackout says &quot;you can&#x27;t watch this game&quot; and Spain is saying &quot;you can&#x27;t access the internet while this game is on, whether you&#x27;re interested in the game or not.&quot; It&#x27;s as if the NBA convinced the DOJ to shut down half the internet every time a game was on, just in case.<p>Before it was DMCA notices (useless) -&gt; lawsuits (whack-a-mole, check TorrentFreak) -&gt; ??? -&gt; infrastructure-level blocking. (I&#x27;m an outlier for many reasons but we won&#x27;t go into those.) Each step is more destructive and less effective than the one preceding it. Spain has reached the end of the playbook, thanks to political interests: ban the internet!<p>Fans are the product. La Liga&#x27;s real customer is Movistar, who pays roughly a billion euros a year for exclusivity so they can bundle it into packages nobody would pay for otherwise. The IP blocking isn&#x27;t an anti-piracy measure—I&#x27;d argue there is no such thing as anti-piracy but that&#x27;s a different thread. The IP blocking is a signal to the next bidder: the government will protect your exclusivity at any cost, even if that cost is the country&#x27;s internet.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47769390,this)">1 replies</button>
+  <div class="replies-container" id="replies-47769390"></div>
+</div>
+<div class="comment" id="comment-47771829">
+  <div class="comment_head"><a href="/user/dwedge">dwedge</a> 17 hours ago</div>
+  <div class="comment_text">I&#x27;m torn on this. It should go through the courts, but the fact is that cloudflare are providing access to illegal content and not doing anything about it.<p>Spain were left with two choices if Cloudflare refuse to act. Either accept it (oh well, too big to fail), or block them.<p>I dislike what is happening but I kind of like that Spain don&#x27;t care about the size of Cloudflare and hold them as accountable as they would a small hosting company in Belarus. Blocking entire ranges due to illegal content isn&#x27;t exactly new, the scale is new.<p>Again though, I really dislike that it isn&#x27;t going through the legal system</div>
+  
+  <div class="replies-container" id="replies-47771829"></div>
+</div>
+<div class="comment" id="comment-47771165">
+  <div class="comment_head"><a href="/user/foo12bar">foo12bar</a> 18 hours ago</div>
+  <div class="comment_text">Offtopic, but after clicking on this story and going to google news, my feed is flooded with all kinds of sports articles,  whereas before there were none.<p>A grim reminder that google does track you all over the internet.</div>
+  
+  <div class="replies-container" id="replies-47771165"></div>
+</div>
+<div class="comment" id="comment-47770310">
+  <div class="comment_head"><a href="/user/littlecranky67">littlecranky67</a> 19 hours ago</div>
+  <div class="comment_text">Quick reminder, it is not LaLiga (the football association) taking court action, but Telefónica the telco provider. In Spain their brand is Movistar, in UK and Germany more commonly known as O2. So there is something we, the consumer, can do - avoid all products Telefónica, in Spain and elsewhere to express the want for a free and uncensored internet.</div>
+  
+  <div class="replies-container" id="replies-47770310"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47768195?all=1">Show all 428 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

@@ -35,6 +35,7 @@ export function jsonResponse(data: unknown, maxAge = 30): Response {
 
 export type EnvBindings = {
   HN_CACHE: KVStore;
+  DISABLE_HTML_CACHE?: boolean;
 };
 
 export type AppContext = Context<{ Bindings: EnvBindings }>;

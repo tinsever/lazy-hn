@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Flock | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://stopflock.com" rel="noopener noreferrer">Stop Flock</a> <span class="story-domain">(stopflock.com)</span></span>
+        <div class="item-meta">
+          854 points &bull; <a href="/user/cdrnsf">cdrnsf</a> &bull; 17 hours ago &bull; 223 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47772012">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47773673">
+  <div class="comment_head"><a href="/user/bmitch3020">bmitch3020</a> 13 hours ago</div>
+  <div class="comment_text">I don&#x27;t want to stop Flock the company. I want to stop Flock the business model, along with all the other mass surveillance, and the data brokers. If the business models can&#x27;t be made illegal, it should at least come with liabilities so high that no sane business would want to hold data that is essentially toxic waste.<p>Without that, we are quickly spiraling into the dystopia where privacy is gone, and when the wrong person gets access to the data, entire populations are threatened.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47773673,this)">12 replies</button>
+  <div class="replies-container" id="replies-47773673"></div>
+</div>
+<div class="comment" id="comment-47779963">
+  <div class="comment_head"><a href="/user/czhu12">czhu12</a> 9 minutes ago</div>
+  <div class="comment_text">This movement reminds me of the &quot;protecting democracy&quot; message that was run on the national stage that pailed against the backdrop of rising inflation.<p>Privacy is important just as democracy is important, but crime and lawlessness feel more immediate and will always take center stage.<p>Any message to try to address the spread of flock and flock-like business models have to address what replaces it. If the only choice people are given is either having flock, or car break-ins, then I think we can probably guess what people would choose.<p>SFPD at least, has credited flock and flock-like tech for why property crime has dropped so much in recent years.</div>
+  
+  <div class="replies-container" id="replies-47779963"></div>
+</div>
+<div class="comment" id="comment-47773905">
+  <div class="comment_head"><a href="/user/scarmig">scarmig</a> 12 hours ago</div>
+  <div class="comment_text">Although I oppose the surveillance state, it&#x27;s important to understand the motivations and incentives involved in the move toward Flock (and its eventual successors); until those are resolved, governments are going to be implementing Flock style programs with relatively tepid opposition.<p>Police departments are seriously understaffed in many major cities, and officers are much less efficient than they used to be. This has led to the decline of the beat cop, who provided a kind of ambient authority that helped create, both a sense and reality, of public order. People really want the sense (even more than the reality!) of public order; without that, they will jump to faddish solutions that promise it, regardless of the data for or against it.<p>The best counter to Flock is to provide alternatives to it, not just reject it while keeping the status quo going. We need a new, vitalized police culture, that shares mutual trust and engagement with the community.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47773905,this)">4 replies</button>
+  <div class="replies-container" id="replies-47773905"></div>
+</div>
+<div class="comment" id="comment-47773611">
+  <div class="comment_head"><a href="/user/jimmar">jimmar</a> 13 hours ago</div>
+  <div class="comment_text">I followed the shooting at Brown University last year very closely. Brown&#x27;s leadership was heavily criticized for having camera blind spots and not being able to track the shooter&#x27;s exact movements through campus. I can understand why people with stewardship over the safety of their students&#x2F;customers&#x2F;constituents would make decisions to err on the side of tracking. I&#x27;m not saying I agree with it, but I understand it.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47773611,this)">6 replies</button>
+  <div class="replies-container" id="replies-47773611"></div>
+</div>
+<div class="comment" id="comment-47779477">
+  <div class="comment_head"><a href="/user/enaaem">enaaem</a> 38 minutes ago</div>
+  <div class="comment_text">Btw, flock employees have been caught watching kids gymnastics class and pools.<p><a href="https:&#x2F;&#x2F;substack.com&#x2F;home&#x2F;post&#x2F;p-193593234" rel="nofollow">https:&#x2F;&#x2F;substack.com&#x2F;home&#x2F;post&#x2F;p-193593234</a><p>Why does the VP of strategic relations need to watch the kids gymnastics class?</div>
+  
+  <div class="replies-container" id="replies-47779477"></div>
+</div>
+<div class="comment" id="comment-47773872">
+  <div class="comment_head"><a href="/user/jedberg">jedberg</a> 12 hours ago</div>
+  <div class="comment_text">We need a law that says if you hold any data about a person, they <i>must</i> be notified when anyone accesses it, including law enforcement.<p>I used to work in criminal investigations.  I understand how this might make investigation of real crime more difficult.  But so does the fact that you need a warrant to enter someone&#x27;s home, and yet we manage to investigate crime anyway.<p>Your data should be an extension of your home, even if it&#x27;s held by another company.  It should require a warrant <i>and</i> notification.  You could even make the notification be 24 hours after the fact.  But it should be required.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47773872,this)">8 replies</button>
+  <div class="replies-container" id="replies-47773872"></div>
+</div>
+<div class="comment" id="comment-47778429">
+  <div class="comment_head"><a href="/user/LurkandComment">LurkandComment</a> 2 hours ago</div>
+  <div class="comment_text">What might be more productive is to suggest legal ways law enforcement can prevent and enforce the problems this was designed to stop.  It will help you see where the laws are limited, what needs to be updated so you can balance the risk of privacy vs. the need to enforce laws (or the need for new laws all together). Right now we&#x27;re osilcating between gaps criminals exploit and infringing on fundemental privacy rights.</div>
+  
+  <div class="replies-container" id="replies-47778429"></div>
+</div>
+<div class="comment" id="comment-47773578">
+  <div class="comment_head"><a href="/user/himata4113">himata4113</a> 13 hours ago</div>
+  <div class="comment_text">This is just reiterating same points deflock does including mentioning deflock and images from deflock?<p>Deflock: <a href="https:&#x2F;&#x2F;deflock.org&#x2F;" rel="nofollow">https:&#x2F;&#x2F;deflock.org&#x2F;</a><p>Also: <a href="https:&#x2F;&#x2F;haveibeenflocked.com&#x2F;" rel="nofollow">https:&#x2F;&#x2F;haveibeenflocked.com&#x2F;</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47773578,this)">2 replies</button>
+  <div class="replies-container" id="replies-47773578"></div>
+</div>
+<div class="comment" id="comment-47773488">
+  <div class="comment_head"><a href="/user/arcanemachiner">arcanemachiner</a> 13 hours ago</div>
+  <div class="comment_text">I would never advocate criminal behavior, but I don&#x27;t understand how these these things aren&#x27;t destroyed en masse by, like... everyone.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47773488,this)">7 replies</button>
+  <div class="replies-container" id="replies-47773488"></div>
+</div>
+<div class="comment" id="comment-47778917">
+  <div class="comment_head"><a href="/user/0ldblu3">0ldblu3</a> 1 hour ago</div>
+  <div class="comment_text">Lawmakers won&#x27;t care until it is them and their kids that are being tracked by &quot;hackers&quot;. Flock API&#x27;s are poorly protected and the individual cameras are hackable as shown by Benn Jordan in multiple YouTube videos.</div>
+  
+  <div class="replies-container" id="replies-47778917"></div>
+</div>
+<div class="comment" id="comment-47773709">
+  <div class="comment_head"><a href="/user/khuston">khuston</a> 13 hours ago</div>
+  <div class="comment_text">I’m all for mass surveillance of roadways, but I want to see results. Every day I see and hear people breaking laws with their vehicles in ways that make life worse for others around them.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47773709,this)">5 replies</button>
+  <div class="replies-container" id="replies-47773709"></div>
+</div>
+<div class="comment" id="comment-47774165">
+  <div class="comment_head"><a href="/user/otterley">otterley</a> 12 hours ago</div>
+  <div class="comment_text">Why do people consistently and falsely believe that they have privacy in public settings? You are literally out in public. If you don&#x27;t want your behavior in public to be observed, then either don&#x27;t behave in such a way that you wouldn&#x27;t want observed, or stay home.<p>UPDATE: don&#x27;t conflate stalking with observation. These are not the same. You can observe, but you cannot intimidate.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47774165,this)">3 replies</button>
+  <div class="replies-container" id="replies-47774165"></div>
+</div>
+<div class="comment" id="comment-47773697">
+  <div class="comment_head"><a href="/user/amazingamazing">amazingamazing</a> 13 hours ago</div>
+  <div class="comment_text">I’m curious if there were some consortium of all private businesses with their own surveillance cams deciding to aggregate their footage could it be stopped?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47773697,this)">2 replies</button>
+  <div class="replies-container" id="replies-47773697"></div>
+</div>
+<div class="comment" id="comment-47778262">
+  <div class="comment_head"><a href="/user/solaarphunk">solaarphunk</a> 2 hours ago</div>
+  <div class="comment_text">Counterpoint: vehicle related crime is way down in SF. Which is great.</div>
+  
+  <div class="replies-container" id="replies-47778262"></div>
+</div>
+<div class="comment" id="comment-47774026">
+  <div class="comment_head"><a href="/user/teraflop">teraflop</a> 12 hours ago</div>
+  <div class="comment_text">Here&#x27;s a modest proposal: what if we made it a serious crime for <i>anyone</i> to retain automatically-recorded surveillance footage, or data derived from it, for longer than some limited period of time (say, 7 days) <i>unless</i> said footage is released to the public within that timeframe?<p>That is, you can put up cameras wherever you want, but you can&#x27;t gain any kind of competitive advantage by doing so.<p>I think the public would be more alert to the dangers of mass surveillance if the magnitude of that surveillance was more obvious. And if everyone was watching everyone, at least it wouldn&#x27;t as easily abused for purposes such as selective prosecution or blackmail.</div>
+  
+  <div class="replies-container" id="replies-47774026"></div>
+</div>
+<div class="comment" id="comment-47776887">
+  <div class="comment_head"><a href="/user/jimnotgym">jimnotgym</a> 5 hours ago</div>
+  <div class="comment_text">Every time I see Flock mentioned, it makes me think it will be about the Linux lock file tool Flock, and I wonder why people want to stop it</div>
+  
+  <div class="replies-container" id="replies-47776887"></div>
+</div>
+<div class="comment" id="comment-47774008">
+  <div class="comment_head"><a href="/user/beloch">beloch</a> 12 hours ago</div>
+  <div class="comment_text">For the Canadians sitting at home, tut tutting more American foolishness that could never happen up here...  Flock started their expansion into Ontario this very month[1].<p>We should probably oppose this.<p>_________<p>[1]<a href="https:&#x2F;&#x2F;www.theguardian.com&#x2F;technology&#x2F;2026&#x2F;apr&#x2F;07&#x2F;toronto-rosedale-row-virtual-gated-community-ai-surveillance-flock" rel="nofollow">https:&#x2F;&#x2F;www.theguardian.com&#x2F;technology&#x2F;2026&#x2F;apr&#x2F;07&#x2F;toronto-r...</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47774008,this)">1 replies</button>
+  <div class="replies-container" id="replies-47774008"></div>
+</div>
+<div class="comment" id="comment-47777161">
+  <div class="comment_head"><a href="/user/hariseldom">hariseldom</a> 4 hours ago</div>
+  <div class="comment_text">a missed opportunity, going with StopFlock instead of FlockOff dot com</div>
+  
+  <div class="replies-container" id="replies-47777161"></div>
+</div>
+<div class="comment" id="comment-47775430">
+  <div class="comment_head"><a href="/user/fffernan">fffernan</a> 8 hours ago</div>
+  <div class="comment_text">Live in a neighborhood that privately installed cameras.  The city also installed cameras.  Before the camera&#x27;s cars used to come and raid houses and worker&#x27;s trucks.  It was quite common.  The neighborhood has statistics and tracks how many stolen cars &#x2F; plates drove through the neighborhood.  All crime statistics dropped, police show up and arrest people.  Saying its an illusion of safety is bullshit. It&#x27;s all fake until you&#x27;re a victim of a crime.  We need our own way to fight back against gangs, etc.  I&#x27;d rather have more cameras and less police. Also lets get some drones as well, they work fantastic in SF.  The city owns the data its not getting sold. It gets erased unless a crime is reported.</div>
+  
+  <div class="replies-container" id="replies-47775430"></div>
+</div>
+<div class="comment" id="comment-47778677">
+  <div class="comment_head"><a href="/user/josefritzishere">josefritzishere</a> 1 hour ago</div>
+  <div class="comment_text">Flock should be illegal. Full stop. These people should be in prison.</div>
+  
+  <div class="replies-container" id="replies-47778677"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47772012?all=1">Show all 223 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

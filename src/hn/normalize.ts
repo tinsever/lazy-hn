@@ -4,6 +4,7 @@ import type { HNItem, HNUser } from "./client.ts";
 export interface StoryCard {
   id: number;
   title: string;
+  text: string;
   by: string;
   score: number;
   time: number;
@@ -37,6 +38,7 @@ export function normalizeStory(item: HNItem): StoryCard {
   return {
     id: item.id,
     title: item.title ?? "",
+    text: item.text ?? "",
     by: item.by ?? "",
     score: item.score ?? 0,
     time: item.time ?? 0,

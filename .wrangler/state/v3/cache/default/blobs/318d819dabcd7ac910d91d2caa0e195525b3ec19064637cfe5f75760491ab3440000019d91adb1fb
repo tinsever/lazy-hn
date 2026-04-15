@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show HN: Plain – The full-stack Python framework designed for humans and agents | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://github.com/dropseed/plain" rel="noopener noreferrer">Show HN: Plain – The full-stack Python framework designed for humans and agents</a> <span class="story-domain">(github.com)</span></span>
+        <div class="item-meta">
+          88 points &bull; <a href="/user/focom">focom</a> &bull; 21 hours ago &bull; 49 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47768750">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47771664">
+  <div class="comment_head"><a href="/user/SwellJoe">SwellJoe</a> 17 hours ago</div>
+  <div class="comment_text">Inventing a new thing &quot;for agents&quot; always feels counter-productive. Your new thing isn&#x27;t in the training data, so you have to teach it how to use your thing. Why not use tech that&#x27;s already in the training data? Agents know Python and Django. Or, better (because the performance, maintainability, and deployment story are much nicer with no extra work, since agents write the code), agents know Go.<p>The very nature of LLMs means you can&#x27;t invent a thing for current agents to use that they&#x27;ll be better at using than the things they already know how to use from their immense training data. You can give them skills, sure, and that&#x27;s useful, but it&#x27;s still not their native tongue.<p>To make a thing that&#x27;s really for agents, you need to have made a popular thing for humans ten years ago, so there&#x27;s a shitload of code and documentation for them to train on.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47771664,this)">3 replies</button>
+  <div class="replies-container" id="replies-47771664"></div>
+</div>
+<div class="comment" id="comment-47770352">
+  <div class="comment_head"><a href="/user/petcat">petcat</a> 19 hours ago</div>
+  <div class="comment_text">It looks like it&#x27;s a fork of Django that just kinda changed a bunch of stuff arbitrarily?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770352,this)">5 replies</button>
+  <div class="replies-container" id="replies-47770352"></div>
+</div>
+<div class="comment" id="comment-47772803">
+  <div class="comment_head"><a href="/user/simonw">simonw</a> 15 hours ago</div>
+  <div class="comment_text">First time I&#x27;ve seen this pattern in the &quot;getting started&quot; guide for a project:<p><pre><code>  claude &quot;$(curl -sSf https:&#x2F;&#x2F;plainframework.com&#x2F;start.md)&quot;
+</code></pre>
+<a href="https:&#x2F;&#x2F;plainframework.com&#x2F;start.md" rel="nofollow">https:&#x2F;&#x2F;plainframework.com&#x2F;start.md</a><p>Looks like that usually runs:<p><pre><code>  uvx plain-start .
+</code></pre>
+Which runs this: <a href="https:&#x2F;&#x2F;tools.simonwillison.net&#x2F;zip-wheel-explorer?package=plain-start#plain&#x2F;start&#x2F;cli.py" rel="nofollow">https:&#x2F;&#x2F;tools.simonwillison.net&#x2F;zip-wheel-explorer?package=p...</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47772803,this)">1 replies</button>
+  <div class="replies-container" id="replies-47772803"></div>
+</div>
+<div class="comment" id="comment-47775344">
+  <div class="comment_head"><a href="/user/mg794613">mg794613</a> 8 hours ago</div>
+  <div class="comment_text">1. Steal codebase of Django, and rename functions so thats hidden
+2. Claim its needed for &quot;the new AI era&quot;
+3. ?
+4. Profit</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47775344,this)">1 replies</button>
+  <div class="replies-container" id="replies-47775344"></div>
+</div>
+<div class="comment" id="comment-47773103">
+  <div class="comment_head"><a href="/user/dchuk">dchuk</a> 14 hours ago</div>
+  <div class="comment_text">Ignore all the hate in the comments here, anyone denying the direction of software development and it aggressively becoming agentic have their own reckonings to deal with…<p>I love this concept. While I’m a Rails guy myself, I appreciate the value of Django too, and an agent-optimized version of it makes sense.<p>I feel like the next logical steps are this exact concept but in Go &#x2F; Rust to get even more performance out of everything and to also get the single deployable binary too</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47773103,this)">2 replies</button>
+  <div class="replies-container" id="replies-47773103"></div>
+</div>
+<div class="comment" id="comment-47775778">
+  <div class="comment_head"><a href="/user/dirkc">dirkc</a> 7 hours ago</div>
+  <div class="comment_text">UPDATE - should this be a Show HN? This isn&#x27;t posted by the author and there are better links to share with more info about the who, what and why: <a href="https:&#x2F;&#x2F;plainframework.com&#x2F;about&#x2F;" rel="nofollow">https:&#x2F;&#x2F;plainframework.com&#x2F;about&#x2F;</a><p>From the Show HN guide&#x2F;rules:<p>&gt;  The project must be something you&#x27;ve worked on personally and which you&#x27;re around to discuss. See these tips about how to present your work.</div>
+  
+  <div class="replies-container" id="replies-47775778"></div>
+</div>
+<div class="comment" id="comment-47774794">
+  <div class="comment_head"><a href="/user/murkt">murkt</a> 10 hours ago</div>
+  <div class="comment_text">Class-based views were a problem when they were introduced in Django, and they’re still a problem.<p>Especially for the so-called AI-ready framework. Because of indirection, you either have to go read all the basic classes, or read documentation three times over. Instead of just reading the self-contained view function itself, once.<p>Especially true for an agent, it will have to go read the new framework’s docs and source over and over and over…</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47774794,this)">2 replies</button>
+  <div class="replies-container" id="replies-47774794"></div>
+</div>
+<div class="comment" id="comment-47770650">
+  <div class="comment_head"><a href="/user/jacktheturtle">jacktheturtle</a> 19 hours ago</div>
+  <div class="comment_text">Nice. Love the idea behind this. I have been using Django for most of my vibe coded side projects just for the reasons stated in this thesis.<p>Django code is pretty easy to review quickly. LLMs are good at writing it.<p>Django is just old and bloated, so the fork is a good idea. Maybe I will use this for my next side project.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770650,this)">1 replies</button>
+  <div class="replies-container" id="replies-47770650"></div>
+</div>
+<div class="comment" id="comment-47779038">
+  <div class="comment_head"><a href="/user/pievalentin">pievalentin</a> 1 hour ago</div>
+  <div class="comment_text">Django desperately need competition so this is a good thing.</div>
+  
+  <div class="replies-container" id="replies-47779038"></div>
+</div>
+<div class="comment" id="comment-47772455">
+  <div class="comment_head"><a href="/user/nikisweeting">nikisweeting</a> 16 hours ago</div>
+  <div class="comment_text">I&#x27;ve been excitedly following the development of Plain for a while now, it&#x27;s so cool to see so many of the rough edges in Django get fixed in a nice comprehensive solution.<p>Great job Dave Gaeddert!<p>I&#x27;m saddened to see some of the other comments saying it&#x27;s slop, he was working on this long before vibecoding became common! I think there&#x27;s a lot of really good design decisions and I hope people don&#x27;t write it off just because he&#x27;s trying the &quot;for agents&quot; marketing approach lately.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47772455,this)">1 replies</button>
+  <div class="replies-container" id="replies-47772455"></div>
+</div>
+<div class="comment" id="comment-47771001">
+  <div class="comment_head"><a href="/user/donfuzius">donfuzius</a> 18 hours ago</div>
+  <div class="comment_text">Something like this has been on my mind for a while. When using LLMs for coding I believe it is a significant benefit, if the amount of lines to be reviewed by humans is as small as possible. An app, which is not much more than a configuration in a dense, custom made DSL with minimal coding to specify business logic would be the simplest artifact that a human can review quickly and an LLM can manipulate with ease (provided there&#x27;s good docs &#x2F; linting &#x2F; errors &#x2F; maybe even a finetuned model at some point).<p>Everything which just works &quot;by convention&quot; or by &quot;opinionated defaults&quot; (allowing a tightly coupled but very feature rich framework) helps to reduce the noise &#x2F; lines that needs to be reviewed.<p>While this approach might not be optimal for every project, I&#x27;m certain the opinionated defaults can work for many endeavours. And the reduction of complexity might be one important aspect, which can make an &quot;agentically engineered&quot; project sustainable.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47771001,this)">1 replies</button>
+  <div class="replies-container" id="replies-47771001"></div>
+</div>
+<div class="comment" id="comment-47775062">
+  <div class="comment_head"><a href="/user/Clo_Claw">Clo_Claw</a> 9 hours ago</div>
+  <div class="comment_text">Great take!<p>I think the &quot;agents only know what&#x27;s in training data&quot; argument never made sense to me. I&#x27;ve watched Claude read a markdown skill file and correctly invoke a CLI it had never seen before.<p>The thing that actually matters is whether your interface is predictable consistent verbs, typed errors, no magic. Agents are surprisingly good at learning from docs, they&#x27;re just terrible at guessing.<p>The real question for Plain isn&#x27;t &quot;will agents know it&quot;, it&#x27;s whether the opinionated defaults actually reduce the surface area they have to reason over. Django&#x27;s flexibility is kind of a nightmare for agents because there are 6 ways to do everything. If Plain picks one, that&#x27;s genuinely useful.<p>Anyway, &quot;designed for humans and agents&quot; is going to be on every framework README by EOY whether it means anything or not, so might as well be the one that actually thought about it first ;P</div>
+  
+  <div class="replies-container" id="replies-47775062"></div>
+</div>
+<div class="comment" id="comment-47770963">
+  <div class="comment_head"><a href="/user/deafpolygon">deafpolygon</a> 18 hours ago</div>
+  <div class="comment_text">It’s vibe-coded, too. Pass.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770963,this)">1 replies</button>
+  <div class="replies-container" id="replies-47770963"></div>
+</div>
+<div class="comment" id="comment-47771253">
+  <div class="comment_head"><a href="/user/awongh">awongh</a> 18 hours ago</div>
+  <div class="comment_text">TLDR:<p>- fork of django<p>- it&#x27;s opinionated<p>- typed<p>- comes with skills &#x2F; rules &#x2F; docs baked in<p>I&#x27;m not against this idea in principle, but I&#x27;m also not sure why that is better than what&#x27;s already out there, except maybe you save some tokens by not vibe coding this yourself?<p>I do think in the future we&#x27;ll see some novel libraries that are agent-optimized first. I&#x27;m not sure if this is it, though.<p>(edit: formatting)</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47771253,this)">2 replies</button>
+  <div class="replies-container" id="replies-47771253"></div>
+</div>
+<div class="comment" id="comment-47774459">
+  <div class="comment_head"><a href="/user/Humphrey">Humphrey</a> 11 hours ago</div>
+  <div class="comment_text">Oh, I do like the format of the models.  Just like how strawberry graphql does this.  I suspect that model format would be a much better development UX.</div>
+  
+  <div class="replies-container" id="replies-47774459"></div>
+</div>
+<div class="comment" id="comment-47772330">
+  <div class="comment_head"><a href="/user/trevor-e">trevor-e</a> 16 hours ago</div>
+  <div class="comment_text">This looks pretty neat and the anti-AI hate in here is getting pretty tiresome.<p>From what I can tell looking at the codebase compared to Django&#x27;s, the top-level modules are structured much better and more obvious for AI to discover them. And then inside each module is a descriptive README with lots of description and examples that are helpful to an agent (and human). Not sure why this is being written off as slop or arbitrary changes, it seems pretty obvious to me this is the direction of frameworks.</div>
+  
+  <div class="replies-container" id="replies-47772330"></div>
+</div>
+<div class="comment" id="comment-47773692">
+  <div class="comment_head"><a href="/user/pmarreck">pmarreck</a> 13 hours ago</div>
+  <div class="comment_text">You lost me at Python.<p>I cannot wait until all the tooling in Python that is the only reason most people use Python is trivially rewritten by LLM’s in other languages</div>
+  
+  <div class="replies-container" id="replies-47773692"></div>
+</div>
+<div class="comment" id="comment-47775608">
+  <div class="comment_head"><a href="/user/ardline">ardline</a> 8 hours ago</div>
+  <div class="comment_text">Interesting approach — curious how this scales under real load.</div>
+  
+  <div class="replies-container" id="replies-47775608"></div>
+</div>
+<div class="comment" id="comment-47772674">
+  <div class="comment_head"><a href="/user/amanzi">amanzi</a> 15 hours ago</div>
+  <div class="comment_text">I think this has been around for a while, if it&#x27;s the same thing I&#x27;m thinking of. It started out as an opinionated fork of Django, but appears to have now been rebranded to jump on the agent hype-train. Not sure if I&#x27;m in the minority, but I&#x27;m now less interested in this given its focus on agents.</div>
+  
+  <div class="replies-container" id="replies-47772674"></div>
+</div>
+<div class="comment" id="comment-47770713">
+  <div class="comment_head"><a href="/user/jaredcwhite">jaredcwhite</a> 19 hours ago</div>
+  <div class="comment_text">So a sloppified Django spit out by Claude? Good luck with that.</div>
+  
+  <div class="replies-container" id="replies-47770713"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47768750?all=1">Show all 49 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

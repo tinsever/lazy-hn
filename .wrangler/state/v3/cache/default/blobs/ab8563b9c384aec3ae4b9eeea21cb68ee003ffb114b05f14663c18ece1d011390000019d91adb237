@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show HN: boringBar – a taskbar-style dock replacement for macOS | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://boringbar.app/" rel="noopener noreferrer">Show HN: boringBar – a taskbar-style dock replacement for macOS</a> <span class="story-domain">(boringbar.app)</span></span>
+        <div class="item-meta">
+          514 points &bull; <a href="/user/a-ve">a-ve</a> &bull; 2 days ago &bull; 298 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47742200">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47742559">
+  <div class="comment_head"><a href="/user/sonofhans">sonofhans</a> 2 days ago</div>
+  <div class="comment_text">I am the target audience for this, from a UX and tech perspective. It addresses a problem I have and for which I periodically audition solutions.<p>A subscription for a menu bar, though, kills it for me. I have apps on Macs that are over 20 years old. Some of those companies don’t exist anymore. I’m not going to risk paying $100 for a decade of your app and hope that your company, or your goodwill, stays around that long.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47742559,this)">5 replies</button>
+  <div class="replies-container" id="replies-47742559"></div>
+</div>
+<div class="comment" id="comment-47779842">
+  <div class="comment_head"><a href="/user/rolisz">rolisz</a> 16 minutes ago</div>
+  <div class="comment_text">@op: I tried BoringBar, I like it, but I run into a weird bug: I have two external monitors for my MacBook. BoringBar on the MBP display is fine, but on external screen 1 it shows the apps from screen 2 and vice versa.<p>I couldn&#x27;t find your email on the site or in the app.</div>
+  
+  <div class="replies-container" id="replies-47779842"></div>
+</div>
+<div class="comment" id="comment-47742616">
+  <div class="comment_head"><a href="/user/SyneRyder">SyneRyder</a> 2 days ago</div>
+  <div class="comment_text">While I don&#x27;t use a Mac as my primary anymore, I&#x27;m surprised I like the look of this! It actually looks quite Mac-like as well.<p>Subscription is a big nope here, though. Especially for Mac software, I&#x27;d expect something where you pay for one major version, that is guaranteed to works on specific macOS versions, and gets minor bugfix updates too. But maybe the next macOS version requires a newer major version update to run, in which case you pay an upgrade fee to buy the next major version - or maybe the next major version has new features you might want to upgrade to as well.<p>My old Macs are stuck on 10.13, and I see Ubar mentioned elsewhere in this thread and that it&#x27;s still compatible with 10.13. I might consider the $30 one off price to buy Ubar and keep it forever, but I wouldn&#x27;t do a $10 subscription.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47742616,this)">2 replies</button>
+  <div class="replies-container" id="replies-47742616"></div>
+</div>
+<div class="comment" id="comment-47742734">
+  <div class="comment_head"><a href="/user/fii">fii</a> 2 days ago</div>
+  <div class="comment_text">Subscription on something like this is goofy, and extra subscription per seat even for personal is goofier. For free, I can use Alfred&#x2F;Raycast, Aerospace, and either sketchybar or zebar and have all this functionality executed even more skillfully and ergonomically. If you want to throw money into it, Alfred power pack is £34 and supports a great company with a lifetime purchase.<p>But I also understand I’m not the target audience for this, and some of my coworkers that wanted a Mac because “it’s a Mac” and now compare everything to Windows would probably use it. I’ll just have to feel bad for their wallets.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47742734,this)">1 replies</button>
+  <div class="replies-container" id="replies-47742734"></div>
+</div>
+<div class="comment" id="comment-47743992">
+  <div class="comment_head"><a href="/user/a-ve">a-ve</a> 2 days ago</div>
+  <div class="comment_text">OP here - based on the feedback, I’ve switched boringBar to a perpetual license for personal use: <a href="https:&#x2F;&#x2F;boringbar.app" rel="nofollow">https:&#x2F;&#x2F;boringbar.app</a><p>It’s now $40 for 2 devices and includes 2 years of updates. After that, you can keep using the version you have, or choose to pay for updates again later.<p>For businesses, I’m keeping the existing annual pricing.<p>A lot of the comments on pricing were fair, and I appreciate people being direct about it. I still care a lot about long-term maintenance for an app like this, but I think this is a better balance.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47743992,this)">6 replies</button>
+  <div class="replies-container" id="replies-47743992"></div>
+</div>
+<div class="comment" id="comment-47747824">
+  <div class="comment_head"><a href="/user/nagonago">nagonago</a> 2 days ago</div>
+  <div class="comment_text">When I got a Macbook many years ago, I was surprised how often little utility software like this cost money. I was just so used to the abundance of open source and freeware in the Windows&#x2F;Linux world.<p>No judgement either way, I get that developers want to be compensated for their time. I just always found the difference in culture curious. I guess it&#x27;s because if you&#x27;re willing to spend the extra premium for Apple products, you&#x27;re probably also willing to spend a little extra premium on the software too.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47747824,this)">1 replies</button>
+  <div class="replies-container" id="replies-47747824"></div>
+</div>
+<div class="comment" id="comment-47742920">
+  <div class="comment_head"><a href="/user/jorl17">jorl17</a> 2 days ago</div>
+  <div class="comment_text">Hi!<p>Over the years, I&#x27;ve tried several of these dock replacement apps. The one that stuck the longest was uBar (which I used with a setup similar to what you have here, emulating a &quot;windows taskbar&quot;.<p>I&#x27;ve hit issues with most of them that forced me to move back to the normal Dock, but the number one issue has always been around notification badges: they always seemed to break in strange ways.<p>For example, can your dock show badges for iMessage if the app isn&#x27;t open? Does it get the updated badge count without me opening it? Say I receive a SMS&#x2F;iMessage, does it instantly show a counter next to the unopened pinned messages app? None of the other apps successfully did this when I tried them...<p>I don&#x27;t know if there are other apps like this, but iMessage was by far the biggest offender. Perhaps system settings too?<p>P.S.: Congrats on the launch :)<p>P.P.S.: As others have said, I think a subscription for this will rub many people the wrong way (I am one of them). If I&#x27;m paying for a subscription, I expect this to be pretty bug-free and have at least monthly updates. I wouldn&#x27;t ask this of other subscription-based apps, but for one that replaces a system-level component and wants me to keep paying, you bet I am holding it to a high standard! I&#x27;ve wasted too much money on other replacements and gotten very little value out of that.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47742920,this)">1 replies</button>
+  <div class="replies-container" id="replies-47742920"></div>
+</div>
+<div class="comment" id="comment-47742621">
+  <div class="comment_head"><a href="/user/genbugenbu">genbugenbu</a> 2 days ago</div>
+  <div class="comment_text">I love that you&#x27;ve made this, but in a world of never ending subscriptions, a subscription to a taskbar is just not something I (or many I imagine) can justify - no matter how low the price.<p>We really have entered the age of everything being a subscription.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47742621,this)">1 replies</button>
+  <div class="replies-container" id="replies-47742621"></div>
+</div>
+<div class="comment" id="comment-47742565">
+  <div class="comment_head"><a href="/user/oa335">oa335</a> 2 days ago</div>
+  <div class="comment_text">I would pay $10 one time for this; a subscription seems excessive to me.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47742565,this)">1 replies</button>
+  <div class="replies-container" id="replies-47742565"></div>
+</div>
+<div class="comment" id="comment-47743122">
+  <div class="comment_head"><a href="/user/randomeel">randomeel</a> 2 days ago</div>
+  <div class="comment_text">There are MORE apps that have a better reputation like sidebar , dock fix , active dock (has been around for years and years) , and a subscription does not make sense since most can be done for free like window previews with dock door , group windows by app is free in desktop and dock settings for Mission Control , the native dock can also do many things like notification badges, click to show desktop or use a hot corner or trackpad gesture , pin apps in the dock  , there are a billion app launchers , spotlight is built in . Most people will stay away from subscriptions as I have observed in the comment below 
+(Pls be nice I’m new here and I don’t know how to comment properly )</div>
+  
+  <div class="replies-container" id="replies-47743122"></div>
+</div>
+<div class="comment" id="comment-47742719">
+  <div class="comment_head"><a href="/user/amarant">amarant</a> 2 days ago</div>
+  <div class="comment_text">Ah, good old Apple, where for only $9.99 a month, you can experience what Linux offered for free 15+ years ago.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47742719,this)">4 replies</button>
+  <div class="replies-container" id="replies-47742719"></div>
+</div>
+<div class="comment" id="comment-47751529">
+  <div class="comment_head"><a href="/user/butlike">butlike</a> 2 days ago</div>
+  <div class="comment_text">The issue I have with UI replacements is that I now have a dependency that MUST be installed, otherwise I have to learn how to UX again from scratch. If I ever get a new Mac, I now MUST install boringBar, otherwise it will be like learning a new OS workflow, akin from  switching from Mac to Windows. If Apple ever updates anything to where the plugin would stop working, I now need to do the same adaptation. It&#x27;s fun for a while to do things like this, but in my older computing age, I can&#x27;t bear the cognitive effort, so I tend to just use mostly-default UI.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47751529,this)">1 replies</button>
+  <div class="replies-container" id="replies-47751529"></div>
+</div>
+<div class="comment" id="comment-47742497">
+  <div class="comment_head"><a href="/user/mynameisvlad">mynameisvlad</a> 2 days ago</div>
+  <div class="comment_text">I use uBar for this: <a href="https:&#x2F;&#x2F;ubarapp.com" rel="nofollow">https:&#x2F;&#x2F;ubarapp.com</a> but this looks like a nice lightweight alternative!</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47742497,this)">4 replies</button>
+  <div class="replies-container" id="replies-47742497"></div>
+</div>
+<div class="comment" id="comment-47742771">
+  <div class="comment_head"><a href="/user/harladsinsteden">harladsinsteden</a> 2 days ago</div>
+  <div class="comment_text">One-time fee? I would be onboard instantly. Monthly fee? For what exactly? There is no recurring cost like server space or anything else. Nope, you lost me as a customer. For good.</div>
+  
+  <div class="replies-container" id="replies-47742771"></div>
+</div>
+<div class="comment" id="comment-47742554">
+  <div class="comment_head"><a href="/user/bradley_taunt">bradley_taunt</a> 2 days ago</div>
+  <div class="comment_text">Looks excellent but I can’t wrap my head around how this is a subscription. Pricing the app even at a higher range ($40-50), one—time payment makes way more sense.<p>You could even require paying for “upgrades” for major updates in the future. (Similar to that of Sketch or some apps made by Panic)</div>
+  
+  <div class="replies-container" id="replies-47742554"></div>
+</div>
+<div class="comment" id="comment-47744102">
+  <div class="comment_head"><a href="/user/fr4nkr">fr4nkr</a> 2 days ago</div>
+  <div class="comment_text">Don&#x27;t take it personally OP, but taskbar-as-a-service is objectively one of the funniest things I have ever seen posted on this site.</div>
+  
+  <div class="replies-container" id="replies-47744102"></div>
+</div>
+<div class="comment" id="comment-47776774">
+  <div class="comment_head"><a href="/user/dobroezlo">dobroezlo</a> 5 hours ago</div>
+  <div class="comment_text">Any plans to have an option to keep icons for active window in the center of the screen? The only that stops me from adopting it right now</div>
+  
+  <div class="replies-container" id="replies-47776774"></div>
+</div>
+<div class="comment" id="comment-47764323">
+  <div class="comment_head"><a href="/user/sercanov">sercanov</a> 1 day ago</div>
+  <div class="comment_text">Already started trial and loving it so far but there&#x27;s one annoying bug&#x2F;QoL improvement. It should set active window not only by clicking to boring bar but also clicking on active application. For example, iTerm open over Arc. When I click to Arc, iTerm goes to back to I can still see iterm is active in the bar. I need to double click to minimize it and bring to foreground again.<p>Also a user feedback&#x2F;contact method in settings should be your first priority</div>
+  
+  <div class="replies-container" id="replies-47764323"></div>
+</div>
+<div class="comment" id="comment-47750228">
+  <div class="comment_head"><a href="/user/perplexa">perplexa</a> 2 days ago</div>
+  <div class="comment_text">Hi there! I really like this project and just bought a copy for myself.<p>It would be great to allow offline activation - as others have pointed out, using the application after the activation servers may go away is something that is useful for an application like this.<p>Also, the application viewer seems a bit clunky - please allow sorting pinned items via drag &amp; drop, or always sort them alphabetically. A mouse over highlight effect is also missing.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47750228,this)">1 replies</button>
+  <div class="replies-container" id="replies-47750228"></div>
+</div>
+<div class="comment" id="comment-47742716">
+  <div class="comment_head"><a href="/user/reacharavindh">reacharavindh</a> 2 days ago</div>
+  <div class="comment_text">+1 to amplify the voice that hates a subscription to a taskbar. If it was €15 one time I would’ve instantly bought it.</div>
+  
+  <div class="replies-container" id="replies-47742716"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47742200?all=1">Show all 298 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

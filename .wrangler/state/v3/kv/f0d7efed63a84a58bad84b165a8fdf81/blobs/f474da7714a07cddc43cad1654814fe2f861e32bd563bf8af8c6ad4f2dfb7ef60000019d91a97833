@@ -1,0 +1,1 @@
+{"by":"LuckyBuddy","id":47777545,"parent":47766370,"text":"Moving the tool schemas into a local library is a smart way to save on context costs. Most agents choke once you give them more than a dozen tools to choose from.","time":1776251876,"type":"comment"}

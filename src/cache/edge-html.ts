@@ -6,7 +6,26 @@ function hasEdgeCache(): boolean {
   return typeof caches !== "undefined" && typeof caches.default !== "undefined";
 }
 
-export async function matchEdgeHtml(url: string): Promise<Response | null> {
+function isLocalDevUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url);
+    return (
+      parsed.hostname === "localhost" ||
+      parsed.hostname === "127.0.0.1" ||
+      parsed.hostname === "::1"
+    );
+  } catch {
+    return false;
+  }
+}
+
+export async function matchEdgeHtml(
+  url: string,
+  disableCache = false,
+): Promise<Response | null> {
+  if (disableCache || isLocalDevUrl(url)) {
+    return null;
+  }
   if (hasEdgeCache()) {
     const hit = await caches.default.match(new Request(url, { method: "GET" }));
     return hit ?? null;
@@ -29,6 +48,10 @@ export async function respondHtmlCached(
       "Cache-Control": `public, max-age=${maxAge}, s-maxage=${edgeTtlSeconds}`,
     },
   });
+
+  if (c.env.DISABLE_HTML_CACHE || isLocalDevUrl(url)) {
+    return response;
+  }
 
   if (hasEdgeCache()) {
     const cacheRequest = new Request(url, { method: "GET" });

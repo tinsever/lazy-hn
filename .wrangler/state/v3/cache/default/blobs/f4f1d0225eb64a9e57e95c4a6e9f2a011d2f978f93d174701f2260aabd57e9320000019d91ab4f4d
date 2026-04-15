@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direct Win32 API, Weird-Shaped Windows, and Why They Mostly Disappeared | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://warped3.substack.com/p/direct-win32-api-weird-shaped-windows" rel="noopener noreferrer">Direct Win32 API, Weird-Shaped Windows, and Why They Mostly Disappeared</a> <span class="story-domain">(warped3.substack.com)</span></span>
+        <div class="item-meta">
+          135 points &bull; <a href="/user/birdculture">birdculture</a> &bull; 5 hours ago &bull; 73 comments
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47777105">
+  <div class="comment_head"><a href="/user/Sharlin">Sharlin</a> 4 hours ago</div>
+  <div class="comment_text">Yeah, weird-shaped windows are definitely not something that should make a comeback. Just because you <i>could</i> doesn&#x27;t mean you <i>should</i>.<p>&gt; Today, all Windows desktop apps look the same as they are the same; they are all built on crap React, Electron, electronbun, and Tauri browser wrappers that mimic the real Desktop apps.<p>Desktop apps <i>should</i> look the same because they should use the OS GUI framework; that has nothing to do with React and Electron. I can&#x27;t quite understand this argument; being webview based enables applications to look <i>different</i> from each other, like websites do, not similar. If they still do look similar, that&#x27;s a good thing.<p>&gt; The point was usually not usability. It was identity.<p>Yeah. And usability is sort of a <i>big deal</i>. Applications that implement their own widgets or color schemes or nonstandard shapes usually pay zero attention to usability or accessibility. They almost invariably lack all standard affordances and disregard the standard UX guidelines.<p>Also, ironically the applications with the most &quot;identity&quot; today tend to be control panels and other accessories by HW manufacturers bundled with device drivers, and they also happen to be the crappiest, most terrible bloatware that an average user is likely to encounter.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777105,this)">6 replies</button>
+  <div class="replies-container" id="replies-47777105"></div>
+</div>
+<div class="comment" id="comment-47778048">
+  <div class="comment_head"><a href="/user/ZoomZoomZoom">ZoomZoomZoom</a> 2 hours ago</div>
+  <div class="comment_text">I&#x27;m all for Win32, but those odd-shapes and custom skins were the precursors and the normalizing precedent for the current default mentality of &quot;visual identity = branding&quot; that&#x27;s been killing desktop computing experience for years and is one of the reasons we have to endure reacts, electrons and multitude of half-baked widget libraries that consist of things looking like no particular control but all feature blurry text rendering, flaky accessibility, negative information density and their own special sets of bugs.<p>Unless you&#x27;re building a Blender or an Ardour or, I don&#x27;t know, a trading platform or a game, an individualized GUI should be the last of your priorities.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778048,this)">2 replies</button>
+  <div class="replies-container" id="replies-47778048"></div>
+</div>
+<div class="comment" id="comment-47779198">
+  <div class="comment_head"><a href="/user/herf">herf</a> 53 minutes ago</div>
+  <div class="comment_text">I think HiDPI is another reason - these were from the &quot;96 DPI&quot; era where pixels looked the same on every screen. You can draw all your pixel art at 2x (or 3x) and scale it down at load time, but it&#x27;s not super easy.
+Also, some of the RAM usage of modern apps is the need for a full backing store for each window - in the &quot;true&quot; win32 days like Windows 95, XP, or Win7 in classic mode, you&#x27;d be drawing directly to the front buffer, with no extra RAM&#x2F;VRAM usage per pixel. Of course it flickered and looked bad, but it was fast and cheap.</div>
+  
+  <div class="replies-container" id="replies-47779198"></div>
+</div>
+<div class="comment" id="comment-47777227">
+  <div class="comment_head"><a href="/user/creshal">creshal</a> 4 hours ago</div>
+  <div class="comment_text">&gt; The point was usually not usability. It was identity.<p>And we&#x27;re not even getting usability out of it! Each of those bland react-angles is subtly inconsistent with the OS, with each other, and very often, <i>itself</i>. And in 6 months everything will move around again, for no reason other than to keep the responsible managers employed, without improving UX. And a11y is crying in a corner somewhere, forgotten.</div>
+  
+  <div class="replies-container" id="replies-47777227"></div>
+</div>
+<div class="comment" id="comment-47777774">
+  <div class="comment_head"><a href="/user/gyomu">gyomu</a> 3 hours ago</div>
+  <div class="comment_text">I think those observations get to the crux of the issue:<p>&gt; That is why weird shaped windows are easy to prototype and expensive to polish.<p>&gt; But there is an issue with Win32 API programming. And the truth is that custom windows mean doing everything yourself, controlling every Windows message, and that is fragile<p>Software used to be made by small teams (often of 1). Once released it could be expected to be stable for years.<p>The priorities have shifted to software that can be built and iterated on quickly, by large teams with high turnover. It’s not uncommon for popular software to get updated weekly, daily.<p>I suspect this is also why skeuomorphic design lost the evolutionary race - everything needs to be tweaked and aligned and optimized ad hoc. If you want to reorganize the interface, it means potentially recreating a lot of assets. Flat design is interchangeable and modular.<p>These trends will only get stronger with agentic software engineering - the incentives reward scale and speed.<p>This is also why we don’t really see large ornate hand carved wooden funiture anymore, it’s all flatpack particleboard now.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777774,this)">3 replies</button>
+  <div class="replies-container" id="replies-47777774"></div>
+</div>
+<div class="comment" id="comment-47780041">
+  <div class="comment_head"><a href="/user/bitwize">bitwize</a> 4 minutes ago</div>
+  <div class="comment_text">I remember some of the malarkey done with the X11 SHAPE extension. There was a program called xmascot. You could give it an xpm of a character or use one of the presets—typically a cute animal or some sort or a chibi anime waifu. It would show a dangling figurine of this character right on your desktop, autogenerating a few frames of rotation so it could swing from side to side.<p>Of course X11 is four olds, and there&#x27;s probably some security justification for not having nonrectangular windows in Wayland, and&#x2F;or &quot;that&#x27;s a compositor implementation detail and outside the scope of the Wayland protocol&quot;.</div>
+  
+  <div class="replies-container" id="replies-47780041"></div>
+</div>
+<div class="comment" id="comment-47779667">
+  <div class="comment_head"><a href="/user/DoctorOW">DoctorOW</a> 24 minutes ago</div>
+  <div class="comment_text">Here&#x27;s the thing, you absolutely can do this in exactly the same way: Make the background transparent and draw within the bounds. You can argue about whether or not you <i>should</i>, but that is the argument. There&#x27;s no technical limitation.<p><a href="https:&#x2F;&#x2F;www.electronjs.org&#x2F;docs&#x2F;latest&#x2F;tutorial&#x2F;custom-window-styles" rel="nofollow">https:&#x2F;&#x2F;www.electronjs.org&#x2F;docs&#x2F;latest&#x2F;tutorial&#x2F;custom-windo...</a></div>
+  
+  <div class="replies-container" id="replies-47779667"></div>
+</div>
+<div class="comment" id="comment-47778286">
+  <div class="comment_head"><a href="/user/Aardwolf">Aardwolf</a> 2 hours ago</div>
+  <div class="comment_text">&gt; A freaking notepad app takes almost 50mb in memory when equivalent NOTEPAD done in pure Win32 C takes 1.8mb of memory.<p>1.8MB? I don&#x27;t know how much it took on our 386 computer with 4MB RAM and windows 3.11, but hopefully not that much</div>
+  
+  <div class="replies-container" id="replies-47778286"></div>
+</div>
+<div class="comment" id="comment-47777043">
+  <div class="comment_head"><a href="/user/tdeck">tdeck</a> 4 hours ago</div>
+  <div class="comment_text">&gt; The point was usually not usability. It was identity.<p>Is it bad that when I read that I immediately thought &quot;this was written by an LLM.&quot;</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777043,this)">3 replies</button>
+  <div class="replies-container" id="replies-47777043"></div>
+</div>
+<div class="comment" id="comment-47778434">
+  <div class="comment_head"><a href="/user/PaulHoule">PaulHoule</a> 1 hour ago</div>
+  <div class="comment_text">I remember in the late 1990s Windows applications,  particularly the little weird ones like the app you would use to work a (flatbed) scanner,  often tried hard to have unique themed appearances.  The industry seemed to lose interest by 2005 or so.  I got a job as a Silverlight programmer not long after that which got me to learn WPF and WPF had facilities for theming that seemed capable and well thought out (would be easy,  for instance,  to turn pill buttons diagonal) but these hardly ever got used,  I think the industry had moved on.<p>Lately I have had to run Office &#x27;98 which tries to take over your desktop with Clippy and other things and it still tries to do it to Windows 11.  The borderless windows from Office &#x27;98 don&#x27;t quite look right now but it all works.</div>
+  
+  <div class="replies-container" id="replies-47778434"></div>
+</div>
+<div class="comment" id="comment-47777736">
+  <div class="comment_head"><a href="/user/donatj">donatj</a> 3 hours ago</div>
+  <div class="comment_text">I am reminded of how the CD burning app Disco for Mac would actually smoke while your disc was burning. Standard looking Window but with semitransparent smoke billowing out the top. If I recall, Steve Jobs showed it off on stage and loved it.</div>
+  
+  <div class="replies-container" id="replies-47777736"></div>
+</div>
+<div class="comment" id="comment-47778514">
+  <div class="comment_head"><a href="/user/rbanffy">rbanffy</a> 1 hour ago</div>
+  <div class="comment_text">&gt; Desktop UI culture shifted from “look at this crazy skin” to “work reliably and get out of my way.”<p>I miss the wobbly windows I had in Linux when we started playing with Compiz.<p>Or neko on my Sun machines.<p>As for weird-shaped windows, I think it is about ergonomics. A different shape requires more thinking to operate. Form should follow function, not the other way around - if the odd shape serves a purpose, then it makes sense. If it&#x27;s just to show off, or to make the app look different, then it becomes a usability issue.</div>
+  
+  <div class="replies-container" id="replies-47778514"></div>
+</div>
+<div class="comment" id="comment-47777751">
+  <div class="comment_head"><a href="/user/okanat">okanat</a> 3 hours ago</div>
+  <div class="comment_text">&gt;  freaking memory is 77% full when freaking Windows 11 starts up.<p>Unused memory is wasted memory. 77% is basically caches + private process memory + shared memory. Unless you are comparing by the private committed working set, you usually have no idea of the actual usage. .Net apps and browsers often allocate overcommitted memory to avoid making system calls.<p>I get it, using browsers for ToDo apps is slow, however measuring their impact is harder than you think. At the same time the best x-platform UI framework is the browser. Qt comes next but it lacks man-decade amount of fixes&#x2F;polishing to match native font support and text rendering, media handling, accessibility support, hw acceleration and memory pressure behaviors of Skia and Chromium.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777751,this)">2 replies</button>
+  <div class="replies-container" id="replies-47777751"></div>
+</div>
+<div class="comment" id="comment-47778687">
+  <div class="comment_head"><a href="/user/rickcarlino">rickcarlino</a> 1 hour ago</div>
+  <div class="comment_text">Sonique media player, Trillian messenger and NeoPlanet web browser. I was there, man. Before flat UI and sensible color schemes took hold. For a moment, it was pretty wild.<p><a href="https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Trillian_(software)" rel="nofollow">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Trillian_(software)</a><p><a href="https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;NeoPlanet" rel="nofollow">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;NeoPlanet</a><p><a href="https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Sonique_(media_player)" rel="nofollow">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Sonique_(media_player)</a></div>
+  
+  <div class="replies-container" id="replies-47778687"></div>
+</div>
+<div class="comment" id="comment-47778261">
+  <div class="comment_head"><a href="/user/51Cards">51Cards</a> 2 hours ago</div>
+  <div class="comment_text">I used to write a lot of native Windows corporate software in the 90&#x27;s and 2000&#x27;s and my standard login window was a floating draggable oval.   Nothing else was oddly shaped but I did get a lot of comments on the oval login windows.  It was a bit about being unique, marking my &quot;style&quot;, and just because I could. I will add though in the 90&#x27;s it did make me nuts when entire applications were wildly shaped and you had to figure out how to use them.<p>Editing this to add: I really miss that level of coding and working with Win32. I get that the world has moved on and HTML or some runtime flavour of it has taken over but I too lament the los of true control I once had.  I hate that my stack can be broken because some runtime was updated out of my control or the crazy load times of simple projects. I know many today would say it was messy and problematic (and it could be) but it&#x27;s definitely a lost art form.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778261,this)">1 replies</button>
+  <div class="replies-container" id="replies-47778261"></div>
+</div>
+<div class="comment" id="comment-47779085">
+  <div class="comment_head"><a href="/user/paddor">paddor</a> 1 hour ago</div>
+  <div class="comment_text">I agree on the memory usage of electron apps though. Been using Slack for 10 years now and it has never been slower. A freshly started Slack app on my macOS takes up nearly 1GB. It&#x27;s nuts imho.</div>
+  
+  <div class="replies-container" id="replies-47779085"></div>
+</div>
+<div class="comment" id="comment-47779142">
+  <div class="comment_head"><a href="/user/ecshafer">ecshafer</a> 57 minutes ago</div>
+  <div class="comment_text">I wish Skeuomorphism returned. I like that these apps were cool and distinct. They were also running in way less memory than electron apps.</div>
+  
+  <div class="replies-container" id="replies-47779142"></div>
+</div>
+<div class="comment" id="comment-47778004">
+  <div class="comment_head"><a href="/user/mark-r">mark-r</a> 2 hours ago</div>
+  <div class="comment_text">I worked on Windows apps for many years.  The problem is that the Win32 interface only really gets you 90% control.  The hardest thing I&#x27;ve ever done was when our product manager decided that color theming our app was an essential new feature.  That&#x27;s when you find out that certain Windows features like scroll bars under certain conditions bypass the usual message loop completely, because they know they can get away with it.  The part I remember most vividly was recreating the lowly MessageBox from scratch, because none of the internals of the system supplied one were exposed in a way that you could modify them.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778004,this)">2 replies</button>
+  <div class="replies-container" id="replies-47778004"></div>
+</div>
+<div class="comment" id="comment-47778108">
+  <div class="comment_head"><a href="/user/ihuk">ihuk</a> 2 hours ago</div>
+  <div class="comment_text">I believe I went to high school with the author, so this took me down memory lane. I wrote an FTP client back in 1999 using only the Win32 API and C. Good times.</div>
+  
+  <div class="replies-container" id="replies-47778108"></div>
+</div>
+<div class="comment" id="comment-47777724">
+  <div class="comment_head"><a href="/user/itmitica">itmitica</a> 3 hours ago</div>
+  <div class="comment_text">Talking about choice. The article is presented in non-avoidable dark mode. Enough already! Say it with me: dark mode does not directly reduces the brightness, which should be your main concern, it only masks the brightness, which is BAD!</div>
+  
+  <div class="replies-container" id="replies-47777724"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47776667?all=1">Show all 73 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

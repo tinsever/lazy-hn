@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask HN: What are you building that&#x27;s not AI related? | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-text {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  line-height: 1.55;
+  white-space: normal;
+}
+.item-text p { margin-bottom: 0.8rem; }
+.item-text a { text-decoration: underline; }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title">Ask HN: What are you building that&#x27;s not AI related?</span>
+        <div class="item-meta">
+          152 points &bull; <a href="/user/meander_water">meander_water</a> &bull; 6 days ago &bull; 221 comments
+        </div>
+        <div class="item-text">I don&#x27;t have anything against AI, but HN (and everywhere else) seems to be drowning in AI atm.<p>Seems like every man and his dog is building an AI agent harness. And power to you (and your dog) if that&#x27;s you.<p>But it would be refreshing to hear about some non AI related projects people are working on.</div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47700460">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47701105">
+  <div class="comment_head"><a href="/user/paulmooreparks">paulmooreparks</a> 6 days ago</div>
+  <div class="comment_text">I&#x27;m building my own cloud (I <i>actually</i> typed claude instead of cloud there... wow). There&#x27;s no IaaS or PaaS; it&#x27;s much simpler. I wanted my own way of connecting to machines and the TCP services on those machines without having to install Tailscale (not allowed on a locked-down corporate PC) or pay for Azure or AWS or GCP or even Hetzner or Linode. I&#x27;ve got 10gbps fibre and a huge workstation at home, and I&#x27;ve got lots of laptops and VMs and other outboard stuff that I want to work in concert with that workstation, so I started building something I call Tela (Filipino for fabric; I was sitting in Ninoy Aquino International Airport waiting for a flight when I had the idea, and it&#x27;s implemented as a network fabric).<p><a href="https:&#x2F;&#x2F;github.com&#x2F;paulmooreparks&#x2F;tela" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;paulmooreparks&#x2F;tela</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47701105,this)">2 replies</button>
+  <div class="replies-container" id="replies-47701105"></div>
+</div>
+<div class="comment" id="comment-47701095">
+  <div class="comment_head"><a href="/user/skor">skor</a> 6 days ago</div>
+  <div class="comment_text">A programming language to hack music, and anything else really
+<a href="https:&#x2F;&#x2F;github.com&#x2F;audion-lang&#x2F;audion" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;audion-lang&#x2F;audion</a><p>The idea came after I finished a permanent piece for a museum using MaxMsp and python. I always had this thought in the back of my mind that &quot;I could express this so much easier in a few lines of code..&quot;<p>here&#x27;s the language spec: <a href="https:&#x2F;&#x2F;github.com&#x2F;audion-lang&#x2F;audion&#x2F;blob&#x2F;main&#x2F;docs&#x2F;LANGUAGE.md" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;audion-lang&#x2F;audion&#x2F;blob&#x2F;main&#x2F;docs&#x2F;LANGUAG...</a><p>I really liked how objects came out, I don&#x27;t think it needs any more since I can do object composition.<p>There are some nice functions to generate rhythms and melodies with combinatorics, see src&#x2F;sequences.rs and melodies.rs<p>Its a WIP but you can use it now to create music with whatever you want: hardware&#x2F;daws&#x2F;supercollider<p>supercollider is tightly integrated but not required. 
+I havent had time to develop userland libraries yet but I&#x27;m working on it</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47701095,this)">2 replies</button>
+  <div class="replies-container" id="replies-47701095"></div>
+</div>
+<div class="comment" id="comment-47700973">
+  <div class="comment_head"><a href="/user/kunley">kunley</a> 6 days ago</div>
+  <div class="comment_text">Working on an audio streaming platform powering an indy internet radio. Looks like Icecast &amp; friends show its age and a similar product can be easily built with the functionality cast down to simply robust streaming &amp; handling &quot;timed playlists&quot;. I enjoy every bit of knowing exactly what happens in the code. It&#x27;s not open source atm, but will be. It&#x27;s in Go, is a pleasure to write and the deployment takes minimal amount of resources.<p>Other project is to continue a bit stalled progress of a configuration language BCL - add functions, more structures and fix some hidden scoping issues. Making languages is an endless fun.
+<a href="https:&#x2F;&#x2F;github.com&#x2F;wkhere&#x2F;bcl" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;wkhere&#x2F;bcl</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47700973,this)">1 replies</button>
+  <div class="replies-container" id="replies-47700973"></div>
+</div>
+<div class="comment" id="comment-47768320">
+  <div class="comment_head"><a href="/user/edelind">edelind</a> 21 hours ago</div>
+  <div class="comment_text">A new habit tracker, which aims to cover any possible need a user can have <a href="https:&#x2F;&#x2F;tapastracker.app&#x2F;" rel="nofollow">https:&#x2F;&#x2F;tapastracker.app&#x2F;</a></div>
+  
+  <div class="replies-container" id="replies-47768320"></div>
+</div>
+<div class="comment" id="comment-47757879">
+  <div class="comment_head"><a href="/user/danish00111">danish00111</a> 1 day ago</div>
+  <div class="comment_text">Building Questly — story-driven practice for real-world conversations which you play like a game. The core insight: people know what to do in hard situations. They freeze because they&#x27;ve never practiced the actual moment. Questly is the reps. <a href="https:&#x2F;&#x2F;questly.academy&#x2F;" rel="nofollow">https:&#x2F;&#x2F;questly.academy&#x2F;</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47757879,this)">1 replies</button>
+  <div class="replies-container" id="replies-47757879"></div>
+</div>
+<div class="comment" id="comment-47701164">
+  <div class="comment_head"><a href="/user/adrianhon">adrianhon</a> 6 days ago</div>
+  <div class="comment_text">My friend and I are building Strandfall, a highly physical outdoor larp (live action role playing game) that uses custom spatial computers: <a href="https:&#x2F;&#x2F;strandfall.com" rel="nofollow">https:&#x2F;&#x2F;strandfall.com</a><p>Players are survivors of a global disaster that has unleashed mysterious, deadly storms. For three hours, they investigate the origin of the storms and make fateful decisions about their future as individuals and as a community.<p>We received Immersive Arts funding, which means we can run it in Edinburgh later this year. Here&#x27;s an excerpt from our 2025 grant application about exactly what those are:<p>--<p>Our “storm sensors” are novel spatial computers designed for outdoor usage over long distances. They will house ePaper displays, LoRa (long range) radios, accelerometers, gyroscopes, and GPS chips in a 3D-printed enclosure to provide a low-tech way to augment the reality of the park. These computers will be cheaper, more rugged, longer-lived, and more capable than smartphones, deployable to locations with zero cellular service and no battery charging options.<p>The sensors will be mounted on top of camera tripods for deployment. Runners will carry them through the park, then position and aim them in the correct direction, as co-ordinated by “operators” using walkie talkies. This will let players feel like they are really setting up important equipment, scanning historical sites for clues (like surveyors), and establishing laser communication links. Lacking colourful touchscreens, the sensors will be less distracting for runners, helping them focus on their surroundings. Essentially, they are a highly tactile and deeply realistic way of immersing players in a post-apocalyptic setting, since such devices – not smartphones – are the most likely to be used.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47701164,this)">1 replies</button>
+  <div class="replies-container" id="replies-47701164"></div>
+</div>
+<div class="comment" id="comment-47701139">
+  <div class="comment_head"><a href="/user/boricj">boricj</a> 6 days ago</div>
+  <div class="comment_text">I&#x27;m working on ghidra-delinker-extension [1], which is a relocatable object file exporter for Ghidra.<p>The algorithms needed to slice up a Ghidra database into relocatable sections, and especially to recover relocations through analysis are really tricky to get right. My MIPS analyzer in particular is an eldritch horror due to several factors combining into a huge mess (branch delay slots, split HI16&#x2F;LO16 relocations, code flow analysis, register graph dependency...).<p>The entire endeavor requires an unusual level of exacting precision to work and will produce some really exotic undefined behavior when it fails, but when it works you feel like a mechanic in a Mad Max universe, stripping programs for parts and building unholy chimeras from them, some examples I&#x27;ve linked in the readme. It has also led to a poster presentation to the SURE workshop at ACM CCS 2025 in Taiwan as a hobbyist, an absolutely insane story.<p>[1] <a href="https:&#x2F;&#x2F;github.com&#x2F;boricj&#x2F;ghidra-delinker-extension" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;boricj&#x2F;ghidra-delinker-extension</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47701139,this)">1 replies</button>
+  <div class="replies-container" id="replies-47701139"></div>
+</div>
+<div class="comment" id="comment-47701193">
+  <div class="comment_head"><a href="/user/ragebol">ragebol</a> 6 days ago</div>
+  <div class="comment_text">Building a bouldering wall at home, for the kids.<p>A bunch of square panels with a grid pattern to mount hold on, with the panels hanging on french cleats (with a locking system, #TODO) so the panels are easily removable so I can hang something like planters on the wall as well with the same french cleats.<p>No AI, a bit of computers to draw things out in CAD, but otherwise just manual building stuff.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47701193,this)">1 replies</button>
+  <div class="replies-container" id="replies-47701193"></div>
+</div>
+<div class="comment" id="comment-47700865">
+  <div class="comment_head"><a href="/user/yuppiepuppie">yuppiepuppie</a> 6 days ago</div>
+  <div class="comment_text">Ive been working on the HN Arcade :) <a href="https:&#x2F;&#x2F;hnarcade.com" rel="nofollow">https:&#x2F;&#x2F;hnarcade.com</a><p>Its always fun to see what games people are building - and some of the lesser known ones are amazing!</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47700865,this)">2 replies</button>
+  <div class="replies-container" id="replies-47700865"></div>
+</div>
+<div class="comment" id="comment-47700855">
+  <div class="comment_head"><a href="/user/recursivedoubts">recursivedoubts</a> 6 days ago</div>
+  <div class="comment_text">I am working towards a big new release of my web scripting language, hyperscript:<p><a href="https:&#x2F;&#x2F;hyperscript.org" rel="nofollow">https:&#x2F;&#x2F;hyperscript.org</a><p>Hoping to release next Monday</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47700855,this)">1 replies</button>
+  <div class="replies-container" id="replies-47700855"></div>
+</div>
+<div class="comment" id="comment-47705865">
+  <div class="comment_head"><a href="/user/the__alchemist">the__alchemist</a> 5 days ago</div>
+  <div class="comment_text">I&#x27;m building OSS structural biology libraries in Rust (+ CUDA), and a GUI application that ties them together. It is kind of an integration of functionality traditionally in separate tools: Viewing, editing, therapeutic properties + pharmacokinetics, molecular dynamics etc.</div>
+  
+  <div class="replies-container" id="replies-47705865"></div>
+</div>
+<div class="comment" id="comment-47772658">
+  <div class="comment_head"><a href="/user/virtyaluk">virtyaluk</a> 15 hours ago</div>
+  <div class="comment_text">Building ghostly - a fast, modular, and configurable linter with built-in LSP support (already faster and more robust than golangci-linter). Also building Kartiteka - an inventory management system for the home with document support, etc. Both are private for now. Hopefully will release both this year.</div>
+  
+  <div class="replies-container" id="replies-47772658"></div>
+</div>
+<div class="comment" id="comment-47704346">
+  <div class="comment_head"><a href="/user/DamnInteresting">DamnInteresting</a> 6 days ago</div>
+  <div class="comment_text">I&#x27;m working on the next update of Omiword[1], an ongoing daily word game previously discussed on HN[2]. I&#x27;m building an alternate stand-alone app version with access to all of the archived puzzles. It&#x27;s slow going since it&#x27;s just one of many side-projects I like to work on, but that&#x27;s the tinkerer&#x27;s dilemma.<p>Yes, I know that [insert LLM here] could do a lot of that conversion for me in mere minutes. No thank you. I&#x27;m doing it, in part, for the doing.<p>[1] <a href="https:&#x2F;&#x2F;omiword.com" rel="nofollow">https:&#x2F;&#x2F;omiword.com</a><p>[2] <a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=43654350">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=43654350</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47704346,this)">1 replies</button>
+  <div class="replies-container" id="replies-47704346"></div>
+</div>
+<div class="comment" id="comment-47767486">
+  <div class="comment_head"><a href="/user/exitplanetary">exitplanetary</a> 23 hours ago</div>
+  <div class="comment_text">Well, repeating the previous answer
+&gt; Game Boy app to explore 4-bit synthesis and &quot;modular&quot; sequencing, smth similar to <a href="https:&#x2F;&#x2F;roberthenke.com&#x2F;technology&#x2F;inside8032av.html" rel="nofollow">https:&#x2F;&#x2F;roberthenke.com&#x2F;technology&#x2F;inside8032av.html</a> but for Game Boy instead of Commodore PC</div>
+  
+  <div class="replies-container" id="replies-47767486"></div>
+</div>
+<div class="comment" id="comment-47707120">
+  <div class="comment_head"><a href="/user/flockaroo">flockaroo</a> 5 days ago</div>
+  <div class="comment_text">&quot;Cars on Mars&quot; ...a scifi racing&#x2F;shootout&#x2F;exploring game with portals into stylized worlds - all content is purely made from math+code
+<a href="https:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;4269050&#x2F;Cars_on_Mars&#x2F;" rel="nofollow">https:&#x2F;&#x2F;store.steampowered.com&#x2F;app&#x2F;4269050&#x2F;Cars_on_Mars&#x2F;</a></div>
+  
+  <div class="replies-container" id="replies-47707120"></div>
+</div>
+<div class="comment" id="comment-47705344">
+  <div class="comment_head"><a href="/user/joenot443">joenot443</a> 5 days ago</div>
+  <div class="comment_text">I&#x27;m still working on Nottawa (<a href="https:&#x2F;&#x2F;nottawa.app" rel="nofollow">https:&#x2F;&#x2F;nottawa.app</a>) - free live audioreactive visuals for everyone.<p>It&#x27;s a node based workstation for generating live visuals using shaders, webcams, local files, and more. 100+ effects and source types.<p>Nottawa&#x27;s aimed somewhere between the Resolume and TouchDesigner market. VJs and musicians who are interested in live visuals but don&#x27;t have the time or funds to dive into a pro setup.<p>It&#x27;s built in C++ with OpenFrameworks, ImGui, BTrack, and more. Right now I&#x27;m doing a front-end rewrite in SwiftUI which bridges back to C++ while keeping all the rendering in OpenGL.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47705344,this)">1 replies</button>
+  <div class="replies-container" id="replies-47705344"></div>
+</div>
+<div class="comment" id="comment-47701212">
+  <div class="comment_head"><a href="/user/flossly">flossly</a> 6 days ago</div>
+  <div class="comment_text">JDBC does not allow pipelining (a Postgres only feature).<p>It can reduce the number of db round-trips a lot, especially when using Supabase+RLS (or other systems that require frequent setting of configuration values that are basically fire-and-forget).<p>Meet Bpdbi, a library with first-class pipelining, which provides a Postgres db driver (that&#x27;s binary only, as the legacy text-based protocol is no longer needed, it just takes up space) and exposes an API that&#x27;s more close to Jdbi&#x27;s that to JDBC&#x27;s (developer friendly).<p><a href="https:&#x2F;&#x2F;github.com&#x2F;bpdbi" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;bpdbi</a><p>It has an extensive benchmark that shows it&#x27;s on par or faster compared to other db connectivity stacks.</div>
+  
+  <div class="replies-container" id="replies-47701212"></div>
+</div>
+<div class="comment" id="comment-47701125">
+  <div class="comment_head"><a href="/user/zc4242">zc4242</a> 6 days ago</div>
+  <div class="comment_text">I&#x27;m building a good intermittent fasting app for iOS using SwiftUI and native Apple APIs for the most &quot;Apple&quot; experience possible. The app is 100% free and without ads.<p><a href="https:&#x2F;&#x2F;apps.apple.com&#x2F;si&#x2F;app&#x2F;fast-slow-fasting-tracker&#x2F;id6749188352">https:&#x2F;&#x2F;apps.apple.com&#x2F;si&#x2F;app&#x2F;fast-slow-fasting-tracker&#x2F;id67...</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47701125,this)">1 replies</button>
+  <div class="replies-container" id="replies-47701125"></div>
+</div>
+<div class="comment" id="comment-47701602">
+  <div class="comment_head"><a href="/user/geekysquirrel">geekysquirrel</a> 6 days ago</div>
+  <div class="comment_text">So great to see how much stuff there is going on outside of AI!<p>I&#x27;ve been working (on and off for over a decade) on a way to manage my unwieldy photo and video collection. I experimented with so many tools before but ultimately nothing ticked all my boxes so I wrote my own. Admittedly lots of niche stuff like proper support for UTC time, stereo photos and partial dates and things like 100% offline face detection and custom tag hierarchies and querying without a database. Each time I add a new feature I&#x27;m having a blast :)<p><a href="https:&#x2F;&#x2F;gitlab.com&#x2F;geekysquirrel&#x2F;memo2" rel="nofollow">https:&#x2F;&#x2F;gitlab.com&#x2F;geekysquirrel&#x2F;memo2</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47701602,this)">1 replies</button>
+  <div class="replies-container" id="replies-47701602"></div>
+</div>
+<div class="comment" id="comment-47708399">
+  <div class="comment_head"><a href="/user/ostefani">ostefani</a> 5 days ago</div>
+  <div class="comment_text">I am working on a network scanner in Go. No AI there, just probes and packets<p><a href="https:&#x2F;&#x2F;github.com&#x2F;ostefani&#x2F;subnetlens" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;ostefani&#x2F;subnetlens</a></div>
+  
+  <div class="replies-container" id="replies-47708399"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47700460?all=1">Show all 221 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

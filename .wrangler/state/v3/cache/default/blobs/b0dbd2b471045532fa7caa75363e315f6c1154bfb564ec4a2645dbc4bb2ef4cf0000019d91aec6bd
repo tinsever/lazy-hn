@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tell HN: GitHub might have been leaking your webhook secrets. Check your emails. | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-text {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  line-height: 1.55;
+  white-space: normal;
+}
+.item-text p { margin-bottom: 0.8rem; }
+.item-text a { text-decoration: underline; }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title">Tell HN: GitHub might have been leaking your webhook secrets. Check your emails.</span>
+        <div class="item-meta">
+          33 points &bull; <a href="/user/ssiddharth">ssiddharth</a> &bull; 22 hours ago &bull; 12 comments
+        </div>
+        <div class="item-text">Got an email from Github a few minutes back asking me to rotate my webhook secrets, the relevant portions of it below.<p><i>We&#x27;re writing to let you know that between September 2025 and January 2026, webhook secrets for webhooks you are responsible for were inadvertently included in an HTTP header on webhook deliveries. This means that any system receiving webhook payloads during this window could have logged the webhook secret from the request headers. Webhook deliveries are encrypted in transit via TLS, so the header containing the secret was only accessible to the receiving endpoint in a base64-encoded format. We have no evidence to suggest your secrets were intercepted. This issue was fixed on January 26, 2026. Please read on for more information.</i><p><i>User privacy and security are essential for maintaining trust, and we want to remain as transparent as possible about events like these. GitHub itself did not experience a compromise or data breach as a result of this event.</i><p><i>What happened?</i><p><i>On January 26, 2026, GitHub identified a bug in a new version of the webhook delivery platform where webhook secrets were included in an `X-Github-Encoded-Secret` HTTP header sent with webhook payloads. This header was not intended to be part of the delivery and made the webhook secret available to the receiving endpoint in a base64-encoded format. Webhook secrets are used to verify that deliveries are genuinely from GitHub, and should only be known to GitHub and the webhook owner.</i><p><i>The bug was limited to only a subset of webhook deliveries that were feature flagged to use this new version of the webhooks platform. The bug was present between September 11, 2025, and December 10, 2025, and briefly on January 5, 2026. The bug was fixed on January 26, 2026.</i><p><i>What information was involved?</i><p><i>The webhook secret for each affected webhook was included in HTTP request headers during the window that the bug was present. The webhook payload content itself was delivered normally and was not additionally affected. No other credentials or tokens were affected. Webhook deliveries are encrypted in transit via TLS, so the header containing the secret was only accessible to the receiving endpoint.</i><p><i>If the receiving system logged HTTP request headers, the webhook secret may be present in those logs. The webhook secret is used to compute the `X-Hub-Signature-256` HMAC signature on deliveries — if compromised, an attacker who knows the secret could forge webhook payloads to make them appear to come from GitHub.</i></div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47767928">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47776448">
+  <div class="comment_head"><a href="/user/johnlbevan2">johnlbevan2</a> 6 hours ago</div>
+  <div class="comment_text">Assuming I&#x27;ve understood correctly...<p>Checking the listed impacted web hooks I noticed that no repo&#x27;s listed twice, even though some have multiple hooks defined... That makes me think the report may have a bug.<p>Also, many of the listed hooks show as `This hook has never been triggered`; which if correct means it wouldn&#x27;t have had an issue as the compromised payload&#x27;s never been sent to it.<p>I&#x27;ll write a powershell script (well, AI will write it and then I&#x27;ll tweak) to help check which webhooks have been called in this time window (or at least, say they were most recently triggered after the issue first began) to help get a more accurate report of what&#x27;s concerning.  If that proves useful, I&#x27;ll share here.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47776448,this)">2 replies</button>
+  <div class="replies-container" id="replies-47776448"></div>
+</div>
+<div class="comment" id="comment-47778441">
+  <div class="comment_head"><a href="/user/thinkindie">thinkindie</a> 2 hours ago</div>
+  <div class="comment_text">I don&#x27;t understand how this story is not in the front page yet.</div>
+  
+  <div class="replies-container" id="replies-47778441"></div>
+</div>
+<div class="comment" id="comment-47768050">
+  <div class="comment_head"><a href="/user/esher">esher</a> 22 hours ago</div>
+  <div class="comment_text">Got that too. My first reaction: Go to HN to understand what&#x27;s going on. Where are the comments?</div>
+  
+  <div class="replies-container" id="replies-47768050"></div>
+</div>
+<div class="comment" id="comment-47777022">
+  <div class="comment_head"><a href="/user/s1mn">s1mn</a> 4 hours ago</div>
+  <div class="comment_text">Waiting 3 months to disclose this is suboptimal.</div>
+  
+  <div class="replies-container" id="replies-47777022"></div>
+</div>
+<div class="comment" id="comment-47768387">
+  <div class="comment_head"><a href="/user/sph">sph</a> 21 hours ago</div>
+  <div class="comment_text">&gt; webhook secrets for webhooks you are responsible for were inadvertently included in an HTTP header on webhook deliveries<p>LOL how does this even happen?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768387,this)">1 replies</button>
+  <div class="replies-container" id="replies-47768387"></div>
+</div>
+<div class="comment" id="comment-47771547">
+  <div class="comment_head"><a href="/user/sathomasga">sathomasga</a> 17 hours ago</div>
+  <div class="comment_text">Closing the barn door well after the horses are long gone.</div>
+  
+  <div class="replies-container" id="replies-47771547"></div>
+</div>
+<div class="comment" id="comment-47774053">
+  <div class="comment_head"><a href="/user/monkaiju">monkaiju</a> 12 hours ago</div>
+  <div class="comment_text">How is this not a bigger deal on hn? Was expecting a lot more conversation</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47774053,this)">1 replies</button>
+  <div class="replies-container" id="replies-47774053"></div>
+</div>
+<div class="comment" id="comment-47768654">
+  <div class="comment_head"><a href="/user/suralind">suralind</a> 21 hours ago</div>
+  <div class="comment_text">How come it took them so much time to send this notification? I&#x27;m so fed up with their bs.</div>
+  
+  <div class="replies-container" id="replies-47768654"></div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 16 hours ago</div>
+</div>
+      </div>
+      
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

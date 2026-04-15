@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>best | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.story-list { list-style: none; }
+.story-item { display: flex; align-items: baseline; padding: 0.3rem 0; gap: 0.5rem; }
+.story-rank { color: var(--muted); min-width: 3rem; text-align: right; font-size: 1.3rem; }
+.story-info { flex: 1; }
+.story-title a { font-size: 1.4rem; }
+.story-domain { color: var(--muted); font-size: 1.1rem; margin-left: 0.3rem; }
+.story-meta { font-size: 1.1rem; color: var(--muted); }
+.story-meta a { color: var(--muted); }
+.story-meta a:hover { text-decoration: underline; }
+.story-comments-link { color: var(--muted); font-size: 1.1rem; }
+.pagination { padding: 1rem 0; font-size: 1.3rem; }
+.pagination a { margin-right: 1rem; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.comment-tree { margin-left: 2rem; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.user-page { max-width: 85vw; margin: 0 auto; }
+.user-header h1 { font-size: 1.6rem; }
+.user-detail { font-size: 1.3rem; color: var(--muted); margin: 0.3rem 0; }
+.user-about { margin: 0.5rem 0; padding: 0.5rem; background: var(--comment-bg); border: 1px solid var(--border); }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <ol class="story-list">
+      <li class="story-item">
+  <span class="story-rank">1.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them/" rel="noopener noreferrer">Someone bought 30 WordPress plugins and planted a backdoor in all of them</a> <span class="story-domain">(anchor.host)</span></div>
+    <div class="story-meta">1169 points &bull; <a href="/user/speckx">speckx</a> &bull; 1 day ago &bull; <a href="/item/47755629" class="story-comments-link">327&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">2.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.blackmagicdesign.com/products/davinciresolve/photo" rel="noopener noreferrer">DaVinci Resolve – Photo</a> <span class="story-domain">(blackmagicdesign.com)</span></div>
+    <div class="story-meta">1111 points &bull; <a href="/user/thebiblelover7">thebiblelover7</a> &bull; 1 day ago &bull; <a href="/item/47760529" class="story-comments-link">284&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">3.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://rareese.com/posts/backblaze/" rel="noopener noreferrer">Backblaze has stopped backing up OneDrive and Dropbox folders and maybe others</a> <span class="story-domain">(rareese.com)</span></div>
+    <div class="story-meta">1081 points &bull; <a href="/user/rrreese">rrreese</a> &bull; 1 day ago &bull; <a href="/item/47762864" class="story-comments-link">641&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">4.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://developers.google.com/search/blog/2026/04/back-button-hijacking" rel="noopener noreferrer">A new spam policy for “back button hijacking”</a> <span class="story-domain">(developers.google.com)</span></div>
+    <div class="story-meta">888 points &bull; <a href="/user/zdw">zdw</a> &bull; 1 day ago &bull; <a href="/item/47760764" class="story-comments-link">499&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">5.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://github.github.com/gh-stack/" rel="noopener noreferrer">GitHub Stacked PRs</a> <span class="story-domain">(github.github.com)</span></div>
+    <div class="story-meta">880 points &bull; <a href="/user/ezekg">ezekg</a> &bull; 1 day ago &bull; <a href="/item/47757495" class="story-comments-link">508&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">6.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://stopflock.com" rel="noopener noreferrer">Stop Flock</a> <span class="story-domain">(stopflock.com)</span></div>
+    <div class="story-meta">854 points &bull; <a href="/user/cdrnsf">cdrnsf</a> &bull; 17 hours ago &bull; <a href="/item/47772012" class="story-comments-link">223&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">7.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="/item/47769796">Tell HN: Fiverr left customer files public and searchable</a></div>
+    <div class="story-meta">765 points &bull; <a href="/user/morpheuskafka">morpheuskafka</a> &bull; 20 hours ago &bull; <a href="/item/47769796" class="story-comments-link">209&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">8.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://code.claude.com/docs/en/routines" rel="noopener noreferrer">Claude Code Routines</a> <span class="story-domain">(code.claude.com)</span></div>
+    <div class="story-meta">682 points &bull; <a href="/user/matthieu_bl">matthieu_bl</a> &bull; 22 hours ago &bull; <a href="/item/47768133" class="story-comments-link">380&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">9.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://techcrunch.com/2026/04/13/thousands-of-rare-concert-recordings-are-landing-on-the-internet-archive-listen-now/" rel="noopener noreferrer">Rare concert recordings are landing on the Internet Archive</a> <span class="story-domain">(techcrunch.com)</span></div>
+    <div class="story-meta">680 points &bull; <a href="/user/jrm-veris">jrm-veris</a> &bull; 1 day ago &bull; <a href="/item/47765604" class="story-comments-link">199&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">10.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://honeypot.net/2026/04/14/i-wrote-to-flocks-privacy.html" rel="noopener noreferrer">I wrote to Flock&#x27;s privacy contact to opt out of their domestic spying program</a> <span class="story-domain">(honeypot.net)</span></div>
+    <div class="story-meta">637 points &bull; <a href="/user/speckx">speckx</a> &bull; 21 hours ago &bull; <a href="/item/47768813" class="story-comments-link">246&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">11.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://steveklabnik.github.io/jujutsu-tutorial/introduction/what-is-jj-and-why-should-i-care.html" rel="noopener noreferrer">jj – the CLI for Jujutsu</a> <span class="story-domain">(steveklabnik.github.io)</span></div>
+    <div class="story-meta">531 points &bull; <a href="/user/tigerlily">tigerlily</a> &bull; 1 day ago &bull; <a href="/item/47763759" class="story-comments-link">469&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">12.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.eff.org/deeplinks/2026/04/dangers-californias-legislation-censor-3d-printing" rel="noopener noreferrer">The dangers of California&#x27;s legislation to censor 3D printing</a> <span class="story-domain">(eff.org)</span></div>
+    <div class="story-meta">466 points &bull; <a href="/user/salkahfi">salkahfi</a> &bull; 1 day ago &bull; <a href="/item/47759420" class="story-comments-link">410&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">13.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://github.com/sterlingcrispin/nothing-ever-happens" rel="noopener noreferrer">Nothing Ever Happens: Polymarket bot that always buys No on non-sports markets</a> <span class="story-domain">(github.com)</span></div>
+    <div class="story-meta">463 points &bull; <a href="/user/m-hodges">m-hodges</a> &bull; 1 day ago &bull; <a href="/item/47753472" class="story-comments-link">268&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">14.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/" rel="noopener noreferrer">Make tmux pretty and usable (2024)</a> <span class="story-domain">(hamvocke.com)</span></div>
+    <div class="story-meta">446 points &bull; <a href="/user/speckx">speckx</a> &bull; 2 days ago &bull; <a href="/item/47752819" class="story-comments-link">274&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">15.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://bandaancha.eu/articulos/telefonica-consigue-bloqueos-ips-11731" rel="noopener noreferrer">Spain to expand internet blocks to tennis, golf, movies broadcasting times</a> <span class="story-domain">(bandaancha.eu)</span></div>
+    <div class="story-meta">424 points &bull; <a href="/user/akyuu">akyuu</a> &bull; 22 hours ago &bull; <a href="/item/47768195" class="story-comments-link">428&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">16.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://kirancodes.me/posts/log-who-watches-the-watchers.html" rel="noopener noreferrer">Lean proved this program correct; then I found a bug</a> <span class="story-domain">(kirancodes.me)</span></div>
+    <div class="story-meta">389 points &bull; <a href="/user/bumbledraven">bumbledraven</a> &bull; 1 day ago &bull; <a href="/item/47759709" class="story-comments-link">174&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">17.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://ringmast4r.substack.com/p/we-may-be-living-through-the-most" rel="noopener noreferrer">This year’s insane timeline of hacks</a> <span class="story-domain">(ringmast4r.substack.com)</span></div>
+    <div class="story-meta">338 points &bull; <a href="/user/laurex">laurex</a> &bull; 2 days ago &bull; <a href="/item/47752884" class="story-comments-link">198&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">18.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://blog.cloudflare.com/cf-cli-local-explorer/" rel="noopener noreferrer">Building a CLI for all of Cloudflare</a> <span class="story-domain">(blog.cloudflare.com)</span></div>
+    <div class="story-meta">328 points &bull; <a href="/user/soheilpro">soheilpro</a> &bull; 1 day ago &bull; <a href="/item/47753689" class="story-comments-link">107&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">19.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://aphyr.com/posts/417-the-future-of-everything-is-lies-i-guess-safety" rel="noopener noreferrer">The Future of Everything Is Lies, I Guess: Safety</a> <span class="story-domain">(aphyr.com)</span></div>
+    <div class="story-meta">324 points &bull; <a href="/user/aphyr">aphyr</a> &bull; 1 day ago &bull; <a href="/item/47754379" class="story-comments-link">179&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">20.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://aphyr.com/posts/418-the-future-of-everything-is-lies-i-guess-work" rel="noopener noreferrer">The future of everything is lies, I guess: Work</a> <span class="story-domain">(aphyr.com)</span></div>
+    <div class="story-meta">276 points &bull; <a href="/user/aphyr">aphyr</a> &bull; 1 day ago &bull; <a href="/item/47766550" class="story-comments-link">209&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">21.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://introspective-diffusion.github.io/" rel="noopener noreferrer">Introspective Diffusion Language Models</a> <span class="story-domain">(introspective-diffusion.github.io)</span></div>
+    <div class="story-meta">275 points &bull; <a href="/user/zagwdt">zagwdt</a> &bull; 1 day ago &bull; <a href="/item/47762641" class="story-comments-link">49&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">22.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://prog21.dadgum.com/30.html" rel="noopener noreferrer">Want to Write a Compiler? Just Read These Two Papers (2008)</a> <span class="story-domain">(prog21.dadgum.com)</span></div>
+    <div class="story-meta">270 points &bull; <a href="/user/downbad_">downbad_</a> &bull; 5 hours ago &bull; <a href="/item/47776796" class="story-comments-link">83&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">23.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://github.com/openssl/openssl/releases/tag/openssl-4.0.0" rel="noopener noreferrer">OpenSSL 4.0.0</a> <span class="story-domain">(github.com)</span></div>
+    <div class="story-meta">271 points &bull; <a href="/user/petecooper">petecooper</a> &bull; 21 hours ago &bull; <a href="/item/47768788" class="story-comments-link">83&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">24.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.joanwestenberg.com/sometimes-powerful-people-just-do-dumb-shit/" rel="noopener noreferrer">Sometimes powerful people just do dumb shit</a> <span class="story-domain">(joanwestenberg.com)</span></div>
+    <div class="story-meta">263 points &bull; <a href="/user/zdw">zdw</a> &bull; 1 day ago &bull; <a href="/item/47760750" class="story-comments-link">154&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">25.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://techcrunch.com/2026/04/13/stanford-report-highlights-growing-disconnect-between-ai-insiders-and-everyone-else/" rel="noopener noreferrer">Stanford report highlights growing disconnect between AI insiders and everyone</a> <span class="story-domain">(techcrunch.com)</span></div>
+    <div class="story-meta">259 points &bull; <a href="/user/ZeidJ">ZeidJ</a> &bull; 1 day ago &bull; <a href="/item/47758028" class="story-comments-link">397&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">26.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://github.com/fabienmillet/WiiFin" rel="noopener noreferrer">WiiFin – Jellyfin Client for Nintendo Wii</a> <span class="story-domain">(github.com)</span></div>
+    <div class="story-meta">256 points &bull; <a href="/user/throwawayk7h">throwawayk7h</a> &bull; 1 day ago &bull; <a href="/item/47759341" class="story-comments-link">128&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">27.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://www.tobru.ch/an-ai-vibe-coding-horror-story/" rel="noopener noreferrer">An AI Vibe Coding Horror Story</a> <span class="story-domain">(tobru.ch)</span></div>
+    <div class="story-meta">209 points &bull; <a href="/user/teichmann">teichmann</a> &bull; 1 day ago &bull; <a href="/item/47762901" class="story-comments-link">209&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">28.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://mceglowski.substack.com/p/lets-talk-space-toilets" rel="noopener noreferrer">Let&#x27;s talk space toilets</a> <span class="story-domain">(mceglowski.substack.com)</span></div>
+    <div class="story-meta">206 points &bull; <a href="/user/zdw">zdw</a> &bull; 1 day ago &bull; <a href="/item/47758870" class="story-comments-link">54&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">29.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://iczelia.net/posts/e16-20-year-old-bug/" rel="noopener noreferrer">Fixing a 20-year-old bug in Enlightenment E16</a> <span class="story-domain">(iczelia.net)</span></div>
+    <div class="story-meta">204 points &bull; <a href="/user/snoofydude">snoofydude</a> &bull; 10 hours ago &bull; <a href="/item/47774789" class="story-comments-link">105&nbsp;comments</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">30.</span>
+  <div class="story-info">
+    <div class="story-title"><a href="https://blog.farre.se/posts/2026/04/10/caching-webidl-codegen/" rel="noopener noreferrer">How to make Firefox builds 17% faster</a> <span class="story-domain">(blog.farre.se)</span></div>
+    <div class="story-meta">202 points &bull; <a href="/user/mbitsnbites">mbitsnbites</a> &bull; 1 day ago &bull; <a href="/item/47756321" class="story-comments-link">37&nbsp;comments</a></div>
+  </div>
+</li>
+    </ol>
+    <div class="pagination"><a href="/best?p=2">next &gt;</a></div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

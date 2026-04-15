@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show HN: Kelet – Root Cause Analysis agent for your LLM apps | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://kelet.ai/" rel="noopener noreferrer">Show HN: Kelet – Root Cause Analysis agent for your LLM apps</a> <span class="story-domain">(kelet.ai)</span></span>
+        <div class="item-meta">
+          47 points &bull; <a href="/user/almogbaku">almogbaku</a> &bull; 22 hours ago &bull; 22 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47767606">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47774834">
+  <div class="comment_head"><a href="/user/oblangatas">oblangatas</a> 10 hours ago</div>
+  <div class="comment_text">AI agents don’t crash, they just quietly give wrong answers is painfully accurate.. quality RCA is a good direction<p>curious about how well do the generated hypotheses generalize beyond obvious prompt issues? IMHO lots of failures come from interactions between retrieval, tool selection, and state, more than a single not-so-good description. 
+Do you find the clustering surfaces such multi-factor issues? does it tend to collapse them into prompt-level fixes?</div>
+  
+  <div class="replies-container" id="replies-47774834"></div>
+</div>
+<div class="comment" id="comment-47773213">
+  <div class="comment_head"><a href="/user/liranka">liranka</a> 14 hours ago</div>
+  <div class="comment_text">I&#x27;m building agent based stuff recently and debugging is indeed pretty painful. It’s hard to even understand where things break<p>Must say, this looks interesting, I like the idea of clustering failures and trying to find patterns. Feels like something that should exist.<p>Going to give it a try :)</div>
+  
+  <div class="replies-container" id="replies-47773213"></div>
+</div>
+<div class="comment" id="comment-47769000">
+  <div class="comment_head"><a href="/user/jldugger">jldugger</a> 21 hours ago</div>
+  <div class="comment_text">Every six months or so, someone at work does a hackathon project to automate outage analysis work SRE would likely perform. And every one of them I&#x27;ve seen has been underwhelming and wrong.<p>There&#x27;s like three reasons for this disconnect.<p>1. The agents aren&#x27;t expert at your proprietary code. They can read logs and traces and make educated guesses, but there&#x27;s no world model of your code in there.<p>2. The people building these apps are unqualified to review the output. I used to mock narcissists evaluating ChatGPT quality by asking it for their own biography, but they&#x27;re at least using a domain they are an expert in. Your average MLE has no profound truths about kubernetes or the app. At best, they&#x27;re using some toy &quot;known broken&quot; app to demonstrate under what are basically ideal conditions, but part of the holdout set should be new outages in your app.<p>3. SREs themselves are not so great at causal analysis. Many junior SRE take the &quot;it worked last time&quot; approach, but this embeds a presumption that whatever went wrong &quot;last time&quot; hasn&#x27;t been fixed in code. Your typical senior SRE takes a &quot;what changed?&quot; approach, which is depressingly effective (as it indicates most outages are caused by coworkers). At the highest echelons, I&#x27;ve seen research papers examining meta-stablity and granger causality networks, but I&#x27;m pretty sure nobody in SRE or these RCA agents can explain what they mean.<p>&gt; The key insight: individual session failures look random. But when you cluster the hypotheses, failure patterns emerge.<p>My own insight is mostly bayesian. Typical applications have redundancy of some kind, and you can extract useful signals by separating &quot;good&quot; from &quot;bad&quot;. A simple bayesian score of (100+bad)&#x2F;(100+good) does a relatively good job of removing the &quot;oh that error log always happens&quot; signals. There&#x27;s also likely a path using clickhouse level data and bayesian causal networks, but the problem is traditional bayesian networks are hand crafted by humans.<p>So yea, you can ask an LLM for 100 guesses and do some kind of k-means clustering on them, but you can probably do a better job doing dimensional analysis first and passing that on to the agent.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47769000,this)">1 replies</button>
+  <div class="replies-container" id="replies-47769000"></div>
+</div>
+<div class="comment" id="comment-47767810">
+  <div class="comment_head"><a href="/user/yanovskishai">yanovskishai</a> 22 hours ago</div>
+  <div class="comment_text">I imagine it&#x27;s hard to create a very generic tool for this usecase - what are the supported frameworks&#x2F;libs, what does this tool assume about my implementation ?</div>
+  
+  <div class="replies-container" id="replies-47767810"></div>
+</div>
+<div class="comment" id="comment-47777160">
+  <div class="comment_head"><a href="/user/xb6bd1sf">xb6bd1sf</a> 4 hours ago</div>
+  <div class="comment_text">Looks promising!</div>
+  
+  <div class="replies-container" id="replies-47777160"></div>
+</div>
+<div class="comment" id="comment-47768652">
+  <div class="comment_head"><a href="/user/RoiTabach">RoiTabach</a> 21 hours ago</div>
+  <div class="comment_text">This looks Amazing
+Do you have a LiteLLM integration?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768652,this)">2 replies</button>
+  <div class="replies-container" id="replies-47768652"></div>
+</div>
+<div class="comment" id="comment-47768241">
+  <div class="comment_head"><a href="/user/BlueHotDog2">BlueHotDog2</a> 22 hours ago</div>
+  <div class="comment_text">nice. what a crazy space.
+how is this different vs other telemetry&#x2F;analysis platforms such as langchain&#x2F;braintrust etc?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768241,this)">1 replies</button>
+  <div class="replies-container" id="replies-47768241"></div>
+</div>
+<div class="comment" id="comment-47768524">
+  <div class="comment_head"><a href="/user/dwb">dwb</a> 21 hours ago</div>
+  <div class="comment_text">&gt; The key insight<p>I&#x27;m so tired</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768524,this)">5 replies</button>
+  <div class="replies-container" id="replies-47768524"></div>
+</div>
+<div class="comment" id="comment-47768446">
+  <div class="comment_head"><a href="/user/halflife">halflife</a> 21 hours ago</div>
+  <div class="comment_text">Kelet as in קלט as in input?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768446,this)">1 replies</button>
+  <div class="replies-container" id="replies-47768446"></div>
+</div>
+<div class="comment" id="comment-47768500">
+  <div class="comment_head"><a href="/user/hadifrt20">hadifrt20</a> 21 hours ago</div>
+  <div class="comment_text">in the auickstart, the suggested fixes are called &quot;Prompt Patches&quot; .. does that mean Kelet only surfaces root causes that are fixable in the prompt? What happens when the real bug is in tool selection or retrieval ranking for example?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768500,this)">1 replies</button>
+  <div class="replies-container" id="replies-47768500"></div>
+</div>
+<div class="comment" id="comment-47768725">
+  <div class="comment_head"><a href="/user/peter_parker">peter_parker</a> 21 hours ago</div>
+  <div class="comment_text">&gt; They just quietly give wrong answers.
+It&#x27;s not about wrong answers only. They just stuck in a circle sometimes.</div>
+  
+  <div class="replies-container" id="replies-47768725"></div>
+</div>
+<div class="comment" id="comment-47768590">
+  <div class="comment_head"><a href="/user/trannnnun">trannnnun</a> 21 hours ago</div>
+  <div class="comment_text">jkfrntgijbntbuijhb8ybu</div>
+  
+  <div class="replies-container" id="replies-47768590"></div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 3 hours ago</div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 19 hours ago</div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 21 hours ago</div>
+</div>
+      </div>
+      
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

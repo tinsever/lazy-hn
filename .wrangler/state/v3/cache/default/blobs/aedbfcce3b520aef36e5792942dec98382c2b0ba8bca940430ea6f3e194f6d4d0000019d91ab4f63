@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A communist Apple II and fourteen years of not knowing what you&#x27;re testing | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://llama.gs/blog/index.php/2026/04/10/friday-archaeology-a-communist-apple-ii-and-fourteen-years-of-not-knowing-what-youre-testing/" rel="noopener noreferrer">A communist Apple II and fourteen years of not knowing what you&#x27;re testing</a> <span class="story-domain">(llama.gs)</span></span>
+        <div class="item-meta">
+          212 points &bull; <a href="/user/major4x">major4x</a> &bull; 4 days ago &bull; 94 comments
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47778565">
+  <div class="comment_head"><a href="/user/dzink">dzink</a> 1 hour ago</div>
+  <div class="comment_text">If you grow up in that environment (restricted by government in some areas and liberated in others) you’ll start seeing systems very differently. The game plays differently with different rules.<p>They had Pravets computers and robotic arms in rural classrooms in places that didn’t have traffic lights, or English teachers. Chess and Math competitions as well, were accessible everywhere. Those were all self-feedback mechanisms that are cheap but allow an interested individual to iterate infinitely to reach advanced levels. Even if only a tiny subset of any population has the cognitive surplus to meddle with programming and math, they had easy access to fulfill that and be found. In the US, schools enable that with sports, which monetize as entertainment venues. In the Eastern Block they had that with brains. As soon as the stupid restrictions on travel were lifted, the brains knew to leave the other restrictions and immigrate to places that reward cognitive surplus.<p>Intelligence builds with reinforcement learning on context that gives you feedback - which makes it easy to iterate on. If you’re not making those types of games&#x2F;tools&#x2F;systems available to kids, you are going to lose that generation to more attention grabbing stuff like Youtube or sports.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778565,this)">1 replies</button>
+  <div class="replies-container" id="replies-47778565"></div>
+</div>
+<div class="comment" id="comment-47779702">
+  <div class="comment_head"><a href="/user/Terretta">Terretta</a> 21 minutes ago</div>
+  <div class="comment_text">Refreshing interconnection of topics.<p>First home “Apple &#x2F;&#x2F;e” was in Africa, using a Korean improvement on the Apple ][+ adding lowercase and memory and more. It was lugged in by Korean ambassador&#x27;s son and remained a better performer than the Apple &#x2F;&#x2F;e once that came out.<p>Once I started looking for the history, I&#x27;ve never found what that Korean machine was.<p>Next came Apple IIc which ran circles around it. Then Fat Mac, SE, SE&#x2F;30… but that&#x27;s a different story.</div>
+  
+  <div class="replies-container" id="replies-47779702"></div>
+</div>
+<div class="comment" id="comment-47774415">
+  <div class="comment_head"><a href="/user/summa_tech">summa_tech</a> 11 hours ago</div>
+  <div class="comment_text">This was a fascinating article, because I&#x27;ve seen so many results of the Eastern Bloc reverse-engineering efforts basically founder into obscurity. Many of these re-created (sometimes with minor variations, or quite novel and ingenious implementation choices) computers were made in small series, but could not compete against illegal imports, and in any case would only be briefly popular in their local university town.<p>So it&#x27;s cool to see that Bulgaria managed to muster enough government interest to force a cohesive strategy for the whole country. It sounds like it paid off.<p>Also, after googling for Правец, I have found out that I can in fact read Bulgarian, which was quite surprising to me.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47774415,this)">4 replies</button>
+  <div class="replies-container" id="replies-47774415"></div>
+</div>
+<div class="comment" id="comment-47776948">
+  <div class="comment_head"><a href="/user/Schlagbohrer">Schlagbohrer</a> 4 hours ago</div>
+  <div class="comment_text">&quot;The circuits do not hallucinate&quot; - que me thinking about all the times I&#x27;ve had to diagnose analog bugs in hardware.</div>
+  
+  <div class="replies-container" id="replies-47776948"></div>
+</div>
+<div class="comment" id="comment-47778424">
+  <div class="comment_head"><a href="/user/mghackerlady">mghackerlady</a> 1 hour ago</div>
+  <div class="comment_text">Eastern bloc computers are so fascinating to me. The soviets were pretty bad at it, but the germans were doing pretty well all things considered. It&#x27;s also fascinating how much they liked DEC, at least architecturally</div>
+  
+  <div class="replies-container" id="replies-47778424"></div>
+</div>
+<div class="comment" id="comment-47775513">
+  <div class="comment_head"><a href="/user/grishka">grishka</a> 8 hours ago</div>
+  <div class="comment_text">There was also a Soviet Apple II clone, called Агат (Agat). But iirc, for whatever reason, they couldn&#x27;t clone the 6502, so they built one out of logic ICs, and the thing was too slow to run Apple II software unmodified. Later there was an expansion card with a real imported 6502 that added full compatibility.<p>The USSR did make their own Z80 and 8080 clones later though. There existed an IBM PC compatible built completely out of Soviet-made parts. A lot of fully localized ZX Spectrum clones as well, of varying degree of homebrewness. Those were very popular in the late 80s and early 90s from what I gather, but I&#x27;m too young to have used one myself.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47775513,this)">1 replies</button>
+  <div class="replies-container" id="replies-47775513"></div>
+</div>
+<div class="comment" id="comment-47776017">
+  <div class="comment_head"><a href="/user/paulnsorensen">paulnsorensen</a> 7 hours ago</div>
+  <div class="comment_text">Thank you for this. Very enjoyable read. It reminds me of a post I saw discussing how code review is similar to reviewing mathematical proofs -- you have to know it like you wrote it, and now with AI, this is less and less the case. I definitely miss the days when I knew something was bulletproof because I wrote it and tested it thoroughly.</div>
+  
+  <div class="replies-container" id="replies-47776017"></div>
+</div>
+<div class="comment" id="comment-47774731">
+  <div class="comment_head"><a href="/user/ipeev">ipeev</a> 10 hours ago</div>
+  <div class="comment_text">I think my reaction is mostly puzzlement. I can see a sensible point or several in the article, but I was not always sure how big a point the author was trying to make.<p>At the narrower level, it seems to be saying that benchmarks are easier to interpret when you know what they really are. That makes sense. If a circuit is known to be a multiplier, that tells you more than if it is just called `c6288`.<p>That is also why I thought of Python benchmarks. In something like `pyperformance`, names such as `json_loads`, `python_startup`, or `nbody` already tell you something about the workload. So when you compare results, you have a better sense of what kind of task a system is doing well on. But so what? It is just benchmarks. They don&#x27;t guarantee anything about anything anyway.<p>What made it harder for me to follow was that this fairly modest point is wrapped in a lot of jokes and swipes about AI and corporate AI language. Some of that is funny, but it also made me less sure what the main point was supposed to be. Was the article really about benchmark interpretation, or was that mostly a vehicle for making a broader point about AI hype and technical understanding?<p>So I do think there is a real point in there. I just found it slightly hard to separate that point from the style and the jokes.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47774731,this)">1 replies</button>
+  <div class="replies-container" id="replies-47774731"></div>
+</div>
+<div class="comment" id="comment-47777241">
+  <div class="comment_head"><a href="/user/PunchyHamster">PunchyHamster</a> 4 hours ago</div>
+  <div class="comment_text">&gt; The methodology was elegantly practical: Hayes assigned each circuit to a PhD student. Cheap labour, and almost certainly cheaper per insight than an LLM.<p>We need API for that, grad students are <i>paying</i> to be there so can&#x27;t get cheaper than that!</div>
+  
+  <div class="replies-container" id="replies-47777241"></div>
+</div>
+<div class="comment" id="comment-47776113">
+  <div class="comment_head"><a href="/user/varjag">varjag</a> 6 hours ago</div>
+  <div class="comment_text">Interesting point about the grassroots origin. When I read the accounts in early 1990s it was alleged that a whole factory of a minor computer manufacturer in the USA was bought and relocated to Pravets. Including the furniture, broom closets and trashcans. Though am not sure if computer designs were also allegedly in the deal.<p>Also that Bulgaria invested into some semiconductor manufacturer in Singapore to maintain uninterrupted access to the components.</div>
+  
+  <div class="replies-container" id="replies-47776113"></div>
+</div>
+<div class="comment" id="comment-47776857">
+  <div class="comment_head"><a href="/user/Schlagbohrer">Schlagbohrer</a> 5 hours ago</div>
+  <div class="comment_text">Ok I read this article but I don&#x27;t see how it connects to LLMs as he puts forth at the start. Is he saying we have not yet reached the phase where someone will reverse engineer LLMs to figure out what is actually going on with these strange new beasts?</div>
+  
+  <div class="replies-container" id="replies-47776857"></div>
+</div>
+<div class="comment" id="comment-47774997">
+  <div class="comment_head"><a href="/user/Minecodes">Minecodes</a> 9 hours ago</div>
+  <div class="comment_text">Very interesting article. It&#x27;s always fascinating for me as someone from Gen Z, to see how the computers worked in the beginning, and the stories behind them.</div>
+  
+  <div class="replies-container" id="replies-47774997"></div>
+</div>
+<div class="comment" id="comment-47776456">
+  <div class="comment_head"><a href="/user/Angostura">Angostura</a> 6 hours ago</div>
+  <div class="comment_text">I seldom enjoy a piece of writing this much. Loved it. Kudos to the author</div>
+  
+  <div class="replies-container" id="replies-47776456"></div>
+</div>
+<div class="comment" id="comment-47775082">
+  <div class="comment_head"><a href="/user/yehat">yehat</a> 9 hours ago</div>
+  <div class="comment_text">I know there&#x27;s predominant thinking that &quot;communism&quot; existed somewhere, but in fact it doesn&#x27;t. It was the ideology developed in the West and brutally imported into the East. Why I say that and why it matters to understand the difference?
+Because there was no &quot;communist&quot; thinking behind the motivation to do whatever by the ordinary people. There was something deeper that manifested in a way that many people mistake for &quot;communist&quot; thinking. And that&#x27;s natural, because people&#x27;s thinking is not same in the West as in the East, and even more in far-East.
+Ok, enough on that, everyone&#x27;s right to call it whatever they want, just pitching some clues that can help avoiding the cliché. 
+My journey also started when first seeing IMKO-2 in 1984, then there was a popular magazine for the young &quot;engineers&quot; called &quot;МЛАД КОНСТРУКТОР&quot; (full archive here <a href="https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=download&amp;id=0Bw941VGG9TjcWXhKdHhjMkljQ1U" rel="nofollow">https:&#x2F;&#x2F;drive.google.com&#x2F;uc?export=download&amp;id=0Bw941VGG9Tjc...</a> )that started publishing a course of BASIC. So I learned virtually and even wrote programs on paper before the first actual contact with the computer, which happened 1 year later on the newly acquired by my school couple of PRAVETZ-82.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47775082,this)">2 replies</button>
+  <div class="replies-container" id="replies-47775082"></div>
+</div>
+<div class="comment" id="comment-47775270">
+  <div class="comment_head"><a href="/user/flomo">flomo</a> 8 hours ago</div>
+  <div class="comment_text">&gt; A limitation, but also an engineering decision that had a certain brutal elegance: you get one alphabet at a time, comrade, and you will type in capitals.<p>Same decision with the capitalist American Apple II, only upper case letters unless you added some additional board.</div>
+  
+  <div class="replies-container" id="replies-47775270"></div>
+</div>
+<div class="comment" id="comment-47775904">
+  <div class="comment_head"><a href="/user/gizajob">gizajob</a> 7 hours ago</div>
+  <div class="comment_text">Great writing and an enjoyable tale well told.</div>
+  
+  <div class="replies-container" id="replies-47775904"></div>
+</div>
+<div class="comment" id="comment-47775277">
+  <div class="comment_head"><a href="/user/exmadscientist">exmadscientist</a> 8 hours ago</div>
+  <div class="comment_text">&gt; For fourteen years... nobody — <i>nobody</i> — knew what these circuits were actually supposed to compute.<p>This is utterly, <i>utterly</i> mind-boggling to me. Seriously no one had any curiosity to look in to these things for 14 years? I mean, I guess someone was bored somewhere along the way, but usually that sort of thing becomes an open secret... not here, I guess.</div>
+  
+  <div class="replies-container" id="replies-47775277"></div>
+</div>
+<div class="comment" id="comment-47778204">
+  <div class="comment_head"><a href="/user/DonHopkins">DonHopkins</a> 2 hours ago</div>
+  <div class="comment_text">&quot;Reverse Over Engineering&quot; is a great thing:<p>Will Wright on Designing User Interfaces to Simulation Games (1996) (2023 Video Update):<p><a href="https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;designing-user-interfaces-to-simulation-games-bd7a9d81e62d" rel="nofollow">https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;designing-user-interfaces-to-s...</a><p><a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=22062590">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=22062590</a><p>DonHopkins on Jan 16, 2020 | parent | context | favorite | on: Reverse engineering course<p>Will Wright defined the &quot;Simulator Effect&quot; as how game players imagine a simulation is vastly more detailed, deep, rich, and complex than it actually is: a magical misunderstanding that you shouldn’t talk them out of. He designs games to run on two computers at once: the electronic one on the player’s desk, running his shallow tame simulation, and the biological one in the player’s head, running their deep wild imagination.
+&quot;Reverse Over-Engineering&quot; is a desirable outcome of the Simulator Effect: what game players (and game developers trying to clone the game) do when they use their imagination to extrapolate how a game works, and totally overestimate how much work and modeling the simulator is actually doing, because they filled in the gaps with their imagination and preconceptions and assumptions, instead of realizing how many simplifications and shortcuts and illusions it actually used.<p><a href="https:&#x2F;&#x2F;www.masterclass.com&#x2F;classes&#x2F;will-wright-teaches-game-design-and-theory&#x2F;chapters&#x2F;game-mechanics#reviews" rel="nofollow">https:&#x2F;&#x2F;www.masterclass.com&#x2F;classes&#x2F;will-wright-teaches-game...</a><p>&gt;There&#x27;s a name for what Wright calls &quot;the simulator effect&quot; in the video: apophenia. There&#x27;s a good GDC video on YouTube where Tynan Sylvester (the creator of RimWorld) talks about using this effect in game design.<p><a href="https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Apophenia" rel="nofollow">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Apophenia</a><p>&gt;Apophenia (&#x2F;æpoʊˈfiːniə&#x2F;) is the tendency to mistakenly perceive connections and meaning between unrelated things. The term (German: Apophänie) was coined by psychiatrist Klaus Conrad in his 1958 publication on the beginning stages of schizophrenia. He defined it as &quot;unmotivated seeing of connections [accompanied by] a specific feeling of abnormal meaningfulness&quot;. He described the early stages of delusional thought as self-referential, over-interpretations of actual sensory perceptions, as opposed to hallucinations.<p>RimWorld: Contrarian, Ridiculous, and Impossible Game Design Methods<p><a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=VdqhHKjepiE" rel="nofollow">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=VdqhHKjepiE</a><p>5 game design tips from Sims creator Will Wright<p><a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=scS3f_YSYO0" rel="nofollow">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=scS3f_YSYO0</a><p>&gt;Tip 5: On world building. As you know by now, Will&#x27;s approach to creating games is all about building a coherent and compelling player experience. His games are comprised of layered systems that engage players creatively, and lead to personalized, some times unexpected outcomes. In these types of games, players will often assume that the underlying system is smarter than it actually is. This happens because there&#x27;s a strong mental model in place, guiding the game design, and enhancing the player&#x27;s ability to imagine a coherent context that explains all the myriad details and dynamics happening within that game experience.<p>&gt;Now let&#x27;s apply this to your project: What mental model are you building, and what story are you causing to unfold between your player&#x27;s ears? And how does the feature set in your game or product support that story? Once you start approaching your product design that way, you&#x27;ll be set up to get your customers to buy into the microworld that you&#x27;re building, and start to imagine that it&#x27;s richer and more detailed than it actually is.</div>
+  
+  <div class="replies-container" id="replies-47778204"></div>
+</div>
+<div class="comment" id="comment-47775412">
+  <div class="comment_head"><a href="/user/bogantech">bogantech</a> 8 hours ago</div>
+  <div class="comment_text">&gt; More interesting is what happened next: an institute in Sofia was reportedly tasked with decapping the ICs, lifting the netlists under a microscope, and reproducing them with socialist lithography<p>Given that (afaik) the Apple II logic would have all been jelly bean logic or otherwise off the shelf parts did they really reverse engineer ICs?</div>
+  
+  <div class="replies-container" id="replies-47775412"></div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 4 hours ago</div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47724571?all=1">Show all 94 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

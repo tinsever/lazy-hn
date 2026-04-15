@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Gemma 4 Runs Natively on iPhone with Full Offline AI Inference | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://www.gizmoweek.com/gemma-4-runs-iphone/" rel="noopener noreferrer">Google Gemma 4 Runs Natively on iPhone with Full Offline AI Inference</a> <span class="story-domain">(gizmoweek.com)</span></span>
+        <div class="item-meta">
+          159 points &bull; <a href="/user/takumi123">takumi123</a> &bull; 9 hours ago &bull; 100 comments
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47777981">
+  <div class="comment_head"><a href="/user/temp7000">temp7000</a> 2 hours ago</div>
+  <div class="comment_text">Is it me, or does the article sound like LLM output?<p>The pattern &quot;It&#x27;s not mere X — it&#x27;s Y&quot;, occurs like 4 times in the text :v</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777981,this)">6 replies</button>
+  <div class="replies-container" id="replies-47777981"></div>
+</div>
+<div class="comment" id="comment-47778993">
+  <div class="comment_head"><a href="/user/blixt">blixt</a> 1 hour ago</div>
+  <div class="comment_text">I made this offline pocket vibe coder using Gemma 4 (works offline once model is downloaded) on an iPhone. It can technically run the 4B model but it will default to 2B because of memory constraints.<p><a href="https:&#x2F;&#x2F;github.com&#x2F;blixt&#x2F;pucky" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;blixt&#x2F;pucky</a><p>It writes a single TypeScript file (I tried multiple files but embedded Gemma 4 is just not smart enough) and compiles the code with oxc.<p>You need to build it yourself in Xcode because this probably wouldn&#x27;t survive the App Store review process. Once you run it, there are two starting points included (React Native and Three.js), the UX is a bit obscure but edge-swipe left&#x2F;right to switch between views.</div>
+  
+  <div class="replies-container" id="replies-47778993"></div>
+</div>
+<div class="comment" id="comment-47777198">
+  <div class="comment_head"><a href="/user/codybontecou">codybontecou</a> 4 hours ago</div>
+  <div class="comment_text">Unfortunately Apple appears to be blocking the use of these llms within apps on their app store.
+I&#x27;ve been trying to ship an app that contains local llms and have hit a brick wall with issue 2.5.2</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777198,this)">6 replies</button>
+  <div class="replies-container" id="replies-47777198"></div>
+</div>
+<div class="comment" id="comment-47778551">
+  <div class="comment_head"><a href="/user/mfro">mfro</a> 1 hour ago</div>
+  <div class="comment_text">Strangely, it is super fast on my 16 Plus, but with longer messages it can slow down a LOT, and not because of thermal throttling. I wish I could see some diagnostic data.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778551,this)">1 replies</button>
+  <div class="replies-container" id="replies-47778551"></div>
+</div>
+<div class="comment" id="comment-47777200">
+  <div class="comment_head"><a href="/user/karimf">karimf</a> 4 hours ago</div>
+  <div class="comment_text">Related: Gemma 4 on iPhone (254 comments) - <a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47652561">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47652561</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777200,this)">1 replies</button>
+  <div class="replies-container" id="replies-47777200"></div>
+</div>
+<div class="comment" id="comment-47778100">
+  <div class="comment_head"><a href="/user/conception">conception</a> 2 hours ago</div>
+  <div class="comment_text">I’m pretty excited about the edge gallery ios app with gemma 4 on it but it seems like they hobbled it, not giving access to intents and you have to write custom plugins for web search, etc. Does anyone have a favorite way to run these usefully? ChatMCP works pretty well but only supports models via api.</div>
+  
+  <div class="replies-container" id="replies-47778100"></div>
+</div>
+<div class="comment" id="comment-47778075">
+  <div class="comment_head"><a href="/user/Chrisszz">Chrisszz</a> 2 hours ago</div>
+  <div class="comment_text">I just installed Google Ai Edge Gallery on my iPhone 16 pro, here are the results of the first benchmark with GPU, Prefill Tokens=256, Decode Tokens=256, Number of runs: 3. Prefill Speed=231t&#x2F;s, Decode Speed=16t&#x2F;s, Time to First Token=1.16s, First init time=20s</div>
+  
+  <div class="replies-container" id="replies-47778075"></div>
+</div>
+<div class="comment" id="comment-47778961">
+  <div class="comment_head"><a href="/user/jimbokun">jimbokun</a> 1 hour ago</div>
+  <div class="comment_text">I feel like UX and API design are very under explored.<p>What are the possibilities of an Android or iOS device where the OS is centered around a locally running LLM with an API for accessing it from apps, along with tools the LLM can call to access data from locally running apps?  What’s the equivalent of the original Mac OS?<p>Do apps disappear and there’s just a running dialog with the LLM generating graphical displays as needed on demand?</div>
+  
+  <div class="replies-container" id="replies-47778961"></div>
+</div>
+<div class="comment" id="comment-47779078">
+  <div class="comment_head"><a href="/user/deckar01">deckar01</a> 1 hour ago</div>
+  <div class="comment_text">They still don’t render the markdown (or LaTeX) it outputs.</div>
+  
+  <div class="replies-container" id="replies-47779078"></div>
+</div>
+<div class="comment" id="comment-47777393">
+  <div class="comment_head"><a href="/user/usmanshaikh06">usmanshaikh06</a> 4 hours ago</div>
+  <div class="comment_text">ESET is blocking this site saying:<p>Threat found
+This web page may contain dangerous content that can provide remote access to an infected device, leak sensitive data from the device or harm the targeted device.
+Threat: JS&#x2F;Agent.RDW trojan</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777393,this)">1 replies</button>
+  <div class="replies-container" id="replies-47777393"></div>
+</div>
+<div class="comment" id="comment-47776870">
+  <div class="comment_head"><a href="/user/mistic92">mistic92</a> 5 hours ago</div>
+  <div class="comment_text">It runs on Android too, with AI Core or even with llama.cpp</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47776870,this)">1 replies</button>
+  <div class="replies-container" id="replies-47776870"></div>
+</div>
+<div class="comment" id="comment-47778376">
+  <div class="comment_head"><a href="/user/DoctorOetker">DoctorOetker</a> 2 hours ago</div>
+  <div class="comment_text">does anyone know of a decent but low memory or low parameter count multilingual model (as many languages as possible), that can faithfully produce the detailed IPA transcription given a word in a sentence in some language?<p>I want to test a hypothesis for &quot;uploading&quot; neural network knowledge to a user&#x27;s brain, by a reaction-speed game.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778376,this)">1 replies</button>
+  <div class="replies-container" id="replies-47778376"></div>
+</div>
+<div class="comment" id="comment-47777988">
+  <div class="comment_head"><a href="/user/bearjaws">bearjaws</a> 2 hours ago</div>
+  <div class="comment_text">Would love to see a show down of performance on iPhone vs Googles Tensor G5, which in my experience the G5 is 2 full generations behind performance wise.</div>
+  
+  <div class="replies-container" id="replies-47777988"></div>
+</div>
+<div class="comment" id="comment-47777191">
+  <div class="comment_head"><a href="/user/pabs3">pabs3</a> 4 hours ago</div>
+  <div class="comment_text">&gt; edge AI deployment<p>Isn&#x27;t the &quot;edge&quot; meant to be computing near the user, but not on their devices?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777191,this)">4 replies</button>
+  <div class="replies-container" id="replies-47777191"></div>
+</div>
+<div class="comment" id="comment-47778136">
+  <div class="comment_head"><a href="/user/the_inspector">the_inspector</a> 2 hours ago</div>
+  <div class="comment_text">You are referring to the edge models, right? E2B and E4B, not the bigger ones (26B, 31B)...</div>
+  
+  <div class="replies-container" id="replies-47778136"></div>
+</div>
+<div class="comment" id="comment-47777344">
+  <div class="comment_head"><a href="/user/logicallee">logicallee</a> 4 hours ago</div>
+  <div class="comment_text">For those who would like an example of its output, I&#x27;m currently working through creating a small, free (cc0, public domain) encyclopedia (just a couple of thousand entries) of core concepts in Biology and Health Sciences, Physical Sciences, and Technology. Each entry is being entirely written by Gemma 4:e4b (the 10 GB model.) I believe that this may be slightly larger than the size of the model that runs locally on phones, so perhaps this model is slightly better, but the output is similar.  Here is an example entry:<p><a href="https:&#x2F;&#x2F;pastebin.com&#x2F;ZfSKmfWp" rel="nofollow">https:&#x2F;&#x2F;pastebin.com&#x2F;ZfSKmfWp</a><p>Seems pretty good to me!</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777344,this)">1 replies</button>
+  <div class="replies-container" id="replies-47777344"></div>
+</div>
+<div class="comment" id="comment-47778219">
+  <div class="comment_head"><a href="/user/grimmai143">grimmai143</a> 2 hours ago</div>
+  <div class="comment_text">Do you know of a way of running these models on Android? Also, what does the thermal throttling look like?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778219,this)">1 replies</button>
+  <div class="replies-container" id="replies-47778219"></div>
+</div>
+<div class="comment" id="comment-47777415">
+  <div class="comment_head"><a href="/user/ValleZ">ValleZ</a> 3 hours ago</div>
+  <div class="comment_text">There are many apps to run local LLMs on both iOS &amp; Android</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777415,this)">1 replies</button>
+  <div class="replies-container" id="replies-47777415"></div>
+</div>
+<div class="comment" id="comment-47776973">
+  <div class="comment_head"><a href="/user/bossyTeacher">bossyTeacher</a> 4 hours ago</div>
+  <div class="comment_text">Is the output coherent though? I am yet to see a local model working on consumer grade hardware being actually useful.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47776973,this)">7 replies</button>
+  <div class="replies-container" id="replies-47776973"></div>
+</div>
+<div class="comment" id="comment-47775220">
+  <div class="comment_head"><a href="/user/andsoitis">andsoitis</a> 9 hours ago</div>
+  <div class="comment_text">is there a comparison of it running on iPhone vs. Android phones?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47775220,this)">2 replies</button>
+  <div class="replies-container" id="replies-47775220"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47774971?all=1">Show all 100 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

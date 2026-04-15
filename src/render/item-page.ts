@@ -11,6 +11,7 @@ export function renderItemPage(data: StoryPage, _storyId?: number): string {
   const domain = story.domain ? ` <span class="story-domain">(${story.domain})</span>` : "";
   const scoreText = story.score > 0 ? `${story.score} points` : "";
   const commentCountText = totalComments > 0 ? `${totalComments} comments` : "0 comments";
+  const storyTextHtml = story.text ? `<div class="item-text">${sanitizeHtml(story.text)}</div>` : "";
 
   const titleHtml = isExternalUrl(story.url)
     ? `<span class="item-title"><a href="${story.url}" rel="noopener noreferrer">${title}</a>${domain}</span>`
@@ -19,6 +20,7 @@ export function renderItemPage(data: StoryPage, _storyId?: number): string {
   const commentsHtml = comments
     .map((c) => renderComment(c))
     .join("\n");
+  const hnCommentUrl = `https://news.ycombinator.com/item?id=${story.id}`;
 
   const moreCommentsLink =
     data.commentIds.length > comments.length
@@ -35,7 +37,7 @@ export function renderItemPage(data: StoryPage, _storyId?: number): string {
 </head>
 <body>
   <header class="header">
-    <a href="/" class="logo">Y</a>
+    <a href="/" class="logo">HN</a>
     <nav>
       <a href="/">top</a>
       <a href="/newest">new</a>
@@ -51,6 +53,10 @@ export function renderItemPage(data: StoryPage, _storyId?: number): string {
         ${titleHtml}
         <div class="item-meta">
           ${scoreText} &bull; <a href="/user/${story.by}">${story.by}</a> &bull; ${timeAgo(story.time)} &bull; ${commentCountText}
+        </div>
+        ${storyTextHtml}
+        <div class="item-actions">
+          <a class="comment-button" href="${hnCommentUrl}">Write a comment on HN</a>
         </div>
       </div>
       <div class="comment-tree">
@@ -118,6 +124,27 @@ a:hover { text-decoration: underline; }
 .item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
 .item-meta { font-size: 1.2rem; color: var(--muted); }
 .item-meta a { color: var(--muted); }
+.item-text {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  line-height: 1.55;
+  white-space: normal;
+}
+.item-text p { margin-bottom: 0.8rem; }
+.item-text a { text-decoration: underline; }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
 .comment-tree { margin-left: 0; }
 .comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
 .comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }

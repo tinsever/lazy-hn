@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show HN: Every CEO and CFO change at US public companies, live from SEC | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://tracksuccession.com/explore" rel="noopener noreferrer">Show HN: Every CEO and CFO change at US public companies, live from SEC</a> <span class="story-domain">(tracksuccession.com)</span></span>
+        <div class="item-meta">
+          74 points &bull; <a href="/user/porsche959">porsche959</a> &bull; 2 hours ago &bull; 25 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47778306">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47779224">
+  <div class="comment_head"><a href="/user/thedougd">thedougd</a> 54 minutes ago</div>
+  <div class="comment_text">What would also be very interesting is a graph of relationships and movements. Let&#x27;s see just how incestuous the boards really are, and what&#x27;s going on with serial CEOs who move from one business to the next.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779224,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779224"></div>
+</div>
+<div class="comment" id="comment-47779132">
+  <div class="comment_head"><a href="/user/hliyan">hliyan</a> 1 hour ago</div>
+  <div class="comment_text">Given this is failing due to HN hug of death, might I suggest that you do a periodic batch, save the results and serve static?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779132,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779132"></div>
+</div>
+<div class="comment" id="comment-47780048">
+  <div class="comment_head"><a href="/user/gbibas">gbibas</a> 6 minutes ago</div>
+  <div class="comment_text">You hit on something that AI can be really good at, which is shining light on corporate activities. Salary and movement are great, and interesting, but this could also help parse things like entry and exits into business markets where companies often quietly add or remove things from their filings.  Keep going.</div>
+  
+  <div class="replies-container" id="replies-47780048"></div>
+</div>
+<div class="comment" id="comment-47780035">
+  <div class="comment_head"><a href="/user/infecto">infecto</a> 6 minutes ago</div>
+  <div class="comment_text">Fun project but meh on subscription. This data already exists in much better detail including full network graphs of people and many additional data points. Financial data is a hard problem because it’s not only hard to offer something new but also your only real consumer unless novel data is going to be retail.</div>
+  
+  <div class="replies-container" id="replies-47780035"></div>
+</div>
+<div class="comment" id="comment-47779616">
+  <div class="comment_head"><a href="/user/WA">WA</a> 30 minutes ago</div>
+  <div class="comment_text">Nice idea. Small thing: the categories are pretty much fixed. If you have to abbreviate a never-changing category like &quot;Consumer Defen...&quot; in a widget, your design doesn&#x27;t work in this aspect.</div>
+  
+  <div class="replies-container" id="replies-47779616"></div>
+</div>
+<div class="comment" id="comment-47779597">
+  <div class="comment_head"><a href="/user/mtam">mtam</a> 31 minutes ago</div>
+  <div class="comment_text">Is the equity piece one-time or yearly grants? I think it is adding up yearly salary with one-time equity grants. Also, how about bonuses?</div>
+  
+  <div class="replies-container" id="replies-47779597"></div>
+</div>
+<div class="comment" id="comment-47779167">
+  <div class="comment_head"><a href="/user/abstracthinking">abstracthinking</a> 58 minutes ago</div>
+  <div class="comment_text">Interesting, you should save part of the data to do some caching and avoid api requests for old positions.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779167,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779167"></div>
+</div>
+<div class="comment" id="comment-47779098">
+  <div class="comment_head"><a href="/user/djfobbz">djfobbz</a> 1 hour ago</div>
+  <div class="comment_text">The site fails to load...it just gets stuck in a fetching state. Another downside of vibe programming.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779098,this)">3 replies</button>
+  <div class="replies-container" id="replies-47779098"></div>
+</div>
+<div class="comment" id="comment-47779793">
+  <div class="comment_head"><a href="/user/leobuskin">leobuskin</a> 19 minutes ago</div>
+  <div class="comment_text">What&#x27;s the backend? I&#x27;d recommend to migrate such project to the edge (Cloudflare, etc)</div>
+  
+  <div class="replies-container" id="replies-47779793"></div>
+</div>
+<div class="comment" id="comment-47779004">
+  <div class="comment_head"><a href="/user/eddy_cammegh">eddy_cammegh</a> 1 hour ago</div>
+  <div class="comment_text">How does the comp extraction work? 8-K prose has no standard format so curious whether you&#x27;re running it through an LLM or using a rules-based parser, and how you handle amendments where the actual figures show up in a later filing.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779004,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779004"></div>
+</div>
+<div class="comment" id="comment-47779300">
+  <div class="comment_head"><a href="/user/baxtr">baxtr</a> 49 minutes ago</div>
+  <div class="comment_text">Nice job! Is there a way to double click on any name to see more details on the person like previous positions or current compensation?</div>
+  
+  <div class="replies-container" id="replies-47779300"></div>
+</div>
+<div class="comment" id="comment-47779761">
+  <div class="comment_head"><a href="/user/htrp">htrp</a> 20 minutes ago</div>
+  <div class="comment_text">did you write the SEC parsers yourself or use oss&#x2F;off the shelf tech?</div>
+  
+  <div class="replies-container" id="replies-47779761"></div>
+</div>
+<div class="comment" id="comment-47778741">
+  <div class="comment_head"><a href="/user/itissid">itissid</a> 1 hour ago</div>
+  <div class="comment_text">Interesting. How do you yourself use this(I am assuming of course you built it out of a need to want to have to track this data)?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778741,this)">1 replies</button>
+  <div class="replies-container" id="replies-47778741"></div>
+</div>
+<div class="comment" id="comment-47779248">
+  <div class="comment_head"><a href="/user/Thoko14">Thoko14</a> 53 minutes ago</div>
+  <div class="comment_text">Interesting part will be what do we read out of that data</div>
+  
+  <div class="replies-container" id="replies-47779248"></div>
+</div>
+<div class="comment" id="comment-47778849">
+  <div class="comment_head"><a href="/user/mikedillion">mikedillion</a> 1 hour ago</div>
+  <div class="comment_text">“Real time”</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778849,this)">1 replies</button>
+  <div class="replies-container" id="replies-47778849"></div>
+</div>
+      </div>
+      
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

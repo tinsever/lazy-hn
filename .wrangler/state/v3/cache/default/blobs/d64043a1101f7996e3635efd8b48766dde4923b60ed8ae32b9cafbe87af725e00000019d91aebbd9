@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jobs | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.story-list { list-style: none; }
+.story-item { display: flex; align-items: baseline; padding: 0.3rem 0; gap: 0.5rem; }
+.story-rank { color: var(--muted); min-width: 3rem; text-align: right; font-size: 1.3rem; }
+.story-info { flex: 1; }
+.story-title a { font-size: 1.4rem; }
+.story-domain { color: var(--muted); font-size: 1.1rem; margin-left: 0.3rem; }
+.story-meta { font-size: 1.1rem; color: var(--muted); }
+.story-meta a { color: var(--muted); }
+.story-meta a:hover { text-decoration: underline; }
+.story-comments-link { color: var(--muted); font-size: 1.1rem; }
+.pagination { padding: 1rem 0; font-size: 1.3rem; }
+.pagination a { margin-right: 1rem; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.comment-tree { margin-left: 2rem; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.user-page { max-width: 85vw; margin: 0 auto; }
+.user-header h1 { font-size: 1.6rem; }
+.user-detail { font-size: 1.3rem; color: var(--muted); margin: 0.3rem 0; }
+.user-about { margin: 0.5rem 0; padding: 0.5rem; background: var(--comment-bg); border: 1px solid var(--border); }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <ol class="story-list">
+      <li class="story-item">
+  <span class="story-rank">1.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47777902">Proliferate (YC S25) Is Hiring Founding Engineers</a></span></div>
+    <div class="story-meta"><a href="/user/pablo24602">pablo24602</a> &bull; 3 hours ago &bull; <a href="/item/47777902" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">2.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47775606">MDalgorithms (AI Healthcare) – Hiring Growth Marketer – Remote – $80K-$140K</a></span></div>
+    <div class="story-meta"><a href="/user/odedharth93">odedharth93</a> &bull; 8 hours ago &bull; <a href="/item/47775606" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">3.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47741953">EasyPost (YC S13) Is Hiring</a></span></div>
+    <div class="story-meta"><a href="/user/jstreebin">jstreebin</a> &bull; 2 days ago &bull; <a href="/item/47741953" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">4.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47720918">Bild AI (YC W25) Is Hiring a Founding Product Engineer</a></span></div>
+    <div class="story-meta"><a href="/user/rooppal">rooppal</a> &bull; 4 days ago &bull; <a href="/item/47720918" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">5.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47713744">CollectWise (YC F24) Is Hiring</a></span></div>
+    <div class="story-meta"><a href="/user/OBrien_1107">OBrien_1107</a> &bull; 5 days ago &bull; <a href="/item/47713744" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">6.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47675302">9 Mothers (YC P26) Is Hiring – Lead Robotics and More</a></span></div>
+    <div class="story-meta"><a href="/user/ukd1">ukd1</a> &bull; 8 days ago &bull; <a href="/item/47675302" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">7.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47667011">HackerRank (YC S11) Is Hiring</a></span></div>
+    <div class="story-meta"><a href="/user/rvivek">rvivek</a> &bull; 8 days ago &bull; <a href="/item/47667011" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">8.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47660343">PostHog (YC W20) Is Hiring</a></span></div>
+    <div class="story-meta"><a href="/user/james_impliu">james_impliu</a> &bull; 9 days ago &bull; <a href="/item/47660343" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">9.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47648499">Hightouch (YC S19) Is Hiring</a></span></div>
+    <div class="story-meta"><a href="/user/joshwget">joshwget</a> &bull; 10 days ago &bull; <a href="/item/47648499" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">10.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47638270">Mbodi AI (YC P25) Is Hiring</a></span></div>
+    <div class="story-meta"><a href="/user/chitianhao">chitianhao</a> &bull; 11 days ago &bull; <a href="/item/47638270" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">11.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47632460">Charge Robotics (YC S21) Is Hiring Software and Hardware Engineers</a></span></div>
+    <div class="story-meta"><a href="/user/banks_h">banks_h</a> &bull; 11 days ago &bull; <a href="/item/47632460" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">12.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47620857">ParadeDB (YC S23) Is Hiring Database Internal Engineers (Rust)</a></span></div>
+    <div class="story-meta"><a href="/user/philippemnoel">philippemnoel</a> &bull; 12 days ago &bull; <a href="/item/47620857" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">13.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47618602">Zep AI Is Hiring – Building the Agent Context Layer (YC W24)</a></span></div>
+    <div class="story-meta"><a href="/user/roseway4">roseway4</a> &bull; 12 days ago &bull; <a href="/item/47618602" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">14.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47611044">Telli (YC F24) is hiring engineers, designers, and more (on-site, Berlin)</a></span></div>
+    <div class="story-meta"><a href="/user/sebselassie">sebselassie</a> &bull; 13 days ago &bull; <a href="/item/47611044" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">15.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47606495">InspectMind AI (YC W24) Is Hiring</a></span></div>
+    <div class="story-meta"><a href="/user/aakashprasad91">aakashprasad91</a> &bull; 13 days ago &bull; <a href="/item/47606495" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">16.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47599673">Wasmer (YC S19) Is Hiring – Rust and DevRel Positions</a></span></div>
+    <div class="story-meta"><a href="/user/syrusakbary">syrusakbary</a> &bull; 14 days ago &bull; <a href="/item/47599673" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">17.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47583712">RamAIn (YC W26) Is Hiring</a></span></div>
+    <div class="story-meta"><a href="/user/svee">svee</a> &bull; 15 days ago &bull; <a href="/item/47583712" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">18.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47558305">InpharmD (YC W21) Is Hiring – Senior Ruby on Rails Developer</a></span></div>
+    <div class="story-meta"><a href="/user/tulasichintha">tulasichintha</a> &bull; 17 days ago &bull; <a href="/item/47558305" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">19.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47553796">Toma (YC W24) is hiring a Senior/Staff Eng to build AI automotive coworkers</a></span></div>
+    <div class="story-meta"><a href="/user/anthonykrivonos">anthonykrivonos</a> &bull; 18 days ago &bull; <a href="/item/47553796" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">20.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47527399">Ashby (YC W19) Is Hiring Engineers Who Make Product Decisions</a></span></div>
+    <div class="story-meta"><a href="/user/abhikp">abhikp</a> &bull; 20 days ago &bull; <a href="/item/47527399" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">21.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47506490">Lago (YC S21) Is Hiring Product Engineers (Growth Team)</a></span></div>
+    <div class="story-meta"><a href="/user/AnhTho_FR">AnhTho_FR</a> &bull; 21 days ago &bull; <a href="/item/47506490" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">22.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47485231">GoGoGrandparent (YC S16) is hiring Back end Engineers</a></span></div>
+    <div class="story-meta"><a href="/user/davidchl">davidchl</a> &bull; 23 days ago &bull; <a href="/item/47485231" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">23.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47422408">Ndea (YC W26) is hiring a symbolic RL search guidance lead</a></span></div>
+    <div class="story-meta"><a href="/user/mikeknoop">mikeknoop</a> &bull; 28 days ago &bull; <a href="/item/47422408" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">24.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47415350">Spice Data (YC S19) Is Hiring a Product Specialist</a></span></div>
+    <div class="story-meta"><a href="/user/richard_pepper">richard_pepper</a> &bull; 28 days ago &bull; <a href="/item/47415350" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">25.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47404801">AnswerThis (YC F25) Is Hiring</a></span></div>
+    <div class="story-meta"><a href="/user/ayush4921">ayush4921</a> &bull; 29 days ago &bull; <a href="/item/47404801" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">26.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47401618">Kaizen (YC P25) Hiring Eng, GTM, Cos to Automate BPOs</a></span></div>
+    <div class="story-meta"><a href="/user/michaelssilver">michaelssilver</a> &bull; 29 days ago &bull; <a href="/item/47401618" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">27.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47397842">Nango (YC W23, API Access for Agents and Apps) Is Hiring</a></span></div>
+    <div class="story-meta"><a href="/user/bastienbeurier">bastienbeurier</a> &bull; 1 month ago &bull; <a href="/item/47397842" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">28.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47376619">9 Mothers Defense (YC P26) Is Hiring in Austin</a></span></div>
+    <div class="story-meta"><a href="/user/ukd1">ukd1</a> &bull; 1 month ago &bull; <a href="/item/47376619" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">29.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47353904">Converge (YC S23) Is Hiring a Founding Platform Engineer (NYC, Onsite)</a></span></div>
+    <div class="story-meta"><a href="/user/thomashlvt">thomashlvt</a> &bull; 1 month ago &bull; <a href="/item/47353904" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+<li class="story-item">
+  <span class="story-rank">30.</span>
+  <div class="story-info">
+    <div class="story-title"><span class="job-title"><a href="/item/47351089">Hive (YC S14) is hiring scrappy product managers and product/data engineers</a></span></div>
+    <div class="story-meta"><a href="/user/patman_h">patman_h</a> &bull; 1 month ago &bull; <a href="/item/47351089" class="story-comments-link">discuss</a></div>
+  </div>
+</li>
+    </ol>
+    <div class="pagination"><a href="/jobs?p=2">next &gt;</a></div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

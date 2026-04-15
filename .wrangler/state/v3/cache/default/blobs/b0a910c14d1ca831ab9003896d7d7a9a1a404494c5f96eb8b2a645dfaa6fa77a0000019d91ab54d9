@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Future of Everything Is Lies, I Guess: New Jobs | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://aphyr.com/posts/419-the-future-of-everything-is-lies-i-guess-new-jobs" rel="noopener noreferrer">The Future of Everything Is Lies, I Guess: New Jobs</a> <span class="story-domain">(aphyr.com)</span></span>
+        <div class="item-meta">
+          71 points &bull; <a href="/user/aphyr">aphyr</a> &bull; 1 hour ago &bull; 34 comments
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47779585">
+  <div class="comment_head"><a href="/user/ej88">ej88</a> 29 minutes ago</div>
+  <div class="comment_text">I am personally of the opinion that ML will end up being &#x27;normal technology&#x27;, albeit incredibly transformative.<p>I think you can combine &#x27;Incanters&#x27; and &#x27;Process Engineers&#x27; into one - &#x27;Users&#x27;. Jobs that encompass a role that requires accountability will be directing, providing context, and verifying the output of agents, almost like how millions of workers know basic computer skills and Microsoft Office.<p>In my opinion, how at-risk a job is in the LLM era comes down to:<p>1: How easy is it to construct RL loops to hillclimb on performance?<p>2: How easy is it to construct a LLM harness to perform the tasks?<p>3: How much of the job is a structured set of tasks vs. taking accountability? What&#x27;s the consequence of a mistake? How much of it comes down to human relationships?<p>Hence why I&#x27;ve been quite bullish on software engineering (but not coding). You can easy set up 1) and 2) on contrived or sandboxed coding tasks but then 3) expands and dominates the rest of the role.<p>On Model Trainers -- I&#x27;m not so convinced that RLHF puts the professional experts out of work, for a few reasons. Firstly, nearly all human data companies produce data that is somewhat contrived, by definition of having people grade outputs on a contracting platform; plus there&#x27;s a seemingly unlimited bound on how much data we can harvest in the world. Secondly, as I mentioned before, the bottleneck is both accountability and the ability for the model to find fresh context without error.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779585,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779585"></div>
+</div>
+<div class="comment" id="comment-47780067">
+  <div class="comment_head"><a href="/user/siliconc0w">siliconc0w</a> 2 minutes ago</div>
+  <div class="comment_text">The problem with AI is that it isn&#x27;t like any previous technology.  There may be temporary jobs to fill in the gaps but they won&#x27;t be careers.  The AI will do the process engineering and self optimization.  The prompt witchcraft is a good example because today its totally unnecessary and doesn&#x27;t actually increase performance, and they&#x27;ll continue to make it easier to direct&#x2F;steer the models.<p>We&#x27;re literally trying to build an intelligence to replace us.</div>
+  
+  <div class="replies-container" id="replies-47780067"></div>
+</div>
+<div class="comment" id="comment-47779738">
+  <div class="comment_head"><a href="/user/Aperocky">Aperocky</a> 18 minutes ago</div>
+  <div class="comment_text">As an engineer, I&#x27;m never more excited about this job.<p>My implementation speed and bug fixing my typed code to be the bottleneck - now I just think about an implementation and it then exist - As long as I thought about the structure&#x2F;input&#x2F;output&#x2F;testability and logic flow correctly and made sure I included all that information, it just works, nicely, with tests.<p>Unix philosophy works well with LLM too - you can have software that does one thing well and only one thing well, that fit in their context and do not lead to haphazard behavior.<p>Now my day essentially revolves around delivering&#x2F;improving on delivering concentrated engineering thinking, which in my opinion is the pure part about engineer profession itself. I like it quite a lot.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779738,this)">2 replies</button>
+  <div class="replies-container" id="replies-47779738"></div>
+</div>
+<div class="comment" id="comment-47779512">
+  <div class="comment_head"><a href="/user/ai_critic">ai_critic</a> 33 minutes ago</div>
+  <div class="comment_text">I think that this is an interesting attempt at taxonomy, but it&#x27;s a bit on the magical thinking end (and I say this as somebody that does a good amount of what&#x27;s described as the <i>incanter</i> role). It&#x27;s a combination of the author&#x27;s previous witchy aesthetic (see his excellent &quot;&lt;x&gt;ing the technical interview&quot; series) and progressive labor politics (which are asymptotically doomed in the current automation push).<p>The biggest failure of imagination, I think, is the assumption we&#x27;d use humans for most (or *any) of these jobs--for example, the work of the haruspex is better left to an LLM that can process the myriad of internal states (this is the mechanical interpretation field).</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779512,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779512"></div>
+</div>
+<div class="comment" id="comment-47780010">
+  <div class="comment_head"><a href="/user/sscaryterry">sscaryterry</a> 5 minutes ago</div>
+  <div class="comment_text"><a href="https:&#x2F;&#x2F;archive.is&#x2F;OjGox" rel="nofollow">https:&#x2F;&#x2F;archive.is&#x2F;OjGox</a></div>
+  
+  <div class="replies-container" id="replies-47780010"></div>
+</div>
+<div class="comment" id="comment-47779214">
+  <div class="comment_head"><a href="/user/pmg102">pmg102</a> 52 minutes ago</div>
+  <div class="comment_text"><a href="https:&#x2F;&#x2F;archive.is&#x2F;OjGox" rel="nofollow">https:&#x2F;&#x2F;archive.is&#x2F;OjGox</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779214,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779214"></div>
+</div>
+<div class="comment deleted">
+  <div class="comment_head">[deleted] 44 minutes ago</div>
+</div>
+<div class="comment" id="comment-47779352">
+  <div class="comment_head"><a href="/user/dsmurrell">dsmurrell</a> 44 minutes ago</div>
+  <div class="comment_text">&quot;Unavailable Due to the UK Online Safety Act&quot; - without my VPN... do you know why?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779352,this)">3 replies</button>
+  <div class="replies-container" id="replies-47779352"></div>
+</div>
+<div class="comment" id="comment-47779498">
+  <div class="comment_head"><a href="/user/nonameiguess">nonameiguess</a> 34 minutes ago</div>
+  <div class="comment_text">This is part 9 of a 10-part series. The author has posted every chapter to Hacker News every day for the past 9 days. Every time four of the first five or so comments are:<p>Someone noting it is unavailable in the UK.<p>Someone posting an archive.is link.<p>Someone asking why the above posted an archive link to a static site.<p>An answer that it is because the content is otherwise unavailable in the UK.<p>Do we really need to see this <i>every single</i> time?<p>I realize I am also not adding to the real discussion now as well, but Jesus Christ, this is irritating. Can we get a new rule that an author posting their own content, knowing it is unavailable in the UK, has to post their own archive link and explain why they&#x27;re doing so as part of the submission?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779498,this)">3 replies</button>
+  <div class="replies-container" id="replies-47779498"></div>
+</div>
+<div class="comment" id="comment-47779099">
+  <div class="comment_head"><a href="/user/elcapitan">elcapitan</a> 1 hour ago</div>
+  <div class="comment_text">Is there a way back to calling human beings human beings and not &quot;meat&quot;? Or is the sociopathic Jeffrey Dahmer undertone now the new normal?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779099,this)">7 replies</button>
+  <div class="replies-container" id="replies-47779099"></div>
+</div>
+      </div>
+      
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

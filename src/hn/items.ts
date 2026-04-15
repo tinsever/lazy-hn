@@ -3,6 +3,7 @@ import { fetchItem } from "./client.ts";
 import { getOrFetchItem } from "./kv-fetch.ts";
 import { normalizeStory, normalizeComment } from "./normalize.ts";
 import { withConcurrency } from "../utils/concurrency.ts";
+import { setCachedItem } from "../cache/kv-cache.ts";
 import type { StoryCard, CommentNode } from "./normalize.ts";
 
 export interface StoryPage {
@@ -19,8 +20,16 @@ export async function fetchStoryPage(
   commentLimit = 20,
   kv?: KVStore,
 ): Promise<StoryPage | null> {
-  const item = kv ? await getOrFetchItem(kv, id) : await fetchItem(id);
+  let item = kv ? await getOrFetchItem(kv, id) : await fetchItem(id);
   if (!item) return null;
+
+  if (kv && item.type === "story" && !item.text) {
+    const fresh = await fetchItem(id);
+    if (fresh?.text) {
+      item = fresh;
+      await setCachedItem(kv, id, fresh, true);
+    }
+  }
 
   const story = normalizeStory(item);
   const commentIds = item.kids ?? [];

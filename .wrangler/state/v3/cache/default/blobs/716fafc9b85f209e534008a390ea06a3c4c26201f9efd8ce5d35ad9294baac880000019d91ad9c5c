@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code Routines | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://code.claude.com/docs/en/routines" rel="noopener noreferrer">Claude Code Routines</a> <span class="story-domain">(code.claude.com)</span></span>
+        <div class="item-meta">
+          682 points &bull; <a href="/user/matthieu_bl">matthieu_bl</a> &bull; 22 hours ago &bull; 380 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47768133">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47769425">
+  <div class="comment_head"><a href="/user/joshstrange">joshstrange</a> 20 hours ago</div>
+  <div class="comment_text">LLMs and LLM providers are massive black boxes. I get a lot of value from them and so I can put up with that to a certain extent, but these new &quot;products&quot;&#x2F;features that Anthropic are shipping are very unappealing to me. Not because I can&#x27;t see a use-case for them, but because I have 0 trust in them:<p>- No trust that they won&#x27;t nerf the tool&#x2F;model behind the feature<p>- No trust they won&#x27;t sunset the feature (the graveyard of LLM-features is vast and growing quickly while they throw stuff at the wall to see what sticks)<p>- No trust in the company long-term. Both in them being around at all and them not rug-pulling. I don&#x27;t want to build on their &quot;platform&quot;. I&#x27;ll use their harness and their models but I don&#x27;t want more lock-in than that.<p>If Anthropic goes &quot;bad&quot; I want to pick up and move to another harness and&#x2F;or model with minimal fuss. Buying in to things like this would make that much harder.<p>I&#x27;m not going to build my business or my development flows on things I can&#x27;t replicate myself. Also, I imagine debugging any of this would be maddening. The value add is just not there IMHO.<p>EDIT: Put another way, LLM companies are trying to climb the ladder to be a platform, I have zero interest in that, I was a &quot;dumb pipe&quot;, I want a commodity, I want a provider, not a platform. Claude Code is as far into the dragon&#x27;s lair that I want to venture and I&#x27;m only okay with that because I know I can jump to OpenCode&#x2F;Codex&#x2F;etc if&#x2F;when Anthropic &quot;goes bad&quot;.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47769425,this)">48 replies</button>
+  <div class="replies-container" id="replies-47769425"></div>
+</div>
+<div class="comment" id="comment-47768821">
+  <div class="comment_head"><a href="/user/andai">andai</a> 21 hours ago</div>
+  <div class="comment_text">I&#x27;m a little confused on the ToS here. From what I gathered, running `claude -p &lt;prompt&gt;` on cron is fine, but putting it in my Telegram bot is a ToS violation (unless I use per-token billing) because it&#x27;s a 3rd party harness, right? (`claude -p` being a trivial workaround for the &quot;no 3rd party stuff on the subscription&quot; rule)<p>This Routines feature notably works with the subscription, and it also has API callbacks. So if my Telegram bot calls that API... do I get my Anthropic account nuked or not?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768821,this)">6 replies</button>
+  <div class="replies-container" id="replies-47768821"></div>
+</div>
+<div class="comment" id="comment-47770354">
+  <div class="comment_head"><a href="/user/comboy">comboy</a> 19 hours ago</div>
+  <div class="comment_text">Unrelated, but Claude was performing so tragically last few days, maybe week(s), but days mostly, that I had to reluctantly switch. Reluctantly because I enjoy it. Even the most basic stuff, like most python scripts it has to rerun because of some syntax error.<p>The new reality of coding took away one of the best things for me - that the computer always just does what it is told to do. If the results are wrong it means I&#x27;m wrong, I made a bug and I can debug it. Here.. I&#x27;m not a hater, it&#x27;s a powerful tool, but.. it&#x27;s different.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770354,this)">5 replies</button>
+  <div class="replies-container" id="replies-47770354"></div>
+</div>
+<div class="comment" id="comment-47769149">
+  <div class="comment_head"><a href="/user/Eldodi">Eldodi</a> 20 hours ago</div>
+  <div class="comment_text">Anthropic is really good at releasing features that are almost the same but not exactly the same as other features they released the week before</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47769149,this)">9 replies</button>
+  <div class="replies-container" id="replies-47769149"></div>
+</div>
+<div class="comment" id="comment-47768517">
+  <div class="comment_head"><a href="/user/minimaxir">minimaxir</a> 21 hours ago</div>
+  <div class="comment_text">Given the alleged recent extreme reduction in Claude Code usage limits (<a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47739260">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47739260</a>), how do these more autonomous tools work within that constraint? Are they effectively only usable with a 20x Max plan?<p>EDIT: This comment is apparently [dead] and idk why.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768517,this)">4 replies</button>
+  <div class="replies-container" id="replies-47768517"></div>
+</div>
+<div class="comment" id="comment-47768592">
+  <div class="comment_head"><a href="/user/ctoth">ctoth</a> 21 hours ago</div>
+  <div class="comment_text">You&#x27;d think that if they were compute-limited ... Trying to get people to use it less ... The rational thing to do would be to not ship features that will use more compute automatedly? Or does this use extra usage?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768592,this)">5 replies</button>
+  <div class="replies-container" id="replies-47768592"></div>
+</div>
+<div class="comment" id="comment-47768834">
+  <div class="comment_head"><a href="/user/mellosouls">mellosouls</a> 21 hours ago</div>
+  <div class="comment_text"><i>Put Claude Code on autopilot. Define routines that run on a schedule, trigger on API calls, or react to GitHub events...</i><p>We ought to come up with a term for this new discipline, eg &quot;software engineering&quot; or &quot;programming&quot;</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768834,this)">6 replies</button>
+  <div class="replies-container" id="replies-47768834"></div>
+</div>
+<div class="comment" id="comment-47773911">
+  <div class="comment_head"><a href="/user/brandensilva">brandensilva</a> 12 hours ago</div>
+  <div class="comment_text">Anthropic is burning their good will faster than the tokens we use these days. It  is hard to be excited about these new features when the core product has been neutered into oblivion.</div>
+  
+  <div class="replies-container" id="replies-47773911"></div>
+</div>
+<div class="comment" id="comment-47770642">
+  <div class="comment_head"><a href="/user/oxag3n">oxag3n</a> 19 hours ago</div>
+  <div class="comment_text">Are they going to mirror every tool software engineers were used to for decades, but in a mangled&#x2F;proprietary form?<p>I think to become really efficient they&#x27;ll have to invent new programming language to eliminate all the ambiguity and non-determinism. Call it &quot;prompt language&quot;, with ai-subroutines, ai-labels and ai-goto.</div>
+  
+  <div class="replies-container" id="replies-47770642"></div>
+</div>
+<div class="comment" id="comment-47769196">
+  <div class="comment_head"><a href="/user/eranation">eranation</a> 20 hours ago</div>
+  <div class="comment_text">I&#x27;ve been using it for a while (it was just called &quot;Scheduled&quot;, so I assume this is an attempt to rebrand it?)<p>It was a bit buggy, but it seems to work better now. Some use cases that worked for me:<p>1. Go over a slack channel used for feedback for an internal tool, triage, open issues, fix obvious ones, reply with the PR link. Some devs liked it, some freaked out. I kept it.<p>2. Surprisingly non code related - give me a daily rundown (GitHub activity, slack messages, emails) - tried it with non Claude Code scheduled tasks (CoWork) not as good, as it seems the GitHub connector only works in Claude Code. Really good correlation between threads that start on slack, related to email (outlook), or even my personal gmail.<p>I can share the markdowns if anyone is interested, but it&#x27;s pretty basic.<p>Very useful, (when it works).</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47769196,this)">3 replies</button>
+  <div class="replies-container" id="replies-47769196"></div>
+</div>
+<div class="comment" id="comment-47771371">
+  <div class="comment_head"><a href="/user/cedws">cedws</a> 18 hours ago</div>
+  <div class="comment_text">This is the beginning of AI clouds in my estimation. Cloud services provide needed lock-in and support the push to provide higher level services over the top of models. It just makes sense, they&#x27;ll never recoup the costs on just inference.</div>
+  
+  <div class="replies-container" id="replies-47771371"></div>
+</div>
+<div class="comment" id="comment-47768583">
+  <div class="comment_head"><a href="/user/summarity">summarity</a> 21 hours ago</div>
+  <div class="comment_text">If you’re trying this for automating things on GitHub, also take a look at Agentic Workflows: <a href="https:&#x2F;&#x2F;github.github.com&#x2F;gh-aw&#x2F;" rel="nofollow">https:&#x2F;&#x2F;github.github.com&#x2F;gh-aw&#x2F;</a><p>They support much of the same triggers and come with many additional security controls out of the box</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768583,this)">3 replies</button>
+  <div class="replies-container" id="replies-47768583"></div>
+</div>
+<div class="comment" id="comment-47772293">
+  <div class="comment_head"><a href="/user/richardw">richardw</a> 16 hours ago</div>
+  <div class="comment_text">I’m moving away from Claude for anything complicated. It’s got such nice DX but I can’t take the confident flaky results. Finding Codex on the high plan more thorough, and for any complicated project that’s what I need.<p>Still using Claude for UX (playgrounds) and language. OpenAI has always been a little more cerebral and stern, which doesn’t suit those areas. When it tries to be friendly it comes off as someone my age trying to be a 20-something.</div>
+  
+  <div class="replies-container" id="replies-47772293"></div>
+</div>
+<div class="comment" id="comment-47768693">
+  <div class="comment_head"><a href="/user/airstrike">airstrike</a> 21 hours ago</div>
+  <div class="comment_text">Still no moat.<p>The reason someone would use this vs. third-party alternatives is still the fact that the $200&#x2F;mo subscription is markedly cheaper than per-token API billing.<p>Not sure how this works out in the long term when switching costs are virtually zero.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768693,this)">2 replies</button>
+  <div class="replies-container" id="replies-47768693"></div>
+</div>
+<div class="comment" id="comment-47777704">
+  <div class="comment_head"><a href="/user/Chrisszz">Chrisszz</a> 3 hours ago</div>
+  <div class="comment_text">I don&#x27;t get all the hype around these kinds of things, it&#x27;s not something that crazy that when it gets released you solve some kind of problem you had. Those are things that can easily be replicated and that many of us already built for ourselves months ago, before those were published and became mainstream</div>
+  
+  <div class="replies-container" id="replies-47777704"></div>
+</div>
+<div class="comment" id="comment-47772912">
+  <div class="comment_head"><a href="/user/haukem">haukem</a> 15 hours ago</div>
+  <div class="comment_text">I used the claude-code-action GitHub Action to review PRs before, but it is pretty buggy e.g. PRs from forked repositories do not work, and I had to fix it myself. This should work better with Claude Code Routines. claude-code-action only works with the API and is therefore pretty expensive compared to the subscription.<p>I think LLM reviews on PRs are helpful and will reduce the load on maintainers. I am working on OpenWrt and was approved for the Claude Code Max Open Source Program today. The cap of 15 automatic Claude Code Routines runs per day is a bit low. We get 5 to 20 new PRs per day and I would like to run it on all of them. I would also like to re-run it when authors make changes, in that case it should be sufficient to just check if the problems were addressed.<p>Is it possible to get more runs per day, or to carry over unused ones from the last 7 days? Maybe 30 on Sonnet and 15 on Opus?<p>When I was editing a routine, the window closed and showed an error message twice. Looks like there are still some bugs.</div>
+  
+  <div class="replies-container" id="replies-47772912"></div>
+</div>
+<div class="comment" id="comment-47768557">
+  <div class="comment_head"><a href="/user/matthieu_bl">matthieu_bl</a> 21 hours ago</div>
+  <div class="comment_text">Blog post <a href="https:&#x2F;&#x2F;claude.com&#x2F;blog&#x2F;introducing-routines-in-claude-code" rel="nofollow">https:&#x2F;&#x2F;claude.com&#x2F;blog&#x2F;introducing-routines-in-claude-code</a></div>
+  
+  <div class="replies-container" id="replies-47768557"></div>
+</div>
+<div class="comment" id="comment-47774605">
+  <div class="comment_head"><a href="/user/bryanhogan">bryanhogan</a> 10 hours ago</div>
+  <div class="comment_text">So do I understand correctly that this is a competitor to something like n8n, but instead entirely vibe-coded?<p>n8n: <a href="https:&#x2F;&#x2F;n8n.io&#x2F;" rel="nofollow">https:&#x2F;&#x2F;n8n.io&#x2F;</a></div>
+  
+  <div class="replies-container" id="replies-47774605"></div>
+</div>
+<div class="comment" id="comment-47775311">
+  <div class="comment_head"><a href="/user/holografix">holografix</a> 8 hours ago</div>
+  <div class="comment_text">Anthropic is putting a lot of eggs into the same Claude Code basket.<p>If the Lovable clone is real that’s going to piss off many model consumers out there.<p>Is Sierra next?</div>
+  
+  <div class="replies-container" id="replies-47775311"></div>
+</div>
+<div class="comment" id="comment-47774418">
+  <div class="comment_head"><a href="/user/lherron">lherron</a> 11 hours ago</div>
+  <div class="comment_text">It’s interesting to watch Ant try to ship every value-add product feature they can while they still have the SOTA model for agentic.  When an open weights equivalent to Opus 4.5’s agentic capabilities comes out, I expect massive shifts of workloads away from Claude.<p>Don’t get me wrong, I think their business model is still solid and they will be able to sell every token they can generate for the next couple years.  They just won’t be critical path for AI diffusion anymore, which will be good for all sides.</div>
+  
+  <div class="replies-container" id="replies-47774418"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47768133?all=1">Show all 380 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

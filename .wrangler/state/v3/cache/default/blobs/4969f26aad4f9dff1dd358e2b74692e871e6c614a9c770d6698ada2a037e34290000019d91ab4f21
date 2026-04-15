@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Claude outage is upon us. Waiting for Claude Status to update | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://claudestatus.com/" rel="noopener noreferrer">Daily Claude outage is upon us. Waiting for Claude Status to update</a> <span class="story-domain">(claudestatus.com)</span></span>
+        <div class="item-meta">
+          95 points &bull; <a href="/user/redm">redm</a> &bull; 19 minutes ago &bull; 60 comments
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47779785">
+  <div class="comment_head"><a href="/user/edf13">edf13</a> 16 minutes ago</div>
+  <div class="comment_text">Seems to be a very regular occurrence starting around this time of day (14:30 UTC)...<p>Claude Code returning: 
+API Error: 500 {&quot;type&quot;:&quot;error&quot;,&quot;error&quot;:{&quot;type&quot;:&quot;api_error&quot;,&quot;message&quot;:&quot;Internal server error&quot;},&quot;request_id&quot;:&quot;---&quot;}<p>Over and over again!</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779785,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779785"></div>
+</div>
+<div class="comment" id="comment-47779908">
+  <div class="comment_head"><a href="/user/Sol-">Sol-</a> 9 minutes ago</div>
+  <div class="comment_text">Once AGI is achieved, they&#x27;ll reach the fabled superhuman &quot;two nines&quot; of uptime.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779908,this)">3 replies</button>
+  <div class="replies-container" id="replies-47779908"></div>
+</div>
+<div class="comment" id="comment-47779834">
+  <div class="comment_head"><a href="/user/mesmertech">mesmertech</a> 14 minutes ago</div>
+  <div class="comment_text">We went from &quot;Peak hours&quot; meaning 2x usage plus slower to now it just does 500 error<p><a href="https:&#x2F;&#x2F;mesmer.tools&#x2F;random&#x2F;is-it-peak-hours" rel="nofollow">https:&#x2F;&#x2F;mesmer.tools&#x2F;random&#x2F;is-it-peak-hours</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779834,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779834"></div>
+</div>
+<div class="comment" id="comment-47780065">
+  <div class="comment_head"><a href="/user/pelagicAustral">pelagicAustral</a> 2 minutes ago</div>
+  <div class="comment_text"><p><pre><code>    API Error: 500 {&quot;type&quot;:&quot;error&quot;,&quot;error&quot; {&quot;type&quot;:&quot;api_error&quot;,&quot;message&quot;:&quot;Internal
+     server error&quot;},&quot;request_id&quot;:&quot;req_011Ca5khsA9fCH6HRrG83NWL&quot;}
+</code></pre>
+Literally, just now.</div>
+  
+  <div class="replies-container" id="replies-47780065"></div>
+</div>
+<div class="comment" id="comment-47779849">
+  <div class="comment_head"><a href="/user/lbriner">lbriner</a> 13 minutes ago</div>
+  <div class="comment_text">Funny that I just saw this after have &quot;Console temporarily unavailable&quot;. I am currently at the stage that: 1) I think Claude Code is very impressive 2) I think pretty much everything else about them is terrible.<p>* Support really poor, raised a ticket last week and have heard nothing back at all
+* Separation of claude.ai accounts and console accounts is super confusing
+* Couldn&#x27;t log into the platform since I had an old org in the process of deletion even though I was invited to a new one (had to wait 7 days!)
+* Payments for more API credits were broken for about a week
+* Claude chat has really gone to s*t unless it always was. Just getting back terrible answers to simple questions.
+* The desktop app is a web app pretending to be a desktop app that doesn&#x27;t always know it is a desktop app so you get things like, &quot;this will only work in the desktop app&quot;. Yes I know, this is the desktop app! &quot;Oh sorry about that but you need to use the desktop app&quot;.
+* mcp integration and debugging is dreadful, just a combination of generic &quot;an error ocurred&quot; and sometimes nothing at all
+* MCP only supports OAuth for shared connectors but auth key doesn&#x27;t work even with &quot;local&quot; servers that are not necessarily local, just the config is local.<p>You can put those on the health status!</div>
+  
+  <div class="replies-container" id="replies-47779849"></div>
+</div>
+<div class="comment" id="comment-47780054">
+  <div class="comment_head"><a href="/user/stokedbits">stokedbits</a> 3 minutes ago</div>
+  <div class="comment_text">Why would anyone assume a new model is dropping when their status page is showing elevated errors? Are they that sloppy that they just let their status systems report failures when they are the ones deploying new infrastructure &#x2F; models &#x2F; etc?</div>
+  
+  <div class="replies-container" id="replies-47780054"></div>
+</div>
+<div class="comment" id="comment-47779950">
+  <div class="comment_head"><a href="/user/jakobloekke">jakobloekke</a> 7 minutes ago</div>
+  <div class="comment_text">Have anyone found good techniques to get a session out of Claude Code, so that I can point another tool at it and pick up there? 
+This always seems to happen at the worst possible time, after having spent an hour getting deep into something – half finished edits across files, subagents running, etc.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779950,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779950"></div>
+</div>
+<div class="comment" id="comment-47779891">
+  <div class="comment_head"><a href="/user/pton_xd">pton_xd</a> 10 minutes ago</div>
+  <div class="comment_text">91% uptime for Claude Code over the last 30 days. Is that accurate?! I&#x27;m not a CC user but that seems awfully low.</div>
+  
+  <div class="replies-container" id="replies-47779891"></div>
+</div>
+<div class="comment" id="comment-47779799">
+  <div class="comment_head"><a href="/user/parthdesai">parthdesai</a> 16 minutes ago</div>
+  <div class="comment_text">Coding is solved</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779799,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779799"></div>
+</div>
+<div class="comment" id="comment-47779951">
+  <div class="comment_head"><a href="/user/chollida1">chollida1</a> 7 minutes ago</div>
+  <div class="comment_text">Shades of early twitter.<p>Early twitter showed the fail whale as often as it showed tweets and yet it was an unstoppable juggernaut that people kept using.</div>
+  
+  <div class="replies-container" id="replies-47779951"></div>
+</div>
+<div class="comment" id="comment-47780058">
+  <div class="comment_head"><a href="/user/garff">garff</a> 3 minutes ago</div>
+  <div class="comment_text">Yea, it&#x27;s peak time - they dont&#x27; have enough compute.</div>
+  
+  <div class="replies-container" id="replies-47780058"></div>
+</div>
+<div class="comment" id="comment-47779987">
+  <div class="comment_head"><a href="/user/sensanaty">sensanaty</a> 6 minutes ago</div>
+  <div class="comment_text">But I thought coding was solved? I guess having a single 9 of availability is something we need true AGI for, we should probably give OpenAI and Anthropic another gazillion dollars to burn through to figure this out!</div>
+  
+  <div class="replies-container" id="replies-47779987"></div>
+</div>
+<div class="comment" id="comment-47780044">
+  <div class="comment_head"><a href="/user/zurfer">zurfer</a> 3 minutes ago</div>
+  <div class="comment_text">They should just fall back to gpt 5.4. would save me the hustle to setup codex.. :P</div>
+  
+  <div class="replies-container" id="replies-47780044"></div>
+</div>
+<div class="comment" id="comment-47780032">
+  <div class="comment_head"><a href="/user/jpcfl">jpcfl</a> 4 minutes ago</div>
+  <div class="comment_text">&gt; claude: &quot;API Error: 500... check status.claude.com&quot;<p>&gt; status.claude.com: &quot;All Systems Operational&quot;</div>
+  
+  <div class="replies-container" id="replies-47780032"></div>
+</div>
+<div class="comment" id="comment-47779904">
+  <div class="comment_head"><a href="/user/DanMcInerney">DanMcInerney</a> 10 minutes ago</div>
+  <div class="comment_text">Cross your fingers they&#x27;re about to drop 4.7. 4.6 came out with a bang, now it seems all the compute bottlenecks just lead to customer frustration as they get closer to releasing next model. Balancing the books over there must be a nightmare, &quot;Well we can piss off every single customer for a week, but we&#x27;ll be able to release the next model 1 week faster&quot;</div>
+  
+  <div class="replies-container" id="replies-47779904"></div>
+</div>
+<div class="comment" id="comment-47780042">
+  <div class="comment_head"><a href="/user/thatmf">thatmf</a> 3 minutes ago</div>
+  <div class="comment_text">Looks like they redesigned the page though, so that&#x27;s nice.</div>
+  
+  <div class="replies-container" id="replies-47780042"></div>
+</div>
+<div class="comment" id="comment-47779971">
+  <div class="comment_head"><a href="/user/filament">filament</a> 6 minutes ago</div>
+  <div class="comment_text">You&#x27;d think the robots would be better at detecting outages.</div>
+  
+  <div class="replies-container" id="replies-47779971"></div>
+</div>
+<div class="comment deleted">
+  <div class="comment_head">[deleted] 7 minutes ago</div>
+</div>
+<div class="comment" id="comment-47779921">
+  <div class="comment_head"><a href="/user/dkackman11">dkackman11</a> 9 minutes ago</div>
+  <div class="comment_text">it was me. i asked it to calculate factorials without recursion and it crashed.</div>
+  
+  <div class="replies-container" id="replies-47779921"></div>
+</div>
+<div class="comment" id="comment-47779997">
+  <div class="comment_head"><a href="/user/me551ah">me551ah</a> 5 minutes ago</div>
+  <div class="comment_text">What am I supposed to do now? Copy code from stackoverflow like a caveman?</div>
+  
+  <div class="replies-container" id="replies-47779997"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47779730?all=1">Show all 60 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

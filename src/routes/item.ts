@@ -11,7 +11,7 @@ itemRoute.get("/item/:id", async (c) => {
     return c.text("Invalid item ID", 400);
   }
 
-  const hit = await matchEdgeHtml(new URL(c.req.url).toString());
+  const hit = await matchEdgeHtml(new URL(c.req.url).toString(), c.env.DISABLE_HTML_CACHE ?? false);
   if (hit) return hit;
 
   const { fetchStoryPage } = await import("../hn/items.ts");

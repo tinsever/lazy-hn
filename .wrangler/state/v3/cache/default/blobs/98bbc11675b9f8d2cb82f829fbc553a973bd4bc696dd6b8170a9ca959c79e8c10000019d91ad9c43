@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Stacked PRs | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://github.github.com/gh-stack/" rel="noopener noreferrer">GitHub Stacked PRs</a> <span class="story-domain">(github.github.com)</span></span>
+        <div class="item-meta">
+          880 points &bull; <a href="/user/ezekg">ezekg</a> &bull; 1 day ago &bull; 508 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47757495">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47757695">
+  <div class="comment_head"><a href="/user/adamwk">adamwk</a> 1 day ago</div>
+  <div class="comment_text">As someone who used phabricator and mercurial, using GitHub and git again feels like going back to the stone ages. Hopefully this and jujutsu can recreate stacked-diff flow of phabricator.<p>It’s not just nice for monorepos. It makes both reviewing and working on long-running feature projects so much nicer. It encourages smaller PRs or diffs so that reviews are quick and easy to do in between builds (whereas long pull requests take a big chunk of time).</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47757695,this)">6 replies</button>
+  <div class="replies-container" id="replies-47757695"></div>
+</div>
+<div class="comment" id="comment-47757981">
+  <div class="comment_head"><a href="/user/jenadine">jenadine</a> 1 day ago</div>
+  <div class="comment_text">I might be missing something, but what I need is not &quot;stacked PR&quot; but a proper UI and interface to manage single commit:<p>- merge some commits independently when partial work is ready.<p>- mark some commit as reviewed.<p>- UI to do interactive rebase and and squash and edit individual commits. (I can do that well from the command line, but not when using the GitHub interface, and somehow not everyone from my team is familiar with that)<p>- ability to attach a comment to a specific commit, or to the commit message.<p>- better way to visualize what change over time in each forced push&#x2F;revision (diff of diff)<p>Git itself already has the concept of commit. Why put this &quot;stacked PR&quot; abstraction on top of it?<p>Or is there a difference I don&#x27;t see?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47757981,this)">9 replies</button>
+  <div class="replies-container" id="replies-47757981"></div>
+</div>
+<div class="comment" id="comment-47758067">
+  <div class="comment_head"><a href="/user/akersten">akersten</a> 1 day ago</div>
+  <div class="comment_text">Does it fix the current UX issue with Squash &amp; Merge?<p>Right now I manually do &quot;stacked PRs&quot; like this:<p>main &lt;- PR A &lt;- PR B (PR B&#x27;s merge target branch is PR A) &lt;- PR C, etc.<p>If PR B merges first, PR A can merge to main no problems. If PR A merges to main first, fixing PR B is a nightmare. The GitHub UI automatically changes the &quot;target&quot; branch of the PR to main, but instantly conflicts spawn from nowhere. Try to rebase it and you&#x27;re going to be manually looking at every non-conflicting change that ever happened on that branch, for no apparent reason (yes, the reason is that PR A merging to main created a new merge commit at the head of main, and git just can&#x27;t handle that or whatever).<p>So I don&#x27;t really need a new UI for this, I need the tool to Just Work in a way that makes sense to anyone who wasn&#x27;t Linus in 1998 when the gospel of rebase was delivered from On High to us unwashed Gentry through his fingertips..</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47758067,this)">10 replies</button>
+  <div class="replies-container" id="replies-47758067"></div>
+</div>
+<div class="comment" id="comment-47765162">
+  <div class="comment_head"><a href="/user/nathas">nathas</a> 1 day ago</div>
+  <div class="comment_text">Meanwhile, you still can&#x27;t do fast-forward merges in GitHub :clown: <a href="https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;community&#x2F;discussions&#x2F;4618" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;community&#x2F;discussions&#x2F;4618</a><p>And it doesn&#x27;t even rebase and merge correctly with fast-forward if there it&#x27;s a clean set of commits! <a href="https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;community&#x2F;discussions&#x2F;5524" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;orgs&#x2F;community&#x2F;discussions&#x2F;5524</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47765162,this)">2 replies</button>
+  <div class="replies-container" id="replies-47765162"></div>
+</div>
+<div class="comment" id="comment-47757617">
+  <div class="comment_head"><a href="/user/bsimpson">bsimpson</a> 1 day ago</div>
+  <div class="comment_text">Finally!<p>I never understood the PR=branch model GitHub defaulted to.  Stacked commits (ala Phabricator&#x2F;Gerrit) always jived more with how my brain reasons about changes.<p>Glad to see this option.  I guess I&#x27;ll have to install their CLI thing now.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47757617,this)">2 replies</button>
+  <div class="replies-container" id="replies-47757617"></div>
+</div>
+<div class="comment" id="comment-47757721">
+  <div class="comment_head"><a href="/user/cleverdash">cleverdash</a> 1 day ago</div>
+  <div class="comment_text">As a solo dev I rarely need stacked PRs, but the underlying problem, keeping PRs small and reviewable, is real even when you&#x27;re your own reviewer. I&#x27;ve found that forcing myself to break work into small branches before I start (rather than retroactively splitting a giant branch) is the actual discipline. The tooling just makes it less painful when you don&#x27;t.<p>Curious whether this changes anything for the AI-assisted workflow. Right now I let Claude Code work on a feature branch and it naturally produces one big diff. Stacked PRs could be interesting if agents learned to split their own work into logical chunks.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47757721,this)">5 replies</button>
+  <div class="replies-container" id="replies-47757721"></div>
+</div>
+<div class="comment" id="comment-47758359">
+  <div class="comment_head"><a href="/user/WhyNotHugo">WhyNotHugo</a> 1 day ago</div>
+  <div class="comment_text">I really don&#x27;t get the point of stacked PRs.<p>Just using git, you&#x27;d send a set of patches, which can be reviewed, tested and applied individually.<p>The PR workflow makes a patch series an undivisible set of changes, which must be reviewed, tested and applied in unison.<p>And stacked PRs tries to work around this issue, but the issue is how PRs are implemented in the first place.<p>What you really want is the ability to review individual commits&#x2F;patches again, rather than work on entire bundles at once. Stacked PRs seems like a second layer of abstraction to work around issues with the first layer of abstractions.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47758359,this)">5 replies</button>
+  <div class="replies-container" id="replies-47758359"></div>
+</div>
+<div class="comment" id="comment-47758698">
+  <div class="comment_head"><a href="/user/thcipriani">thcipriani</a> 1 day ago</div>
+  <div class="comment_text">Very cool that GitHub actually put stacks in the UI vs. GitLab&#x27;s `glab stack`[0] (which looks just like the `gh stack` part of GitHub&#x27;s thing).<p>One part that seems like it&#x27;s going to feel a little weird is how merging is set up[1].<p>That is, if I merge the bottom of the stack, it&#x27;ll rebase the others in the stack, which will probably trigger a CI test run. So, if I have three patches in the stack, and I want to merge the bottom two, I&#x27;d merge one, wait for tests to run on the other, merge the second vs. merge just those two in one step (though, without having used it, can&#x27;t be sure about how this&#x27;d work in practice—maybe there&#x27;s some way to work around this with restacking?)<p>[0]: &lt;<a href="https:&#x2F;&#x2F;docs.gitlab.com&#x2F;cli&#x2F;stack&#x2F;" rel="nofollow">https:&#x2F;&#x2F;docs.gitlab.com&#x2F;cli&#x2F;stack&#x2F;</a>&gt;<p>[1]: &lt;<a href="https:&#x2F;&#x2F;github.github.com&#x2F;gh-stack&#x2F;guides&#x2F;stacked-prs&#x2F;#merging-step-by-step" rel="nofollow">https:&#x2F;&#x2F;github.github.com&#x2F;gh-stack&#x2F;guides&#x2F;stacked-prs&#x2F;#mergi...</a>&gt;</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47758698,this)">1 replies</button>
+  <div class="replies-container" id="replies-47758698"></div>
+</div>
+<div class="comment" id="comment-47757989">
+  <div class="comment_head"><a href="/user/robertwt7">robertwt7</a> 1 day ago</div>
+  <div class="comment_text">There’s a startup callled Graphite dedicated to stacked PRs. I have been using them for a while now I always wonder why github doesn’t implement something similar to this. I probaly will try and switch to GitHub to see if it works flawlessly</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47757989,this)">2 replies</button>
+  <div class="replies-container" id="replies-47757989"></div>
+</div>
+<div class="comment" id="comment-47761360">
+  <div class="comment_head"><a href="/user/fphilipe">fphilipe</a> 1 day ago</div>
+  <div class="comment_text">I&#x27;ve been doing stacked PRs for ~2 years now. Thus, I don&#x27;t quite see the need for this CLI. Git has had some additions in the last few years that make this work natively – specifically the --update-refs flag[1] or the rebase.updateRefs config. Combined with `git commit --fixup`, rebase.autoStash, and rebase.autoSquash rebasing stacks becomes a breeze (as long as you work off from the tip of your stack). Add in git-absorb[2] and the heavy-lifting is taken care of.<p>My biggest gripe with GitHub when working with stacks – and something that&#x27;s not clarified in these docs – is whether fast-forward merges are possible. Its &quot;Merge with rebase&quot; button <i>always</i> rewrites the commit. They do mention that the stack needs to be rebased in order to merge it. My workaround has been `git merge --ff-only top-branch-of-stack` to merge the entire stack locally into main (or anything in between actually) and then push. GitHub neatly recognizes that each PR in the stack is now in main and marks them all as merged. If there are subsequent PRs that weren&#x27;t merged it updates the base branch.<p>Having said that, it&#x27;s great to see GitHub getting a proper UI for this. It&#x27;s also great that it understands the intent that branch B that goes on top of branch A is a stack and thus CI runs against. I just hope that it&#x27;s not mandatory to use their CLI in order to create stacks. They do cover this briefly in the FAQ[3], but it might be necessary to use `gh stack init --adopt branch-a branch-b branch-c`. On the other hand, if that removes the need to manually create the N PRs for my stack, that&#x27;s nice.<p>[1]: <a href="https:&#x2F;&#x2F;git-scm.com&#x2F;docs&#x2F;git-rebase#Documentation&#x2F;git-rebase.txt---update-refs" rel="nofollow">https:&#x2F;&#x2F;git-scm.com&#x2F;docs&#x2F;git-rebase#Documentation&#x2F;git-rebase...</a><p>[2]: <a href="https:&#x2F;&#x2F;github.com&#x2F;tummychow&#x2F;git-absorb" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;tummychow&#x2F;git-absorb</a><p>[3]: <a href="https:&#x2F;&#x2F;github.github.com&#x2F;gh-stack&#x2F;faq&#x2F;#will-this-work-with-a-different-tool-for-stacking" rel="nofollow">https:&#x2F;&#x2F;github.github.com&#x2F;gh-stack&#x2F;faq&#x2F;#will-this-work-with-...</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47761360,this)">2 replies</button>
+  <div class="replies-container" id="replies-47761360"></div>
+</div>
+<div class="comment" id="comment-47761842">
+  <div class="comment_head"><a href="/user/boomlinde">boomlinde</a> 1 day ago</div>
+  <div class="comment_text">IME the github workflow promotes bad commit hygiene by making squashing or rebasing as-is an either-or choice in the web GUI.<p>This will help some since you can more easily split PRs into units that make sense to squash at the end, but it still seems like not doing this on a per-commit basis is a disadvantage compared to Gerrit. With Gerrit I can use all the built-in Git rebase&#x2F;squash&#x2F;fixup tools to manage the commit stack and push everything in one go. I don&#x27;t think there&#x27;s a nearly as convenient a way to work with stacked branches in Git.</div>
+  
+  <div class="replies-container" id="replies-47761842"></div>
+</div>
+<div class="comment" id="comment-47762713">
+  <div class="comment_head"><a href="/user/metafeather">metafeather</a> 1 day ago</div>
+  <div class="comment_text">I&#x27;ve been using `git town`[1] for years to managed stacked PR&#x27;s alone with Github PR&#x27;s[2] and juniors I have introduced it to have really found it a helpful mental model when developing features.<p>I hope the Gitub CLI will include syncing[3] &#x27;stacks&#x27; locally with upstream in a similar way.<p>[1]: <a href="https:&#x2F;&#x2F;www.git-town.com&#x2F;stacked-changes.html" rel="nofollow">https:&#x2F;&#x2F;www.git-town.com&#x2F;stacked-changes.html</a><p>[2]: <a href="https:&#x2F;&#x2F;github.com&#x2F;marketplace&#x2F;actions&#x2F;git-town-github-action" rel="nofollow">https:&#x2F;&#x2F;github.com&#x2F;marketplace&#x2F;actions&#x2F;git-town-github-actio...</a><p>[3]: <a href="https:&#x2F;&#x2F;www.git-town.com&#x2F;commands&#x2F;sync.html" rel="nofollow">https:&#x2F;&#x2F;www.git-town.com&#x2F;commands&#x2F;sync.html</a></div>
+  
+  <div class="replies-container" id="replies-47762713"></div>
+</div>
+<div class="comment" id="comment-47758749">
+  <div class="comment_head"><a href="/user/dminik">dminik</a> 1 day ago</div>
+  <div class="comment_text">Maybe this is just a skill issue, but even with several attempts I just can&#x27;t figure out why I would use stacked diffs&#x2F;PRs. Though maybe that&#x27;s because of the way I work?<p>I notice a lot of examples just vaguely mention &quot;oh, you can have others review your previous changes while you continue working&quot;, but this one doesnt make sense to me. Often times, the first set of commits doesn&#x27;t even make it to the end result. I&#x27;m working on a feature using lexical, and at this point I had to rewrite the damn thing 3 times. The time of other devs is quite valuable and I can&#x27;t imagine wasting it by having them review something that doesn&#x27;t even make it in.<p>Now, I have been in situations where I have some ready changes and I need to build something on top. But it&#x27;s not something just making another branch on top + rebase once the original is merged wouldn&#x27;t solve.<p>Is this really worth so much hype?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47758749,this)">3 replies</button>
+  <div class="replies-container" id="replies-47758749"></div>
+</div>
+<div class="comment" id="comment-47758572">
+  <div class="comment_head"><a href="/user/herpdyderp">herpdyderp</a> 1 day ago</div>
+  <div class="comment_text">I thrive on stacked PRs but this sure seems like a weird way to implement support for it. Just have each branch point to their parent in the chain, the end. Just native Git. I&#x27;ve been longing for better GitHub support for this but the CLI is not where I need that support: just the UI.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47758572,this)">4 replies</button>
+  <div class="replies-container" id="replies-47758572"></div>
+</div>
+<div class="comment" id="comment-47762444">
+  <div class="comment_head"><a href="/user/AJRF">AJRF</a> 1 day ago</div>
+  <div class="comment_text">I have never got a good answer to &quot;can&#x27;t you just make smaller PRs&quot;. This is convoluted tooling (needs its own CLI) for something you could achieve with just learning how git works.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47762444,this)">4 replies</button>
+  <div class="replies-container" id="replies-47762444"></div>
+</div>
+<div class="comment" id="comment-47757789">
+  <div class="comment_head"><a href="/user/fweimer">fweimer</a> 1 day ago</div>
+  <div class="comment_text">I find this puzzling. It does not seem to allow to stack PRs on top of other people&#x27;s PRs?<p>There is already an option to enable review comments on individual commits (see the API endpoint here: <a href="https:&#x2F;&#x2F;docs.github.com&#x2F;en&#x2F;rest&#x2F;guides&#x2F;working-with-comments?apiVersion=2026-03-10#commit-comments" rel="nofollow">https:&#x2F;&#x2F;docs.github.com&#x2F;en&#x2F;rest&#x2F;guides&#x2F;working-with-comments...</a>). Self-stacking PRs seem redundant.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47757789,this)">2 replies</button>
+  <div class="replies-container" id="replies-47757789"></div>
+</div>
+<div class="comment" id="comment-47759148">
+  <div class="comment_head"><a href="/user/j3g6t">j3g6t</a> 1 day ago</div>
+  <div class="comment_text">Super excited to give this a whirl - i&#x27;ve been messing with graphite&#x27;s `gt` command for stacking and it&#x27;s been relatively decent but I didn&#x27;t love needing to bring in another tool&#x2F;service&#x2F;account when I only care about the stacking behaviour. Was a fun experiment but nice I can simplify back onto `gh` and `git`</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47759148,this)">1 replies</button>
+  <div class="replies-container" id="replies-47759148"></div>
+</div>
+<div class="comment" id="comment-47757606">
+  <div class="comment_head"><a href="/user/ZeWaka">ZeWaka</a> 1 day ago</div>
+  <div class="comment_text">Seems to mainly be useful for monorepos as currently designed. Or, to replace a long-lived feature&#x2F;refactor branch.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47757606,this)">2 replies</button>
+  <div class="replies-container" id="replies-47757606"></div>
+</div>
+<div class="comment" id="comment-47762781">
+  <div class="comment_head"><a href="/user/netheril96">netheril96</a> 1 day ago</div>
+  <div class="comment_text">Does this work from a fork? That is, can I file a stacked PR to a project not owned by me, by creating branches in my forked project? Previously I asked AI about how to contribute stacked PR, it told me that I can only do it when I have push privileges to the repo, not from a fork, and the doc here is ambiguous.<p>----<p>OK, I found this from official docs, so this feature is now quite useless to me:<p>&gt; Can stacks be created across forks?<p>&gt; No, Stacked PRs currently require all branches to be in the same repository. Cross-fork stacks are not supported.</div>
+  
+  <div class="replies-container" id="replies-47762781"></div>
+</div>
+<div class="comment" id="comment-47761501">
+  <div class="comment_head"><a href="/user/rs545837">rs545837</a> 1 day ago</div>
+  <div class="comment_text">This is awesome honestly, Stacked PRs are one of those features that feels obvious in hindsight. Breaking a n-line PR into 3 focused layers where each one is independently reviewable is a huge win for both the author and reviewer. The native GitHub UI with the stack navigator is the right call too, and there&#x27;s no reason this should require a third-party tool.<p>One thing I keep thinking about in this same direction: even within a single layer of a stack, line-level diffs are still noisy. You rename a function and update x call sites, the diff shows y changed lines. A reviewer has to mentally reconstruct &quot;oh this is just a rename&quot; from raw red&#x2F;green text.<p>Semantic diffing (showing which functions, classes, methods were added&#x2F;modified&#x2F;deleted&#x2F;moved) would pair really well with stacks. Each layer of the stack becomes even easier to review when the diff tells you &quot;modified function X, added function Y&quot; instead of just showing changed lines.<p>I&#x27;ve been researching something in this direction, <a href="https:&#x2F;&#x2F;ataraxy-labs.github.io&#x2F;sem&#x2F;" rel="nofollow">https:&#x2F;&#x2F;ataraxy-labs.github.io&#x2F;sem&#x2F;</a>. It does entity-level diffs, blame, and impact analysis. Would love to see forges like GitHub move in this direction natively. Stacked PRs solve the too much at once problem. Semantic diffs solve the &quot;what actually changed&quot; problem. Together they&#x27;d make code review dramatically better.</div>
+  
+  <div class="replies-container" id="replies-47761501"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47757495?all=1">Show all 508 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

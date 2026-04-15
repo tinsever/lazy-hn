@@ -16,7 +16,7 @@ export function renderUserPage(user: UserProfile): string {
 </head>
 <body>
   <header class="header">
-    <a href="/" class="logo">Y</a>
+    <a href="/" class="logo">HN</a>
     <nav>
       <a href="/">top</a>
       <a href="/newest">new</a>
@@ -76,4 +76,3 @@ a:hover { text-decoration: underline; }
 .footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
   `.trim();
 }
-

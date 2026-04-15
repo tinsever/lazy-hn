@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good Sleep, Good Learning (2012) | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://super-memory.com/articles/sleep.htm" rel="noopener noreferrer">Good Sleep, Good Learning (2012)</a> <span class="story-domain">(super-memory.com)</span></span>
+        <div class="item-meta">
+          191 points &bull; <a href="/user/downbad_">downbad_</a> &bull; 5 hours ago &bull; 93 comments
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47777013">
+  <div class="comment_head"><a href="/user/rustyhancock">rustyhancock</a> 4 hours ago</div>
+  <div class="comment_text">The older I get the more sensitive to a single poor night&#x27;s sleep I become.<p>The most frustrating effect is that even a few drinks in the evening (maybe over 2-3 units). Unsettles my sleep that if I&#x27;m in the process of learning something feels like it sets me back several days.<p>That&#x27;s not even counting the slowed processing I feel, and lower productivity the next day.<p>I genuinely have to revisit old information.<p>A genuine hangover from a heavy night can put me out of action for half a week!<p>When I was younger I&#x27;m not sure I had many good nights sleep let alone noticed a bad one!<p>I&#x27;ve heard that small amounts of alcohol can actually improve learning interestingly by preventing interference from events later in the day.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777013,this)">7 replies</button>
+  <div class="replies-container" id="replies-47777013"></div>
+</div>
+<div class="comment" id="comment-47778941">
+  <div class="comment_head"><a href="/user/hnthrowaway0315">hnthrowaway0315</a> 1 hour ago</div>
+  <div class="comment_text">I think a lot of it has to do with mental status, which can be concluded with one sentence -- &quot;Are you happy with your life, and if not do you have a clear path to reach that?&quot;.<p>People who say no probably has a lot of trouble to get fit, get enough sleep -- sometimes NOT because they do not have the resources, but because they are not happy. They hate life, so why makes it better? I have observed this in myself so I wonder whether it is universally true.<p>I have observed that whenever I have a clear target in my life (e.g. I need to pursue this girl I like, or, I need to figure out Linux 1.0 VFS and I have a clear path before me), I immediately take care to do exercises, eat more healthy food, and try to get good sleep -- but if I cannot find an objective, or I have lost interests and are in the middle of finding a new one, I find myself a lot more obnoxious, and sometimes I &quot;proactively&quot; destroy my health because I don&#x27;t care about it. Unfortunately I rarely find a clear path before me so the later status is more or less permanent while the former one is rare, maybe once per year -- but when I reach the first status it usually grabbed me for 2-3 months.<p>Mental stability is probably one of the reasons different people have vastly different productivity or achievements. It is mental stability that brings focus, not the other way around.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778941,this)">3 replies</button>
+  <div class="replies-container" id="replies-47778941"></div>
+</div>
+<div class="comment" id="comment-47778393">
+  <div class="comment_head"><a href="/user/gitowiec">gitowiec</a> 2 hours ago</div>
+  <div class="comment_text">The most important thing about sleep I learned is to fall asleep at the same moment of every day. Make it 22:00 or 23:00 or 00:00. Whatever is comfortable for you. But you have to stick to the chosen hour as hard as you can. Every day from now on it has to be that hour. After you get used to that you will notice a much better effect of the sleep.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778393,this)">1 replies</button>
+  <div class="replies-container" id="replies-47778393"></div>
+</div>
+<div class="comment" id="comment-47777299">
+  <div class="comment_head"><a href="/user/sminchev">sminchev</a> 4 hours ago</div>
+  <div class="comment_text">How can I explain to my 6 months old girl that we all need to sleep :D<p>This is a bug in the universe! We need to sleep so that the levels of dopamine, and hormones of hunger and not hunger are at good levels, so that we can be healthy and strong, so that the immune system is stable and strong... And we need to get good sleep so that we can protect our children and be sane....<p>BUT the nature decided that the kids will wake up 3-4 times per night, and you need to wake up and take care of them.<p>You sleep in best case, on pauses, not more than 4-6 hours, you feel miserable, and at the same time you are THE HAPPIEST PERSON IN THIS WORLD! :)</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777299,this)">7 replies</button>
+  <div class="replies-container" id="replies-47777299"></div>
+</div>
+<div class="comment" id="comment-47778303">
+  <div class="comment_head"><a href="/user/Antibabelic">Antibabelic</a> 2 hours ago</div>
+  <div class="comment_text">&gt; There is only one formula for healthy and refreshing sleep: Go to sleep only when you are very tired. Not earlier. Not later. Wake up naturally without an alarm clock.<p>This is very easy to say when you&#x27;re not suffering from insomnia and other sleep disorders.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778303,this)">3 replies</button>
+  <div class="replies-container" id="replies-47778303"></div>
+</div>
+<div class="comment" id="comment-47777128">
+  <div class="comment_head"><a href="/user/ButlerianJihad">ButlerianJihad</a> 4 hours ago</div>
+  <div class="comment_text">I am recently diagnosed with Type II Diabetes.<p>The classic symptoms were unknown to me until this point when I researched them.<p>I had previously blamed psych medications for the symptoms, and while they may have exacerbated them, I guess diabetes was the real root cause.<p>One of the symptoms is frequent urination. And so, every night I wake up every 2 hours or so and crawl into the bathroom. It’s legitimately a huge curse.<p>I don’t get enough deep R.E.M. and I remain exhausted just from the physical effort of get-up-and-go.<p>It’s very frustrating and sad to think that even after I’ve got my blood glucose under control, I still have these lingering symptoms that impact my QoL.<p>Eat right, kids; eat well or be cursed for life!</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777128,this)">1 replies</button>
+  <div class="replies-container" id="replies-47777128"></div>
+</div>
+<div class="comment" id="comment-47779131">
+  <div class="comment_head"><a href="/user/Anonyneko">Anonyneko</a> 58 minutes ago</div>
+  <div class="comment_text">If only I knew how to have full non-interrupted restorative sleep. It seems that my body started losing that skill about 20 years ago, and lost it altogether about 6 years ago. The falling asleep time is a lottery and I&#x27;m always waking up after the first stage, often a few more times after that.<p>Tried all kinds of sleep medication, but by now I&#x27;ve forgotten what it&#x27;s like to not be half-asleep and unable to concentrate throughout the day (with loud tinnitus and a soupy feel in the brain to boot). Really sucks out any and all enjoyment from life, I can&#x27;t even find the energy to watch TV shows anymore, let alone read books. I haven&#x27;t learned anything fundamentally new at work for years too (inertia helps with daily routine).</div>
+  
+  <div class="replies-container" id="replies-47779131"></div>
+</div>
+<div class="comment deleted">
+  <div class="comment_head">[deleted] 1 hour ago</div>
+</div>
+<div class="comment" id="comment-47777497">
+  <div class="comment_head"><a href="/user/amunozo">amunozo</a> 3 hours ago</div>
+  <div class="comment_text">As a Spaniard I am trying to honor my ancestors and nap when I can, but man, it feels almost impossible most of the days. It could be that I am having too much anxiety&#x2F;stress, too much coffee in the mornings, lack of practice, or maybe all of them. Any experiences related to learning to nap or what worked for you over here?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777497,this)">3 replies</button>
+  <div class="replies-container" id="replies-47777497"></div>
+</div>
+<div class="comment" id="comment-47779292">
+  <div class="comment_head"><a href="/user/djeastm">djeastm</a> 47 minutes ago</div>
+  <div class="comment_text">How are we meant to read and discuss this page? It&#x27;s huge!<p>It seems like we&#x27;re all just looking at the title and talking about our sleep habits.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779292,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779292"></div>
+</div>
+<div class="comment" id="comment-47777460">
+  <div class="comment_head"><a href="/user/sudosteph">sudosteph</a> 3 hours ago</div>
+  <div class="comment_text">I think nearly everyone should be screened for sleep apnea. The at-home test you wear on your finger is so cheap - it doesn&#x27;t make sense not to do it for anyone who has any issues with sleep or tiredness in the day.<p>I always thought that due to being female and a healthy weight, it wasn&#x27;t something I needed to think about. I also didn&#x27;t think I snored more than anyone else, so it took me years of poor sleep before a Doctor finally recommended I get tested.<p>Turns out OSA also can be caused or aggravated by: the size and shape of your mouth, the position you sleep in (I have twice as many events on my back vs side), and whether you tuck your chin in near your test (soft cervical collar helped for that). There are devices that alter how your mouth rests when sleeping (easier to breathe if your front teeth are forward) but they&#x27;re possibly not good for your bite. CPAP&#x2F;APAP is still the gold standard for a reason.<p>The coolest thing about CPAP though, is a lot of them have amazing metrics recorded if you pop in an SD card. And there&#x27;s a big community built around open source software to analyze those metrics and tune the settings to minimize apnea events overnight.<p>Also, a cpap with a humidifier is amazing if you&#x27;re prone to nose pain &#x2F; nose bleeds due to dry air.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777460,this)">2 replies</button>
+  <div class="replies-container" id="replies-47777460"></div>
+</div>
+<div class="comment deleted">
+  <div class="comment_head">[deleted] 1 hour ago</div>
+</div>
+<div class="comment" id="comment-47779392">
+  <div class="comment_head"><a href="/user/hani1808">hani1808</a> 41 minutes ago</div>
+  <div class="comment_text">No wonder I sleep a lot but still wake up feeling tired and constantly sleepy. Maybe following proper REM sleep cycles could help solve this. I’ll give it a try.</div>
+  
+  <div class="replies-container" id="replies-47779392"></div>
+</div>
+<div class="comment" id="comment-47777400">
+  <div class="comment_head"><a href="/user/logicprog">logicprog</a> 3 hours ago</div>
+  <div class="comment_text">I&#x27;m extremely sensitive to poor sleep. I also have nothing in my schedule that really prevents me from going to sleep early and sleeping late most of the time, and generally I at least achieve the former. The problem is that I have unbearable horrible nightmares every time I sleep. To the point where going to sleep is akin to going to hell itself, and I generally choose to forcibly wake myself up around like 6 a.m. just to get away from it all. I haven&#x27;t really figured out a way around this.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777400,this)">1 replies</button>
+  <div class="replies-container" id="replies-47777400"></div>
+</div>
+<div class="comment" id="comment-47778685">
+  <div class="comment_head"><a href="/user/itissid">itissid</a> 1 hour ago</div>
+  <div class="comment_text">Has someone found that they have better alcohol &quot;recovery&quot; if they are pursuing intense or at least regular(at least 3x a week) stamina building exercise like running&#x2F;swimming?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778685,this)">1 replies</button>
+  <div class="replies-container" id="replies-47778685"></div>
+</div>
+<div class="comment" id="comment-47777750">
+  <div class="comment_head"><a href="/user/alvsilvao">alvsilvao</a> 3 hours ago</div>
+  <div class="comment_text">Putting my laptop to sleep unfortunately didn&#x27;t increase its memory</div>
+  
+  <div class="replies-container" id="replies-47777750"></div>
+</div>
+<div class="comment" id="comment-47777264">
+  <div class="comment_head"><a href="/user/LZ_Khan">LZ_Khan</a> 4 hours ago</div>
+  <div class="comment_text">Is the author suggesting people to have to live with going through a phase of being nocturnal? In the free running algorithm, we&#x27;re supposed to sleep 15 minutes later each day until we&#x27;re falling asleep at like 9AM?<p>That&#x27;s just incompatible with modern life right?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47777264,this)">3 replies</button>
+  <div class="replies-container" id="replies-47777264"></div>
+</div>
+<div class="comment" id="comment-47776558">
+  <div class="comment_head"><a href="/user/downbad_">downbad_</a> 5 hours ago</div>
+  <div class="comment_text"><a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=10782443">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=10782443</a></div>
+  
+  <div class="replies-container" id="replies-47776558"></div>
+</div>
+<div class="comment" id="comment-47778466">
+  <div class="comment_head"><a href="/user/AheadFin">AheadFin</a> 1 hour ago</div>
+  <div class="comment_text">The explanation of the memory consolidation process during sleep was surprising and made me rethink my habit of using alarms and cutting back on sleep for overtime work.</div>
+  
+  <div class="replies-container" id="replies-47778466"></div>
+</div>
+<div class="comment" id="comment-47777088">
+  <div class="comment_head"><a href="/user/block_dagger">block_dagger</a> 4 hours ago</div>
+  <div class="comment_text">Biphasic&#x2F;polyphasic sleeper here (not by choice). Makes the work week a lot trickier. I will be reading through this article for insight on how to get the most out of my situation.</div>
+  
+  <div class="replies-container" id="replies-47777088"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47776557?all=1">Show all 93 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

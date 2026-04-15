@@ -6,7 +6,7 @@ import type { EnvBindings } from "../utils/response.ts";
 export const homeRoute = new Hono<{ Bindings: EnvBindings }>();
 
 homeRoute.get("/", async (c) => {
-  const hit = await matchEdgeHtml(new URL(c.req.url).toString());
+  const hit = await matchEdgeHtml(new URL(c.req.url).toString(), c.env.DISABLE_HTML_CACHE ?? false);
   if (hit) return hit;
 
   const { fetchStories } = await import("../hn/lists.ts");

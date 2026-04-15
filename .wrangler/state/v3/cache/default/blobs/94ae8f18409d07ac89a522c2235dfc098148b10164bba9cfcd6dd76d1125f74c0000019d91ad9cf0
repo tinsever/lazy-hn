@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The future of everything is lies, I guess: Work | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://aphyr.com/posts/418-the-future-of-everything-is-lies-i-guess-work" rel="noopener noreferrer">The future of everything is lies, I guess: Work</a> <span class="story-domain">(aphyr.com)</span></span>
+        <div class="item-meta">
+          276 points &bull; <a href="/user/aphyr">aphyr</a> &bull; 1 day ago &bull; 209 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47766550">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47767539">
+  <div class="comment_head"><a href="/user/jerf">jerf</a> 22 hours ago</div>
+  <div class="comment_text">The interesting question to me at the moment is whether we are still at the bottom of an exponential takeoff or nearing the top of a sigmoid curve. You can find evidence for both. LLMs probably can&#x27;t get another 10 times better. But then, almost literally at any minute, someone could come up with a new architecture that <i>can</i> be 10 times better with the same or fewer resources. LLMs strike me as still leaving a lot on the table.<p>If we&#x27;re nearing the  top of a sigmoid curve and are given 10-ish years at least to adapt, we probably can. Advancements in applying the AI will continue but we&#x27;ll also grow a clearer understanding of what current AI can&#x27;t do.<p>If we&#x27;re still at the bottom of the curve and it doesn&#x27;t slow down, then we&#x27;re looking at the singularity. Which I would remind people in its original, and generally better, formulation is simply an observation that there comes a point where you can&#x27;t predict past it at all. (&quot;Rapture of the Nerds&quot; is a  <i>very</i> particular possible instance of the unpredictable future, it is not the concept of the &quot;singularity&quot; itself.) Who knows what will happen.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767539,this)">12 replies</button>
+  <div class="replies-container" id="replies-47767539"></div>
+</div>
+<div class="comment" id="comment-47768106">
+  <div class="comment_head"><a href="/user/itissid">itissid</a> 22 hours ago</div>
+  <div class="comment_text">For any one who has not read the cockpit recording of air-france-447 I would encourage them to[1]. It is simply jaw dropping study in how things go wrong so fast — a risk with AI we have barely begun to acknowledge let alone regulate as a community.<p>[1](<a href="https:&#x2F;&#x2F;tailstrike.com&#x2F;database&#x2F;01-june-2009-air-france-447&#x2F;" rel="nofollow">https:&#x2F;&#x2F;tailstrike.com&#x2F;database&#x2F;01-june-2009-air-france-447&#x2F;</a>)</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768106,this)">2 replies</button>
+  <div class="replies-container" id="replies-47768106"></div>
+</div>
+<div class="comment" id="comment-47768639">
+  <div class="comment_head"><a href="/user/omega3">omega3</a> 21 hours ago</div>
+  <div class="comment_text">The answer has always been the same: self-regulated profession and trade unions. Instead the ever efficient software engineers have efficiently dug their own grave. The regulated professions aren&#x27;t going to be affected by the AI because their members understand that preservation of job security[0], their pay and QOL is more important than automating themselves out of existence.<p>[0] <a href="https:&#x2F;&#x2F;www.bma.org.uk&#x2F;news-and-opinion&#x2F;medical-degree-apprenticeships" rel="nofollow">https:&#x2F;&#x2F;www.bma.org.uk&#x2F;news-and-opinion&#x2F;medical-degree-appre...</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768639,this)">2 replies</button>
+  <div class="replies-container" id="replies-47768639"></div>
+</div>
+<div class="comment" id="comment-47767857">
+  <div class="comment_head"><a href="/user/elcapitan">elcapitan</a> 22 hours ago</div>
+  <div class="comment_text">I really appreciate this series of posts, as it serves as a good summary of key points of the discourse around AIs, and links to the relevant articles etc. I find following all those discussions myself exhausting, so if I can find this all in one place and read it nicely grouped, that is very helpful.</div>
+  
+  <div class="replies-container" id="replies-47767857"></div>
+</div>
+<div class="comment" id="comment-47766779">
+  <div class="comment_head"><a href="/user/greatpost">greatpost</a> 23 hours ago</div>
+  <div class="comment_text">Thank you for this aphyr.<p>My one ask is people seem to put “CEOs” on a pedestal any time things come up, like they’re an alien life form and oh no they’re going to do something terrible. There are good company executives and shitty ones. You should try to start a company and see if you can be one of the better ones.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766779,this)">8 replies</button>
+  <div class="replies-container" id="replies-47766779"></div>
+</div>
+<div class="comment" id="comment-47777447">
+  <div class="comment_head"><a href="/user/yubblegum">yubblegum</a> 3 hours ago</div>
+  <div class="comment_text">Always a pleasure to read the thoughts of Kyle.<p>I wonder if he self censored here regarding potential futures here as concentration of stupendous wealth in generational hands and obscene wealth disparity coupled with machines that can do what &quot;bodies&quot; can naturally points to <i>depopulation</i> as a goal for the elite and their (future) spawn that are not on the choping blocks.</div>
+  
+  <div class="replies-container" id="replies-47777447"></div>
+</div>
+<div class="comment" id="comment-47767964">
+  <div class="comment_head"><a href="/user/itissid">itissid</a> 22 hours ago</div>
+  <div class="comment_text">Everyday I sit down to build a product for my clients. I am a one man shop _now_. Before I had people helping me. My mental state is not good. 
+A very odd thing happens when claude or codex complete code fast, I begin to think of all the other things that are needed to make AI Agent work better. I begin to worry about problems that other people use to help me with and think &quot;Can I do those too?&quot;. Problems like product design, devops work etc.  In a bid to try  I get nerd sniped by the velocity people seem to have — and these are respected devs not just twitter claims.  And because I am so bad at &quot;doing it all&quot; its causing my mental health to suffer because of long hours i have to put it in. I miss my friends and colleagues who I worked with.<p>I always struggled with coding before 2023, but i made ends meet and put food on the table and could work sane hours and knew what I needed to do. Logically I should have been happy that I did not have to grind on code — and some days I truly am — but it would yield such poor quality of life at such a high cost was not what I expected...</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767964,this)">1 replies</button>
+  <div class="replies-container" id="replies-47767964"></div>
+</div>
+<div class="comment" id="comment-47767726">
+  <div class="comment_head"><a href="/user/_doctor_love">_doctor_love</a> 22 hours ago</div>
+  <div class="comment_text">Another interesting one from &#x27;aphyr -- I think the points around the Ironies of Automation deserve deeper focus, possibly even a separate follow-up post.<p>I would encourage folks to look at the following industries: nuclear safety, commercial aviation, remote surgery. These industries have dealt with the issues of automation for much longer than we have as programmers.<p>In the research I&#x27;ve done, these industries went through a similar journey in the 20th century as we are now: once something becomes automated enough, the old way simply won&#x27;t work. You have to evolve new frameworks and procedures to deal with it.<p>So in the case of aviation they developed CRM and SRM - how to manage the airplane as a crew and how to manage it as a solo operator. Remember that modern airplanes are highly automated!! The human pilot is not typically hands-on-wheel for most of the flight.<p>In the case of surgeons, they found that de-skilling without regular practice can occur in as little as four weeks! So to combat that, some surgeons are now required to practice in simulated environment to keep their skills sharp.<p>My feeling is that &#x27;aphyr is right in the short-to-medium term. Current market forces and US regulatory posture (or lack thereof) makes it so that there are less rules and less enforcement. IMHO the results are depressingly predictable but the train has left the station with enough momentum that there&#x27;s no stopping it. If we survive long enough to make it past the medium-term things will change.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767726,this)">2 replies</button>
+  <div class="replies-container" id="replies-47767726"></div>
+</div>
+<div class="comment" id="comment-47768378">
+  <div class="comment_head"><a href="/user/hliyan">hliyan</a> 21 hours ago</div>
+  <div class="comment_text">&gt; One of her key lessons is that automation tends to de-skill operators<p>I recently discovered an example of this phenomenon in a completely unrelated area: navigation. About a week ago, I realized that I couldn&#x27;t remember the exact turns to reach a certain place I started driving to recently, even after having driven there about 3-4 times over a period of a month. Each time I had used Google Maps. When I used to drive pre-Google-Maps, I would typically develop a good spatial model of a route on my third drive. This skill seems to have atrophied now. Even when I explicitly decide to drive without Google Maps, and make mental notes of the turns, my retention of new routes is now much weaker than it used to be. Thankfully, routes I retained before becoming Google Maps dependent, are still there.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768378,this)">1 replies</button>
+  <div class="replies-container" id="replies-47768378"></div>
+</div>
+<div class="comment" id="comment-47768164">
+  <div class="comment_head"><a href="/user/GistNoesis">GistNoesis</a> 22 hours ago</div>
+  <div class="comment_text">Programming is indeed becoming witchcraft, with LLMs it is of the utmost importance that you chose the right database administrator.<p>For example I&#x27;m now relying on Soteria, the greek goddess of safety, salvation and preservation from harm to act as my database administrator.</div>
+  
+  <div class="replies-container" id="replies-47768164"></div>
+</div>
+<div class="comment" id="comment-47769330">
+  <div class="comment_head"><a href="/user/sambuccid">sambuccid</a> 20 hours ago</div>
+  <div class="comment_text">Great article, near the end it talks about where the money go and if there will be universal basic income. I think those paragraph had an assumption that if models get very smart all the money will go to big tech.<p>But, thanks to all the companies working on open-weight models, I&#x27;m starting to think this might no longer happen. Currently open-weights models are said to be just months behind the top players (and I think we should really try to do what we can to keep it that way).<p>I&#x27;m wondering what the predictions would be in the case where AI becomes very powerfull, but also models are generally available.<p>Two possibilities come to mind, the first one where all the money no longer spent on employment would go towards hardware. New hardware manufacturers or innovators could jump in and create a bit more employment, but eventually it would probably all progress in one direction, which is the only finite resource in the chain, the materials&#x2F;minerals needed for the hardware. Those materials might become the new &quot;petrol&quot;.
+It&#x27;s possible that eventually we would have build enough chips to power all the AI we need without needing more extraction, but I wouldn&#x27;t underestimate our ability to waste resources when they feel aboundant.<p>In the second possibility, alongside a very powerful open-weight LLM, there could be big performance advancements, which would make the hardware no longer the bottleneck. But I&#x27;m struggling to imagine this scenario, maybe we would all be better off? Maybe we would all just be deppressed because most people won&#x27;t feel &quot;usefull&quot; to society or their peers anymore?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47769330,this)">1 replies</button>
+  <div class="replies-container" id="replies-47769330"></div>
+</div>
+<div class="comment" id="comment-47768555">
+  <div class="comment_head"><a href="/user/asdfman123">asdfman123</a> 21 hours ago</div>
+  <div class="comment_text">&gt; I can imagine a future in which some or even most software is developed by witches, who construct elaborate summoning environments, repeat special incantations (“ALWAYS run the tests!”), and invoke LLM daemons who write software on their behalf.<p>This sort of prompting is only necessary now because LLMs are janky and new. I might have written this in 2025, but now LLMs are capable of saying &quot;wait, that approach clearly isn&#x27;t working, let&#x27;s try something else,&quot; running the code again, and revising their results.<p>There&#x27;s still a little jankiness but I have confidence LLMs will just get better and better at metacognitive tasks.<p>UPDATE: At this very moment, I&#x27;m using a coding agent at work and reading its output. It&#x27;s saying things like:<p>&gt; Ah! The command in README.md has specific flags! I ran: &lt;internal command&gt;. Without these flags! I missed that. I should have checked README.md again or remembered it better. The user just viewed it, maybe to remind me or themselves. But let&#x27;s first see what the background task reported. Maybe it failed because I missed the flags, or passed because the user got access and defaults worked.<p>AI is already developing better metacognition.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768555,this)">2 replies</button>
+  <div class="replies-container" id="replies-47768555"></div>
+</div>
+<div class="comment" id="comment-47770113">
+  <div class="comment_head"><a href="/user/lrvick">lrvick</a> 19 hours ago</div>
+  <div class="comment_text">&gt; Machine learning seems likely to further consolidate wealth and power in the hands of large tech companies<p>Only if you let it. You can own the means of production. I self host my daily driver LLMs in hardware in my garage.<p>Never given money to an LLM provider and never will. I only do work with tools I own.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770113,this)">1 replies</button>
+  <div class="replies-container" id="replies-47770113"></div>
+</div>
+<div class="comment" id="comment-47767914">
+  <div class="comment_head"><a href="/user/buildbot">buildbot</a> 22 hours ago</div>
+  <div class="comment_text">I love the analogy of AI coding as witchcraft! It’s very accurate to how working with these tools feels - At one point I was forced to invoke a “litany  against stubbing” in a loop to make claude code actually implement a renode setup for some firmware. That worked really well.<p>It feels like hexing the technical interview come to real life ;)</div>
+  
+  <div class="replies-container" id="replies-47767914"></div>
+</div>
+<div class="comment" id="comment-47766781">
+  <div class="comment_head"><a href="/user/Papazsazsa">Papazsazsa</a> 23 hours ago</div>
+  <div class="comment_text">previously: <a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47754379">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47754379</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766781,this)">1 replies</button>
+  <div class="replies-container" id="replies-47766781"></div>
+</div>
+<div class="comment deleted">
+  <div class="comment_head">[deleted] 19 hours ago</div>
+</div>
+<div class="comment" id="comment-47768219">
+  <div class="comment_head"><a href="/user/drivebyhooting">drivebyhooting</a> 22 hours ago</div>
+  <div class="comment_text">In the case of UBI, how would we differentiate between a previously highly paid professional (SWE, lawyer, author) and a pauper (janitor, car washer, unemployed).<p>It’s only fair that they would receive the same amount. But then how can the former category continue to fulfill their obligations?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768219,this)">1 replies</button>
+  <div class="replies-container" id="replies-47768219"></div>
+</div>
+<div class="comment" id="comment-47770022">
+  <div class="comment_head"><a href="/user/MomsAVoxell">MomsAVoxell</a> 19 hours ago</div>
+  <div class="comment_text">Every time I hear of a hallucinogenic AI event, I am reminded of what happens often with synthesizers, as in the musical variant - an instrument, set up for musicality, creativity, and exploration which - in a mere glance of a finger tip upon a delicately balanced knob - can turn immediately into ear-splitting terror and calamity, if one is .. you know .. not too careful.<p>We have to remember that the results of our prompting is a synthesis, formed on the mass psychosis of a humanity which is simultaneously capable of being completely and utterly heinous to each other, and gloriously noble and kind as well - with nought but a stray new word and a thousand old forgotten to keep us all together or not.<p>In any case, all culture is a lie, which only persists in the re-telling.  The past is a lie, too, somehow, someday, forgotten the day nobody remembers it.  Hope you make some tunes into the winds and they echo on forever.  And by you, I mean, not an AI&#x2F;ML-based entity, but rather, the source of all lies, the human soul itself.</div>
+  
+  <div class="replies-container" id="replies-47770022"></div>
+</div>
+<div class="comment" id="comment-47767446">
+  <div class="comment_head"><a href="/user/mannanj">mannanj</a> 23 hours ago</div>
+  <div class="comment_text">&gt; This feels hopelessly naïve. We have profitable megacorps at home, and their names are things like Google, Amazon, Meta, and Microsoft. These companies have fought tooth and nail to avoid paying taxes (or, for that matter, their workers). OpenAI made it less than a decade before deciding it didn’t want to be a nonprofit any more. There is no reason to believe that “AI” companies will, having extracted immense wealth from interposing their services across every sector of the economy, turn around and fund UBI out of the goodness of their hearts.<p>&gt; If enough people lose their jobs we may be able to mobilize sufficient public enthusiasm for however many trillions of dollars of new tax revenue are required. On the other hand, US income inequality has been generally increasing for 40 years, the top earner pre-tax income shares are nearing their highs from the early 20th century, and Republican opposition to progressive tax policy remains strong.<p>I think we are in general a highly naive, gullible class of people: we were conditioned, programmed and put into environments where being this was the norm and rewarded. The leaders and those extracting resources, who we gullibly allow to trample over our dignity and our rights, take advantage of this and reinforce it through lobby and influence of the mainstream culture and media campaigns around us. Further, if social media becomes a threat to their statuses, they have been shown to employ their influence there too through censorship and more; we therefore, may be best to learn how to not to be gullible and grow some balls.</div>
+  
+  <div class="replies-container" id="replies-47767446"></div>
+</div>
+<div class="comment" id="comment-47768373">
+  <div class="comment_head"><a href="/user/keeganpoppen">keeganpoppen</a> 21 hours ago</div>
+  <div class="comment_text">i respect the author of this post wayyyy too much to ever imply that i know more than them, or that i even have proprietary knowledge that they, themselves do not possess. i admire aphyr, and i aesthetically agree with many of the arguments offered forth. but this whole thing feels a bit cherry-picked— i’m not gonna go chapter-and-verse (cf. belt-and-suspenders) about it, but on some levels this comes across as a bit superficial. i think the general thrust— that ai is a sort of Narcissus’s pond— is completely a reasonable and well-considered take. but i would be shocked if someone with the intellectual powers of someone like Aphyr has never had an interaction with an ai in which they did not feel like they were interacting with the deep recesses of their mind in a way both profound and, more importantly, productive. and yeah, there’s plenty of pyrite in them thar hills. but, it does have this almost Lord of the Rings The One Ring -esque pull when you get into a certain “embedding space” (&#x2F; thought space) in a certain thread conversing with ai. it genuinely is a profound transformation of cognition, and working superlinearly productively with it is a matter of “when”, not “if”. i share all the same aeathetic concerns, and all the deeper ones. but there have been sessions that i have had with ai that made me blankly stare up at the heavens as well, and i don’t think i’m anywhere near the only one.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47768373,this)">1 replies</button>
+  <div class="replies-container" id="replies-47768373"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47766550?all=1">Show all 209 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

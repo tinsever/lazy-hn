@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>US national level OS-level age verification bill | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">Y</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://social.coop/@cwebber/116408556882122186" rel="noopener noreferrer">US national level OS-level age verification bill</a> <span class="story-domain">(social.coop)</span></span>
+        <div class="item-meta">
+          79 points &bull; <a href="/user/marvinborner">marvinborner</a> &bull; 2 hours ago &bull; 59 comments
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47778953">
+  <div class="comment_head"><a href="/user/paddor">paddor</a> 1 hour ago</div>
+  <div class="comment_text">According to a recent CRYPTO-GRAM issue from Schneier, it&#x27;s in Meta&#x27;s interest to push these regulations as their product isn&#x27;t an OS. Their competition (Apple&#x2F;MS&#x2F;Google) are OSs though.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778953,this)">1 replies</button>
+  <div class="replies-container" id="replies-47778953"></div>
+</div>
+<div class="comment" id="comment-47779033">
+  <div class="comment_head"><a href="/user/VadimPR">VadimPR</a> 1 hour ago</div>
+  <div class="comment_text">US should first implement a national identifier that can be used for healthcare purposes before implementing age verification, that would be a lot more helpful.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779033,this)">4 replies</button>
+  <div class="replies-container" id="replies-47779033"></div>
+</div>
+<div class="comment" id="comment-47778954">
+  <div class="comment_head"><a href="/user/stevenalowe">stevenalowe</a> 1 hour ago</div>
+  <div class="comment_text">Looks like compelled speech to me, both for the operating system creator and the users. I do not believe that “interstate commerce” powers negate the first amendment.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47778954,this)">4 replies</button>
+  <div class="replies-container" id="replies-47778954"></div>
+</div>
+<div class="comment" id="comment-47778927">
+  <div class="comment_head"><a href="/user/nemomarx">nemomarx</a> 1 hour ago</div>
+  <div class="comment_text">I didn&#x27;t even know a bill could be listed without the text being out.<p>Too early to discuss much though?</div>
+  
+  <div class="replies-container" id="replies-47778927"></div>
+</div>
+<div class="comment" id="comment-47779968">
+  <div class="comment_head"><a href="/user/iamnothere">iamnothere</a> 4 minutes ago</div>
+  <div class="comment_text">As I’ve said before, it’s a great time to invest in a pallet of SFF computers and source&#x2F;ISO archives of all the best distros.</div>
+  
+  <div class="replies-container" id="replies-47779968"></div>
+</div>
+<div class="comment" id="comment-47779427">
+  <div class="comment_head"><a href="/user/gustavus">gustavus</a> 36 minutes ago</div>
+  <div class="comment_text">It is currently in commitee the energy and commerce committee. If one of your reps sits on this committee my suggestion is to reach out to them and voice your opposition to this measure. Consider writing a letter or email as well.<p>Committee members can be found here:
+<a href="https:&#x2F;&#x2F;energycommerce.house.gov&#x2F;representatives" rel="nofollow">https:&#x2F;&#x2F;energycommerce.house.gov&#x2F;representatives</a></div>
+  
+  <div class="replies-container" id="replies-47779427"></div>
+</div>
+<div class="comment" id="comment-47779127">
+  <div class="comment_head"><a href="/user/OutOfHere">OutOfHere</a> 56 minutes ago</div>
+  <div class="comment_text">I guess we&#x27;ll be selecting Canada at the country selection screen.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779127,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779127"></div>
+</div>
+<div class="comment" id="comment-47779015">
+  <div class="comment_head"><a href="/user/bayareateg">bayareateg</a> 1 hour ago</div>
+  <div class="comment_text">This is a stupid bill, but how is this an anti-LGBTQ issue?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779015,this)">4 replies</button>
+  <div class="replies-container" id="replies-47779015"></div>
+</div>
+<div class="comment" id="comment-47779346">
+  <div class="comment_head"><a href="/user/nh23423fefe">nh23423fefe</a> 42 minutes ago</div>
+  <div class="comment_text">You will be charged with child endangerment if you let your kid use your phone.</div>
+  
+  <div class="replies-container" id="replies-47779346"></div>
+</div>
+<div class="comment" id="comment-47779003">
+  <div class="comment_head"><a href="/user/cwmoore">cwmoore</a> 1 hour ago</div>
+  <div class="comment_text">I’m old enough to tell you I’m old enough.</div>
+  
+  <div class="replies-container" id="replies-47779003"></div>
+</div>
+<div class="comment" id="comment-47779754">
+  <div class="comment_head"><a href="/user/ChrisArchitect">ChrisArchitect</a> 15 minutes ago</div>
+  <div class="comment_text">[dupe] Discussion on source: <a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47772203">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47772203</a></div>
+  
+  <div class="replies-container" id="replies-47779754"></div>
+</div>
+<div class="comment" id="comment-47779433">
+  <div class="comment_head"><a href="/user/binarymax">binarymax</a> 36 minutes ago</div>
+  <div class="comment_text">Nonsense bills get introduced all the time. I’m not saying this shouldn’t be taken seriously, but this eventually getting codified is a long shot.<p>There are so many issues with how this can work in practice.  Best case it just asks how old you are like a website that shows mature content, and the user lies.  So from a liability perspective that shifts it to the user who gave false information.  Beyond that there’s no practical way to actually verify someone’s age at the OS level.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779433,this)">2 replies</button>
+  <div class="replies-container" id="replies-47779433"></div>
+</div>
+<div class="comment" id="comment-47779236">
+  <div class="comment_head"><a href="/user/t1234s">t1234s</a> 49 minutes ago</div>
+  <div class="comment_text">Will this make Linux illegal?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779236,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779236"></div>
+</div>
+<div class="comment" id="comment-47779149">
+  <div class="comment_head"><a href="/user/ultrablack">ultrablack</a> 55 minutes ago</div>
+  <div class="comment_text">Input age here:</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779149,this)">1 replies</button>
+  <div class="replies-container" id="replies-47779149"></div>
+</div>
+<div class="comment" id="comment-47779284">
+  <div class="comment_head"><a href="/user/jonahs197">jonahs197</a> 46 minutes ago</div>
+  <div class="comment_text">Will there be a shooting because of this?</div>
+  
+  <div class="replies-container" id="replies-47779284"></div>
+</div>
+<div class="comment deleted">
+  <div class="comment_head">[deleted] 52 minutes ago</div>
+</div>
+<div class="comment" id="comment-47779159">
+  <div class="comment_head"><a href="/user/jmclnx">jmclnx</a> 54 minutes ago</div>
+  <div class="comment_text">This did not take long, we all knew this was coming but I am surprised on how quick this appeared.<p>Lets hope they carve out exemptions for Free Operating Systems based upon revenue.  But we know that will not happen.</div>
+  
+  <div class="replies-container" id="replies-47779159"></div>
+</div>
+<div class="comment deleted">
+  <div class="comment_head">[deleted] 1 hour ago</div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 25 minutes ago</div>
+</div>
+      </div>
+      
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

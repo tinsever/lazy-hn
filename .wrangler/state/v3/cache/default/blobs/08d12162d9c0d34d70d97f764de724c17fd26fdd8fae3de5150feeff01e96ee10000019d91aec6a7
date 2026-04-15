@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask HN: I quit my job over weaponized robots to start my own venture | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-text {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  line-height: 1.55;
+  white-space: normal;
+}
+.item-text p { margin-bottom: 0.8rem; }
+.item-text a { text-decoration: underline; }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title">Ask HN: I quit my job over weaponized robots to start my own venture</span>
+        <div class="item-meta">
+          113 points &bull; <a href="/user/barratia">barratia</a> &bull; 1 day ago &bull; 76 comments
+        </div>
+        <div class="item-text">Two weeks ago, I quit my job at a robotics company. I was working with high-end hardware (Boston Dynamics, Unitree), but I found out they were planning to mount teleoperated weapons on the robotic platforms for a demo. I’m not willing to go there, so I resigned without another offer.<p>I’ve decided this is the right time to go back to entrepreneurship. We&#x27;re at an incredible moment for embodied intelligence, but I feel the tools and workflows we use to interact, monitor, and control these platforms are still lagging behind.<p>I&#x27;m currently exploring a couple of projects around how we build, test, and interact with robots. As part of my customer discovery phase, I&#x27;m trying to gather raw data on how roboticists and developers actually work day to day and what their main pain points are regarding control interfaces.<p>I put together a very short survey (3 mins) to validate some ideas. If you work in robotics, embedded systems, or just tinker with hardware, your input would be incredibly valuable:<p>Survey link: <a href="https:&#x2F;&#x2F;forms.gle&#x2F;3Nm76wkeT5CMt23c8" rel="nofollow">https:&#x2F;&#x2F;forms.gle&#x2F;3Nm76wkeT5CMt23c8</a><p>I&#x27;m also open to discussing the ethical lines in modern robotics or anything related to ROS2 &#x2F; HRI in the thread. Thanks for reading!</div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47764215">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47775715">
+  <div class="comment_head"><a href="/user/thesmok">thesmok</a> 7 hours ago</div>
+  <div class="comment_text">As a citizen of a country currently defending in a war, unmanned systems are a literal lifesaver. We can send an armed robot where we previously would have to send a soldier. This is a good thing and before the war many had the same pacifist sentiment in the tech sector, but it&#x27;s completely reversed now.<p>Though I can understand your position being in a country that&#x27;s not defending itself currently.</div>
+  
+  <div class="replies-container" id="replies-47775715"></div>
+</div>
+<div class="comment" id="comment-47764902">
+  <div class="comment_head"><a href="/user/440bx">440bx</a> 1 day ago</div>
+  <div class="comment_text">Good on you. I quit my job in the defence sector over two decades ago for the same reasons. Best decision I ever made.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764902,this)">1 replies</button>
+  <div class="replies-container" id="replies-47764902"></div>
+</div>
+<div class="comment" id="comment-47765473">
+  <div class="comment_head"><a href="/user/rkozik1989">rkozik1989</a> 1 day ago</div>
+  <div class="comment_text">Good on you for quitting, but unless you know of people in your network who&#x27;re willing to buy what you&#x27;re making not sure if this will work. Often times its the simplest ideas that make the most profitable businesses. You know, like selling handmade soap or coffee. The problem with what you&#x27;re doing is you are trying to enter a market as the first person doing it. Which means nobody has taken the risk to prove there is a demand, and without that it means you&#x27;re potentially burning a ton of time and resources with no logical place to pivot to next.</div>
+  
+  <div class="replies-container" id="replies-47765473"></div>
+</div>
+<div class="comment" id="comment-47764959">
+  <div class="comment_head"><a href="/user/leetrout">leetrout</a> 1 day ago</div>
+  <div class="comment_text">I am building a very similar thing after a short stent at a robotics company in 2024. The industry is very far behind more general dev experience and tooling.<p>I am forced to accept the popularity of ROS but I find it to generally be a terrible experience. Are you considering an alternative? Have you used foxglove?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764959,this)">3 replies</button>
+  <div class="replies-container" id="replies-47764959"></div>
+</div>
+<div class="comment" id="comment-47776454">
+  <div class="comment_head"><a href="/user/rl3">rl3</a> 6 hours ago</div>
+  <div class="comment_text">&gt;<i>... but I found out they were planning to mount teleoperated weapons on the robotic platforms for a demo. I’m not willing to go there, so I resigned without another offer.</i><p>There&#x27;s a ton of anti-drone defense startups currently, but how does one defend against armed bipedal robots? They&#x27;re a lot heavier than most drones, so presumably they can be decked out with various types of shielding.<p>As far as I&#x27;m aware, phased plasma rifles in the 40-watt range don&#x27;t yet exist.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47776454,this)">1 replies</button>
+  <div class="replies-container" id="replies-47776454"></div>
+</div>
+<div class="comment" id="comment-47764777">
+  <div class="comment_head"><a href="/user/sminchev">sminchev</a> 1 day ago</div>
+  <div class="comment_text">Robots are everywhere. Especially in the factories. 
+I think making things automatic is good, all those stupid jobs, moving all day something from one place to another, manually is pure waste of human energy. If this energy is redirected to education, and more meaningful work, those people will be much more valuable for their community and the world. If robots are used in that direction, they can do a lot of good things, and there will be no ethical lines to cross.<p>Helping people enhance is a good thing!</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764777,this)">1 replies</button>
+  <div class="replies-container" id="replies-47764777"></div>
+</div>
+<div class="comment" id="comment-47767577">
+  <div class="comment_head"><a href="/user/rupurt">rupurt</a> 22 hours ago</div>
+  <div class="comment_text">Congrats!<p>I&#x27;m on a similar journey. I took flight 6 weeks ago and built a turn based board engine for human&#x2F;agent delivery teams called Keel <a href="https:&#x2F;&#x2F;www.spoke.sh&#x2F;keel" rel="nofollow">https:&#x2F;&#x2F;www.spoke.sh&#x2F;keel</a>. The grand vision is to apply the board engine as a control mechanism for work to be done and verified in deployed robot fleets.</div>
+  
+  <div class="replies-container" id="replies-47767577"></div>
+</div>
+<div class="comment" id="comment-47765166">
+  <div class="comment_head"><a href="/user/specproc">specproc</a> 1 day ago</div>
+  <div class="comment_text">Much love and respect. I quit a job over a similar matter of principle. The decision to walk was easy, but the following year wasn&#x27;t.<p>I&#x27;m glad I did it though. We have to few years on this earth to spend our energies hurting others.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47765166,this)">1 replies</button>
+  <div class="replies-container" id="replies-47765166"></div>
+</div>
+<div class="comment" id="comment-47765053">
+  <div class="comment_head"><a href="/user/claudiacsf">claudiacsf</a> 1 day ago</div>
+  <div class="comment_text">Not helpful if all detractors leave a company that&#x27;s going down a dangerous path, leaving all the trigger happy peeps to follow their worst instincts. But understandable regardless.</div>
+  
+  <div class="replies-container" id="replies-47765053"></div>
+</div>
+<div class="comment" id="comment-47764879">
+  <div class="comment_head"><a href="/user/tqwhite">tqwhite</a> 1 day ago</div>
+  <div class="comment_text">Tough call giving up a good job. Admiration.</div>
+  
+  <div class="replies-container" id="replies-47764879"></div>
+</div>
+<div class="comment" id="comment-47764743">
+  <div class="comment_head"><a href="/user/Chance-Device">Chance-Device</a> 1 day ago</div>
+  <div class="comment_text">I do not work in robotics, but I would also like to thank you for listening to your conscience and resigning. The world needs more people like you. I hope your venture goes well!</div>
+  
+  <div class="replies-container" id="replies-47764743"></div>
+</div>
+<div class="comment" id="comment-47764692">
+  <div class="comment_head"><a href="/user/jMyles">jMyles</a> 1 day ago</div>
+  <div class="comment_text">Thank you so much for quitting and putting the long-term needs of humanity over your short-term economic comfort.  This is nothing short of a heroic move.<p>I hope you are able to convince some of your colleagues to do likewise.</div>
+  
+  <div class="replies-container" id="replies-47764692"></div>
+</div>
+<div class="comment" id="comment-47764794">
+  <div class="comment_head"><a href="/user/testemailfordg2">testemailfordg2</a> 1 day ago</div>
+  <div class="comment_text">I guess people making swords and arrows in the past had similar ethical dilemas in the begining, until they were attacked and then it became business as usual.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764794,this)">1 replies</button>
+  <div class="replies-container" id="replies-47764794"></div>
+</div>
+<div class="comment" id="comment-47764244">
+  <div class="comment_head"><a href="/user/rvz">rvz</a> 1 day ago</div>
+  <div class="comment_text">Unfortunately, this is where robotics is going to end up. We already have drones being used in warfare. Humanoids are next.<p>Won&#x27;t be surprised to see hundreds of thousands of humanoid robots strapped up with explosives running to their target or some of them flying to their target with drones attached.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764244,this)">7 replies</button>
+  <div class="replies-container" id="replies-47764244"></div>
+</div>
+<div class="comment" id="comment-47765638">
+  <div class="comment_head"><a href="/user/martythemaniak">martythemaniak</a> 1 day ago</div>
+  <div class="comment_text">After many many years in fintech, I&#x27;m now getting into robotics by trying to build an autonomous snow clearing robot, think of it like a miniature electric loader.<p>I&#x27;ve been using AI heavily to do this, so everything is in ROS2 since it&#x27;s &quot;standard&quot; and AIs have pretty good training for it. I can see how it&#x27;s annoying and suboptimal if you&#x27;re writing manually and after a more integrated system, but it&#x27;s been pretty good for getting up and running because it&#x27;s &quot;standard&quot; and kinda plug and play. I see why you&#x27;d want to rewrite it for production, the endless processes and nodes and startup processes can get annoying<p>One of the more useful things I&#x27;ve done so far is actually not robotics related directly, it&#x27;s a Godot based &quot;game&quot; with a ROS bridge that lets me drive the robot from Foxglove, which I will eventlly get a vlm based agent to drive. Seems much easier and faster than Issac Sim for getting started with.</div>
+  
+  <div class="replies-container" id="replies-47765638"></div>
+</div>
+<div class="comment" id="comment-47764286">
+  <div class="comment_head"><a href="/user/Imustaskforhelp">Imustaskforhelp</a> 1 day ago</div>
+  <div class="comment_text">can I recommend to you to not use google forms, I know that they are convenient but they aren&#x27;t privacy friendly.<p>There are many open source solutions out there: <a href="https:&#x2F;&#x2F;alternativeto.net&#x2F;software&#x2F;google-forms&#x2F;?license=opensource" rel="nofollow">https:&#x2F;&#x2F;alternativeto.net&#x2F;software&#x2F;google-forms&#x2F;?license=ope...</a> I recommend if you can choose any of privacy friendly options, thanks and have a nice day.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764286,this)">2 replies</button>
+  <div class="replies-container" id="replies-47764286"></div>
+</div>
+<div class="comment" id="comment-47764924">
+  <div class="comment_head"><a href="/user/shevy-java">shevy-java</a> 1 day ago</div>
+  <div class="comment_text">I think ethics will often fall short in general. I don&#x27;t mean this to be limited to the comment above by the threadstarter, but when it comes to money, most people will choose money. People will have different threshold levels of what they want to accept.<p>Using a survey like this is IMO not ideal though.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764924,this)">2 replies</button>
+  <div class="replies-container" id="replies-47764924"></div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 1 day ago</div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 1 day ago</div>
+</div>
+<div class="comment dead">
+  <div class="comment_head">[dead] 1 day ago</div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47764215?all=1">Show all 76 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

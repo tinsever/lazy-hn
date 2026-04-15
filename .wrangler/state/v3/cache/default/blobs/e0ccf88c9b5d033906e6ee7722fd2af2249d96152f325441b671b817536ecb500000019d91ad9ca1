@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The dangers of California&#x27;s legislation to censor 3D printing | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://www.eff.org/deeplinks/2026/04/dangers-californias-legislation-censor-3d-printing" rel="noopener noreferrer">The dangers of California&#x27;s legislation to censor 3D printing</a> <span class="story-domain">(eff.org)</span></span>
+        <div class="item-meta">
+          466 points &bull; <a href="/user/salkahfi">salkahfi</a> &bull; 1 day ago &bull; 410 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47759420">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment deleted">
+  <div class="comment_head">[deleted] 17 hours ago</div>
+</div>
+<div class="comment" id="comment-47770910">
+  <div class="comment_head"><a href="/user/horsawlarway">horsawlarway</a> 18 hours ago</div>
+  <div class="comment_text">Personally, I see this as an assault on 3d printing more than any real attempt to regulate guns.<p>I own several 3d printers.  If I wanted to make something resembling a firearm I&#x27;d go to home depot WAY before I bothered 3d printing parts.  You basically just need a metal tube, and well... a pipe from home depot does that much better than trying to 3d print something much less reliable.<p>So given we don&#x27;t do this regulation for any of the much more reliable ways to create unregistered firearms... what&#x27;s special about 3d printers?<p>So my assumption is immediately that some relatively large lobbying group feels threatened by 3d printing, and is using this as a driver to try to control access and limit business impact.<p>Either way, this is bad legislation.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770910,this)">25 replies</button>
+  <div class="replies-container" id="replies-47770910"></div>
+</div>
+<div class="comment" id="comment-47770587">
+  <div class="comment_head"><a href="/user/MisterTea">MisterTea</a> 19 hours ago</div>
+  <div class="comment_text">&gt; The primary goal is clear and simple: to require 3D printer manufacturers to use a state-certified algorithm that checks digital design files for firearm components and blocks print jobs that would produce prohibited parts.<p>&quot;state-certified algorithm&quot; has a really nice tyrannic ring to it. I am sure once this has passed the rich people can finally sleep at night knowing they are safe from roving gangs of armed Mangiones.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770587,this)">5 replies</button>
+  <div class="replies-container" id="replies-47770587"></div>
+</div>
+<div class="comment" id="comment-47771089">
+  <div class="comment_head"><a href="/user/krunck">krunck</a> 18 hours ago</div>
+  <div class="comment_text">Lets imagine a similar situation but instead of with an additive manufacturing process they try to regulate a subtractive manufacturing process: a traditional CNC machine. There is no way to prevent the CNC system from machining gun parts as along as the machining is done in discrete steps with the same work piece. The software can&#x27;t know what sitting on the CNC table.<p>In additive manufacturing it is more difficult but not impossible to print a bunch of pieces that look nothing like a gun part but and in the end be assembled into a gun.<p>In both the above cases there would need to be sophisticated surveillance software to even come close to detecting &quot;gun-ness.&quot;<p>While I don&#x27;t have a horse in the gun control race, I do have one in the open-source, running a local OS, running what software I want, and controlling what that software does races.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47771089,this)">2 replies</button>
+  <div class="replies-container" id="replies-47771089"></div>
+</div>
+<div class="comment" id="comment-47770787">
+  <div class="comment_head"><a href="/user/simplyluke">simplyluke</a> 18 hours ago</div>
+  <div class="comment_text">The 3d printer gun legislation has been rearing its head in a bunch of states this year, and generally with very similar patterns. I suspect some of the pro-gun-control groups have been pushing it to lawmakers given most legislation is basically copy-pastes from lobbying groups at both the state and federal level. Colorado, Washington, New York, and now California have all floated legislation attempting to make device-level restrictions around the issue. I only followed Washington&#x27;s in depth, and they ended up removing all the requirements on manufactures, but did criminalize possession of files which I suspect won&#x27;t hold up to a first amendment challenge.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770787,this)">3 replies</button>
+  <div class="replies-container" id="replies-47770787"></div>
+</div>
+<div class="comment" id="comment-47773167">
+  <div class="comment_head"><a href="/user/rpmisms">rpmisms</a> 14 hours ago</div>
+  <div class="comment_text">As an unabashed American, guns are amazing and an insanely important part of our national culture. Any attempt to diminish this is an attack on the culture of America. We are a nation of dangerous freedoms and matching individual responsibility. In order to maintain a functional country without ruining what makes America special, we need to simply actually enforce laws and I&#x27;ll take apart in making our national culture one to be proud of again.<p>I have been watching footage from the Apollo programs recently, and while the types of people who made that possible are very much still around, we need to encourage that sort of thinking once again. Dangerous freedoms, radical Liberty, complete responsibility.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47773167,this)">3 replies</button>
+  <div class="replies-container" id="replies-47773167"></div>
+</div>
+<div class="comment" id="comment-47777048">
+  <div class="comment_head"><a href="/user/lrvick">lrvick</a> 4 hours ago</div>
+  <div class="comment_text">To any legislators watching, if you successfully pass this I am going to give public workshops teaching people how to make 3D printers from parts found at Home Depot out of pure spite, and separately, how to make a 12 gauge shotgun with almost 0 effort from basic parts also found at Home Depot without even using the 3D printer.<p>Put DRM on plumbing pipes, I dare you.</div>
+  
+  <div class="replies-container" id="replies-47777048"></div>
+</div>
+<div class="comment" id="comment-47773181">
+  <div class="comment_head"><a href="/user/Findecanor">Findecanor</a> 14 hours ago</div>
+  <div class="comment_text">I used to do cosplay. Many costumes from movies, TV-series and anime are of characters that wield guns, often unique or at least quite distinctive guns. Carrying the correct gun is sometimes a thing that identifies the character, and therefore is an integral part of the cosplay.<p>For example, I used to cosplay for charity in the Star Wars costuming club 501&#x27;st Legion [0], where for most costumes a blaster gun of high likeness to the original is required. It has hundreds of members in California.<p>These days, it is very common to make cosplay accessories through 3D-printing. 
+A ban on replica guns parts would hit the hobby hard.<p>[0]: <a href="https:&#x2F;&#x2F;501st.com&#x2F;" rel="nofollow">https:&#x2F;&#x2F;501st.com&#x2F;</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47773181,this)">1 replies</button>
+  <div class="replies-container" id="replies-47773181"></div>
+</div>
+<div class="comment" id="comment-47774726">
+  <div class="comment_head"><a href="/user/hnburnsy">hnburnsy</a> 10 hours ago</div>
+  <div class="comment_text">This is the organization behind this...<p><a href="https:&#x2F;&#x2F;everytownresearch.org&#x2F;report&#x2F;printing-violence-urgent-policy-actions-are-needed-to-combat-3d-printed-guns&#x2F;" rel="nofollow">https:&#x2F;&#x2F;everytownresearch.org&#x2F;report&#x2F;printing-violence-urgen...</a><p>&gt;Lawmakers can take aggressive action to spur change in this area and help prevent the printing of 3DPFs. The most comprehensive solutions would apply nationwide, and Congress should work immediately to pass the innovative laws described here. But even without federal action, state policymakers can take meaningful action to curtail 3DPFs.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47774726,this)">1 replies</button>
+  <div class="replies-container" id="replies-47774726"></div>
+</div>
+<div class="comment" id="comment-47771369">
+  <div class="comment_head"><a href="/user/codedokode">codedokode</a> 18 hours ago</div>
+  <div class="comment_text">Sorry if it is a dumb question, but why in USA people try to regulate 3D printing instead of banning sale of bullets without a firearm owner license? What stops people from buying   Chinese printers or components on AliExpress? Or using an open source printer? At the same time, if you cannot buy bullets, your plastic gun is worthless.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47771369,this)">6 replies</button>
+  <div class="replies-container" id="replies-47771369"></div>
+</div>
+<div class="comment" id="comment-47773124">
+  <div class="comment_head"><a href="/user/c0rruptbytes">c0rruptbytes</a> 14 hours ago</div>
+  <div class="comment_text">Guns are legal, in fact building your own gun, may be the most legal thing in the history of the 2A - there&#x27;s an enormous amount of &quot;historical&quot; context to back this<p>It&#x27;s such a waste of time and resources - you wanna handle gun violence? handle normal violence with proven mechanisms (education, social welfare, etc...)</div>
+  
+  <div class="replies-container" id="replies-47773124"></div>
+</div>
+<div class="comment" id="comment-47770611">
+  <div class="comment_head"><a href="/user/ginkgotree">ginkgotree</a> 19 hours ago</div>
+  <div class="comment_text">I&#x27;m so glad I left California 6 years ago. They are going to regulate and tax their startups and innovators away to other states. This is supremely stupid.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770611,this)">2 replies</button>
+  <div class="replies-container" id="replies-47770611"></div>
+</div>
+<div class="comment" id="comment-47770677">
+  <div class="comment_head"><a href="/user/rdtsc">rdtsc</a> 19 hours ago</div>
+  <div class="comment_text">&gt; California&#x27;s proposed legislation to put the burden of blocking 3D-printed firearms onto printer manufacturers<p>I can only assume California has solved all its major problems if policing 3D printers is at the top of the agenda. It&#x27;s like when someone complains their neighbor can afford two yachts and they can only afford one, you know they are doing pretty well if that&#x27;s their major concern.</div>
+  
+  <div class="replies-container" id="replies-47770677"></div>
+</div>
+<div class="comment" id="comment-47779025">
+  <div class="comment_head"><a href="/user/master-lincoln">master-lincoln</a> 1 hour ago</div>
+  <div class="comment_text">Reminds me of when we built a potato gun from pvc pipes as kids. Another villager noticed us shooting in the fields and when he saw the mechanism he called the local hardware shop and they then required you to be older than 18 to buy pvc pipes.</div>
+  
+  <div class="replies-container" id="replies-47779025"></div>
+</div>
+<div class="comment" id="comment-47770871">
+  <div class="comment_head"><a href="/user/tracker1">tracker1</a> 18 hours ago</div>
+  <div class="comment_text">So, I cannot 3d print a squirt gun or a nerf style gun either?  This print looks &quot;scary&quot; you cannot print it.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770871,this)">1 replies</button>
+  <div class="replies-container" id="replies-47770871"></div>
+</div>
+<div class="comment" id="comment-47776633">
+  <div class="comment_head"><a href="/user/cultofmetatron">cultofmetatron</a> 5 hours ago</div>
+  <div class="comment_text">I dont&#x27; see similar restrictions on Lathes. probably because lathes cost more (but not by much) and need some skill. unlike a 3d printer you can actually make a proper gun on one of those to much higher specs. The hypocracy is unsettling.<p>This is all at a time when the US desperately needs innovation. China basically owns us on raw manufacturing capability. 3d printers represent an excellent entry point for getting people into hobbyist manufacturing which will be where new ideas ultimately come from. This is just contributing to making is fall behind as a country.</div>
+  
+  <div class="replies-container" id="replies-47776633"></div>
+</div>
+<div class="comment" id="comment-47776029">
+  <div class="comment_head"><a href="/user/21asdffdsa12">21asdffdsa12</a> 7 hours ago</div>
+  <div class="comment_text">Its a reeling of the lawmakers against reality itself. If you read Jules Verne- you always could find and make dangerous chemicals from natural substances and thus by the power of chemistry - you where suddenly a owner of nitroglycerin and  owner of a dangerous &quot;substance&quot;.<p>So, the danger is in pre-emptive policing- aka capability reduction. In its extremes it results in what china does- which is producing dangerous objects on mass (every shop has a lathe that can make a gun) - while constantly looking over each other shoulders to see who might ferment revolution or amok. Same with chemistry. Same with software. The panopticon as patchwork counter measure to accumulating dangerous capabilities.<p>But it can not go much further. If you have a psychological normal individual that buckles under stress and hand it a photon torpedo- the spaceship goes boom. You need &quot;unrealistic&quot; humans, the angles of star trek to be able to handle that sort of capability. Its a whole group of problems, which started with nuclear power.
+Basically, the material science on humans and organizations is lousy - and the stress tests showed that we fall apart under duress.<p>Which is why california tries to limit it, while at the same time idealizing human nature as benevolent and at the same time driving onwards technologies, which wind up the lethal mouse-trap of capabilities with ever more potent dangers. Which as paradox as it is, is a expression of a inability to deal with reality.</div>
+  
+  <div class="replies-container" id="replies-47776029"></div>
+</div>
+<div class="comment" id="comment-47770563">
+  <div class="comment_head"><a href="/user/asdff">asdff</a> 19 hours ago</div>
+  <div class="comment_text">Why don&#x27;t these bills go after ammo or gunpowder access? Seems as long as you have access to a cylinder, and ammunition, you can make a gun.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47770563,this)">7 replies</button>
+  <div class="replies-container" id="replies-47770563"></div>
+</div>
+<div class="comment" id="comment-47774658">
+  <div class="comment_head"><a href="/user/hnburnsy">hnburnsy</a> 10 hours ago</div>
+  <div class="comment_text">Why isn&#x27;t EFF calling out Everytown for Gun Safety and Moms Demand Action for pushing this across the US?</div>
+  
+  <div class="replies-container" id="replies-47774658"></div>
+</div>
+<div class="comment" id="comment-47770808">
+  <div class="comment_head"><a href="/user/maininformer">maininformer</a> 18 hours ago</div>
+  <div class="comment_text">A. What if some part looks like some other non-gun part?
+B. What if they can further break down the pieces to avoid detection?</div>
+  
+  <div class="replies-container" id="replies-47770808"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47759420?all=1">Show all 410 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

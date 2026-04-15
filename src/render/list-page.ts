@@ -32,7 +32,7 @@ export function renderListPage(
 </head>
 <body>
   <header class="header">
-    <a href="/" class="logo">Y</a>
+    <a href="/" class="logo">HN</a>
     <nav>
       <a href="/">top</a>
       <a href="/newest">new</a>

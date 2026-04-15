@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Someone bought 30 WordPress plugins and planted a backdoor in all of them | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them/" rel="noopener noreferrer">Someone bought 30 WordPress plugins and planted a backdoor in all of them</a> <span class="story-domain">(anchor.host)</span></span>
+        <div class="item-meta">
+          1169 points &bull; <a href="/user/speckx">speckx</a> &bull; 1 day ago &bull; 327 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47755629">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47756259">
+  <div class="comment_head"><a href="/user/chromacity">chromacity</a> 1 day ago</div>
+  <div class="comment_text">This is a perfect illustration of what cracks me up about the hyperbolic reactions to Mythos. Yes, increased automation of cutting-edge vulnerability discovery will shake things up a bit. No, it&#x27;s nowhere near the top of what should be keeping you awake at night if you&#x27;re working in infosec.<p>We&#x27;ve built our existing tech stacks and corporate governance structures for a different era. If you want to credit one specific development for making things dramatically worse, it&#x27;s cryptocurrencies, not AI. They&#x27;ve turned the cottage industry of malicious hacking into a multi-billion-dollar enterprise that&#x27;s attractive even to rogue nations such as North Korea. And with this much at stake, they can afford to simply buy your software dependencies, or to offer one of your employees some retirement money in exchange for making a &quot;mistake&quot;.<p>We know how to write software with very few bugs (although we often choose not to). We have no good plan for keeping big enterprises secure in this reality. Autonomous LLM agents will be used by ransomware gangs and similar operations, but they don&#x27;t need FreeBSD exploit-writing capabilities for that.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47756259,this)">22 replies</button>
+  <div class="replies-container" id="replies-47756259"></div>
+</div>
+<div class="comment" id="comment-47755991">
+  <div class="comment_head"><a href="/user/bradley13">bradley13</a> 1 day ago</div>
+  <div class="comment_text">Whenever I look at a web project, it starts with &quot;npm install&quot; and literally dozens of libraries get downloaded.<p>The project authors probably don&#x27;t even know what libraries their project requires, because many of them are transitive dependencies. There is zero chance that they have checked those libraries for supply chain attacks.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47755991,this)">20 replies</button>
+  <div class="replies-container" id="replies-47755991"></div>
+</div>
+<div class="comment" id="comment-47756498">
+  <div class="comment_head"><a href="/user/toniantunovi">toniantunovi</a> 1 day ago</div>
+  <div class="comment_text">The supply chain attack surface in WordPress plugins has always been particularly dangerous because the ecosystem encourages users to install many small single-purpose plugins from individual developers, most of whom aren&#x27;t security-focused organizations. Buying out an established plugin with a large install base is a clever approach because you inherit years of user trust that took the original developer a long time to build.<p>The deeper structural issue is that plugin update notifications function as an implicit trust signal. Users see &quot;update available&quot; and click without questioning whether the author is still the same person. A package signing and transfer transparency system similar to what npm has been working toward would help here, but the WordPress ecosystem has historically moved slowly on security infrastructure.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47756498,this)">3 replies</button>
+  <div class="replies-container" id="replies-47756498"></div>
+</div>
+<div class="comment" id="comment-47756219">
+  <div class="comment_head"><a href="/user/spankalee">spankalee</a> 1 day ago</div>
+  <div class="comment_text">I really wish that the FAIR package manager project had been successful, but they recently gave up after the WordPress drama died down.<p><a href="https:&#x2F;&#x2F;fair.pm&#x2F;" rel="nofollow">https:&#x2F;&#x2F;fair.pm&#x2F;</a><p>FAIR has a very interesting architecture, inspired by atproto, that I think has the potential to mitigate some of the supply-chain attacks we&#x27;ve seen recently.<p>In FAIR, there&#x27;s no central package repository. Anyone can run one, like an atproto PDS. Packages have DIDs, routable across all repositories. There are aggregators that provide search, front-ends, etc. And like Bluesky, there are &quot;labelers&quot;, separate from repositories and front-ends. So organizations like Socket, etc can label packages with their analysis in a first class way, visible to the whole ecosystem.<p>So you could set up your installer to ban packages flagged by Socket, or ones that recently published by a new DID, etc. You could run your own labeler with AI security analysis on the packages you care about. A specific community could build their own lint rules and label based on that (like e18e in the npm ecosystem.<p>Not perfect, but far better than centralized package managers that only get the features their owner decides to pay for.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47756219,this)">5 replies</button>
+  <div class="replies-container" id="replies-47756219"></div>
+</div>
+<div class="comment" id="comment-47758432">
+  <div class="comment_head"><a href="/user/jimrandomh">jimrandomh</a> 1 day ago</div>
+  <div class="comment_text">I think the main problem here is the ideology of software updating. Updates represent a tradeoff: On one hand there might be security vulnerabilities that need an update to fix, and developers don&#x27;t want to receive bug reports or maintain server infrastructure for obsolete versions. On the other hand, the developer might make decisions users don&#x27;t want, or turn evil temporarily (as in a supply chain attack) or permanently (as in selling off control of a Wordpress extension).<p>In the case of small Wordpress extensions from individual developers, I think the tradeoff is such that you should basically never allow auto-updating. Unfortunately wordpress.org runs a Wordpress extension marketplace that doesn&#x27;t work that way, and worse. I think that other than a small number of high-visibility long-established extensions, you should basically never install anything from there, and if you want a Wordpress extension you should download its source code and install it manually as an unpacked extension.<p>(This is a comment that I wrote about Chrome extensions, where I replaced Chrome with Wordpress, deleted one sentence about Google, and it was all still true. <a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47721946#47724474">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47721946#47724474</a> )</div>
+  
+  <div class="replies-container" id="replies-47758432"></div>
+</div>
+<div class="comment" id="comment-47764347">
+  <div class="comment_head"><a href="/user/lambdaone">lambdaone</a> 1 day ago</div>
+  <div class="comment_text">It seems obvious to me that there should now be a concerted and open effort to detect malware in supply chains based on AI-based scanning. Sure, there will be an arms race in malware obfuscation, but that was coming anyway. Manual review is useless at this scale - it is just not happening.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764347,this)">1 replies</button>
+  <div class="replies-container" id="replies-47764347"></div>
+</div>
+<div class="comment" id="comment-47757660">
+  <div class="comment_head"><a href="/user/fblp">fblp</a> 1 day ago</div>
+  <div class="comment_text">Hear me out. Mergers and acquisitions that substantially lesson market competition can be blocked by governments, or even require approval in certain jurisdictions.
+<a href="https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Mergers_and_acquisitions" rel="nofollow">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Mergers_and_acquisitions</a><p>Maybe mergers or acquisitions that substantially impact security should require approval by marketplaces (industry governance), and notification and approval by even governments?</div>
+  
+  <div class="replies-container" id="replies-47757660"></div>
+</div>
+<div class="comment" id="comment-47761057">
+  <div class="comment_head"><a href="/user/edg5000">edg5000</a> 1 day ago</div>
+  <div class="comment_text">&gt; In 2017, a buyer using the alias “Daley Tias” purchased the Display Widgets plugin (200,000 installs) for $15,000 and injected payday loan spam.<p>Is that it? Going through all that trouble just for some spam? Surely more lucrative criminal actions can be imagined with a compromised WP plugin?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47761057,this)">1 replies</button>
+  <div class="replies-container" id="replies-47761057"></div>
+</div>
+<div class="comment" id="comment-47761061">
+  <div class="comment_head"><a href="/user/edg5000">edg5000</a> 1 day ago</div>
+  <div class="comment_text">If the plugins were bought for six figures, then it must be incredibly lucrative. How on earth could they be making it back? Is injecting spam into Google results THAT lucrative?</div>
+  
+  <div class="replies-container" id="replies-47761061"></div>
+</div>
+<div class="comment" id="comment-47756398">
+  <div class="comment_head"><a href="/user/ChuckMcM">ChuckMcM</a> 1 day ago</div>
+  <div class="comment_text">I don&#x27;t think companies appreciated just how much they gave up when they outsourced &quot;IT&quot;.</div>
+  
+  <div class="replies-container" id="replies-47756398"></div>
+</div>
+<div class="comment" id="comment-47763246">
+  <div class="comment_head"><a href="/user/RandomGerm4n">RandomGerm4n</a> 1 day ago</div>
+  <div class="comment_text">This is probably a controversial opinion but this case is yet another example of why it should be prohibited to sell repositories and storefronts. If you want to take over someone else’s user base you should be forced to display a message to the users and actively ask them whether they trust the new owner as well. Simply passing the whole thing on to someone else in secret who could then compromise the WordPress plugin, a browser extension or something similar should not be allowed.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47763246,this)">1 replies</button>
+  <div class="replies-container" id="replies-47763246"></div>
+</div>
+<div class="comment" id="comment-47755998">
+  <div class="comment_head"><a href="/user/meteyor">meteyor</a> 1 day ago</div>
+  <div class="comment_text">So how was this attack gonna generate &quot;revenue&quot; for the attacker? What kind of info did they get hold of?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47755998,this)">5 replies</button>
+  <div class="replies-container" id="replies-47755998"></div>
+</div>
+<div class="comment" id="comment-47762824">
+  <div class="comment_head"><a href="/user/elric">elric</a> 1 day ago</div>
+  <div class="comment_text">A tale as old as time. And hard to defend against. Did the sellers know their plugins were going to be abused? Is there some kind of seller liability in cases like this?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47762824,this)">1 replies</button>
+  <div class="replies-container" id="replies-47762824"></div>
+</div>
+<div class="comment" id="comment-47757937">
+  <div class="comment_head"><a href="/user/K0IN">K0IN</a> 1 day ago</div>
+  <div class="comment_text">At this point im not sure how we can reestablish trust in the software supply chain, especailly for small businesses.</div>
+  
+  <div class="replies-container" id="replies-47757937"></div>
+</div>
+<div class="comment" id="comment-47757976">
+  <div class="comment_head"><a href="/user/antaviana">antaviana</a> 1 day ago</div>
+  <div class="comment_text">Crypto has single handedly created a very large malware industry and has also made information security a massive industry.<p>Ban crypto and both industries will become way, way smaller.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47757976,this)">2 replies</button>
+  <div class="replies-container" id="replies-47757976"></div>
+</div>
+<div class="comment" id="comment-47764952">
+  <div class="comment_head"><a href="/user/paglaghoda">paglaghoda</a> 1 day ago</div>
+  <div class="comment_text">One of the best time for Cloudflare to market EmDash as Wordpress alternative.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47764952,this)">2 replies</button>
+  <div class="replies-container" id="replies-47764952"></div>
+</div>
+<div class="comment" id="comment-47762211">
+  <div class="comment_head"><a href="/user/alex1sa">alex1sa</a> 1 day ago</div>
+  <div class="comment_text">What’s scary is that this attack doesn’t require any technical sophistication.
+You don’t need zero-days, you don’t need exploits — you just need money. Feels like we’ve shifted from “can you break in?” to “can you buy your way in?”, which is a very different problem.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47762211,this)">1 replies</button>
+  <div class="replies-container" id="replies-47762211"></div>
+</div>
+<div class="comment" id="comment-47757220">
+  <div class="comment_head"><a href="/user/ashishb">ashishb</a> 1 day ago</div>
+  <div class="comment_text">WordPress was great because of the plugins.<p>WordPress is now a dangerous ecosystem because of the plugins and their current security model.<p>I moved to Hugo and encourage others to do so - <a href="https:&#x2F;&#x2F;ashishb.net&#x2F;tech&#x2F;wordpress-to-hugo&#x2F;" rel="nofollow">https:&#x2F;&#x2F;ashishb.net&#x2F;tech&#x2F;wordpress-to-hugo&#x2F;</a></div>
+  
+  <div class="replies-container" id="replies-47757220"></div>
+</div>
+<div class="comment" id="comment-47760916">
+  <div class="comment_head"><a href="/user/latentframe">latentframe</a> 1 day ago</div>
+  <div class="comment_text">This looks to be more than just a security bug and rather an incentive problem because you can buy trust with plugin installs numbers and reputation but there’s no mechanism to reprice that trust after the ownership gets changed so the attackers just buy the distribution and monetize it later and that makes this kind of attack economically rational, so it gets reproduced often</div>
+  
+  <div class="replies-container" id="replies-47760916"></div>
+</div>
+<div class="comment" id="comment-47756174">
+  <div class="comment_head"><a href="/user/ValentineC">ValentineC</a> 1 day ago</div>
+  <div class="comment_text">This somehow reminds me of the irony that was Secure Custom Fields:<p><a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=41821336">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=41821336</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47756174,this)">1 replies</button>
+  <div class="replies-container" id="replies-47756174"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47755629?all=1">Show all 327 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

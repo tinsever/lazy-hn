@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixing a 20-year-old bug in Enlightenment E16 | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://iczelia.net/posts/e16-20-year-old-bug/" rel="noopener noreferrer">Fixing a 20-year-old bug in Enlightenment E16</a> <span class="story-domain">(iczelia.net)</span></span>
+        <div class="item-meta">
+          204 points &bull; <a href="/user/snoofydude">snoofydude</a> &bull; 10 hours ago &bull; 105 comments
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47779673">
+  <div class="comment_head"><a href="/user/somat">somat</a> 23 minutes ago</div>
+  <div class="comment_text">&quot;Sadly, the hang was deterministic&quot;<p>No, no, you rejoice, a deterministic bug is the best sort of bug. because now you have a test case and a solid method to know when it is fixed. The sad bugs are the ones you can&#x27;t find a test case for.<p>I also got a bittersweet chuckle out of how the author considers it a lightweight environment, I mean, they are not wrong, but think of how far we have fallen when e, the ultimate bling desktop environment is considered lightweight.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47779673,this)">2 replies</button>
+  <div class="replies-container" id="replies-47779673"></div>
+</div>
+<div class="comment" id="comment-47778904">
+  <div class="comment_head"><a href="/user/pvtmert">pvtmert</a> 1 hour ago</div>
+  <div class="comment_text">I liked the author&#x27;s pragmatic take on the stability. Indeed that running bleeding edge now has implications to greater attack surface as the supply-chain attacks getting more and more common.<p>A nice and sincere excerpt from the recent past...<p>&gt; Back when the XZ backdoor was introduced, I was scrolling through news on my Debian Sid laptop with some code compiling in the background. I learned of a backdoor in XZ Utils, potentially introduced by a state actor in version v5.6.0. Thinking back to the fact that I do, indeed, run a bleeding edge distro and update often, I immediately ran apt list --upgradable | grep xz-utils. Sure enough, the stains on my laptop from the coffee I spat out through the nose2 were pretty tough to deal with.</div>
+  
+  <div class="replies-container" id="replies-47778904"></div>
+</div>
+<div class="comment" id="comment-47776319">
+  <div class="comment_head"><a href="/user/wvh">wvh</a> 6 hours ago</div>
+  <div class="comment_text">This is a flash from an almost forgotten past. I&#x27;m happy people are still using and even improving Enlightenment.<p>I used to run Enlightenment in the late nineties and early 2000s, first by itself, then with Gnome bar. At some point Gnome turned hostile on power users and I switched to KDE, leaving also Enlightenment behind, as well as any extensive customization of my desktop. At that time, the ubiquitous themes.org also got in disarray, and I feel it was a bit an end of an era of design and theming experiments on the early Linux (and *BSD) desktop.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47776319,this)">2 replies</button>
+  <div class="replies-container" id="replies-47776319"></div>
+</div>
+<div class="comment" id="comment-47776938">
+  <div class="comment_head"><a href="/user/exitb">exitb</a> 5 hours ago</div>
+  <div class="comment_text">It&#x27;s such an underrated advantage of open source operating systems that if you like some bit of software, you&#x27;ll likely be able to use it for decades to come. Even a core bit of software like a window manager. I grew to hate how you need to conform to someone&#x27;s whim at Apple or Microsoft, or else you get locked out of new features.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47776938,this)">1 replies</button>
+  <div class="replies-container" id="replies-47776938"></div>
+</div>
+<div class="comment" id="comment-47776367">
+  <div class="comment_head"><a href="/user/ZoomZoomZoom">ZoomZoomZoom</a> 6 hours ago</div>
+  <div class="comment_text">&gt; Sadly, the hang was deterministic:<p>Huh, someone&#x27;s in it for the thrill of the hunt, I see...</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47776367,this)">1 replies</button>
+  <div class="replies-container" id="replies-47776367"></div>
+</div>
+<div class="comment" id="comment-47775442">
+  <div class="comment_head"><a href="/user/zeruch">zeruch</a> 8 hours ago</div>
+  <div class="comment_text">The amount of abuse I hurled at Carsten Haitzler (Raster) during our time at VA Linux (where he worked on E as well as other stuff) was a complete sitcom unto itself; at one point he debated making a &quot;zeruch insult generator&quot; just to streamline the verbal abuse process.<p>I loved using the environment but would regularly harangue him for being glib on resource usage.  It really was otherwise very ahead of the curve.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47775442,this)">2 replies</button>
+  <div class="replies-container" id="replies-47775442"></div>
+</div>
+<div class="comment" id="comment-47775449">
+  <div class="comment_head"><a href="/user/unwind">unwind</a> 8 hours ago</div>
+  <div class="comment_text">Fun post! Very happy to see a 20-something year old find and fix bugs in an X11 wm from before they were born. Gives me hope.<p>There was some kind of editing snafu though, the loop header in the big (first) code block reads:<p><pre><code>    for (i = 0; i &lt; 10; i++, nuke_count++)
+</code></pre>
+But the references to it in the text, and updated versions in the patches, show it as just<p><pre><code>    for (;;)
+</code></pre>
+That was confusing me a bit.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47775449,this)">1 replies</button>
+  <div class="replies-container" id="replies-47775449"></div>
+</div>
+<div class="comment" id="comment-47776464">
+  <div class="comment_head"><a href="/user/prmoustache">prmoustache</a> 6 hours ago</div>
+  <div class="comment_text">Funnily, E16 was considered a rather eye candy but heavy WM&#x2F;environment back in the i486 &#x2F; early pentium days, now it is considered lightweight!</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47776464,this)">3 replies</button>
+  <div class="replies-container" id="replies-47776464"></div>
+</div>
+<div class="comment" id="comment-47775450">
+  <div class="comment_head"><a href="/user/pjmlp">pjmlp</a> 8 hours ago</div>
+  <div class="comment_text">Oh, people are still using Enlightenment.<p>My last time I used it was still in the 1990&#x27;s, before I settled into Afterstep and soon afterwards Windowmaker.<p>In what concerns my use of GNU&#x2F;Linux, it was CDE on others.<p>Apparently nothing big came out of Enlightenment and Tizen.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47775450,this)">6 replies</button>
+  <div class="replies-container" id="replies-47775450"></div>
+</div>
+<div class="comment" id="comment-47775492">
+  <div class="comment_head"><a href="/user/BozeWolf">BozeWolf</a> 8 hours ago</div>
+  <div class="comment_text">I am still waiting for e17. I stuck to e16 for a long time until ubuntu got a thing which was much more convenient than gentoo.<p>I had the classic setup with the apache helicopter on the background and virtual desktops with preview. On MacOS however.<p>To this day i am still using a single screen, with virtual desktops ordered the same way.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47775492,this)">1 replies</button>
+  <div class="replies-container" id="replies-47775492"></div>
+</div>
+<div class="comment" id="comment-47775424">
+  <div class="comment_head"><a href="/user/mrweasel">mrweasel</a> 8 hours ago</div>
+  <div class="comment_text">&gt; It’s themable, hackable, lightweight<p>Certainly wasn&#x27;t considered lightweight back then :-)<p>I never saw the appeal of Enlightenment, but a very nice write-up regardless.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47775424,this)">1 replies</button>
+  <div class="replies-container" id="replies-47775424"></div>
+</div>
+<div class="comment" id="comment-47778405">
+  <div class="comment_head"><a href="/user/manbash">manbash</a> 2 hours ago</div>
+  <div class="comment_text">I always appreciated how you can simply attach to the enlightenment process at any point, and also upon a crash.<p>The documentation is there: <a href="https:&#x2F;&#x2F;www.enlightenment.org&#x2F;contrib&#x2F;enlightenment-debug" rel="nofollow">https:&#x2F;&#x2F;www.enlightenment.org&#x2F;contrib&#x2F;enlightenment-debug</a></div>
+  
+  <div class="replies-container" id="replies-47778405"></div>
+</div>
+<div class="comment" id="comment-47775656">
+  <div class="comment_head"><a href="/user/sqbic">sqbic</a> 7 hours ago</div>
+  <div class="comment_text">I love Enlightenment still, even the new ones. The most important component of it to me is Terminology. What a gorgeous and functional Terminal emulator.</div>
+  
+  <div class="replies-container" id="replies-47775656"></div>
+</div>
+<div class="comment" id="comment-47778911">
+  <div class="comment_head"><a href="/user/mghackerlady">mghackerlady</a> 1 hour ago</div>
+  <div class="comment_text">I really wish there was more EFL software :(</div>
+  
+  <div class="replies-container" id="replies-47778911"></div>
+</div>
+<div class="comment" id="comment-47779741">
+  <div class="comment_head"><a href="/user/kogasa240p">kogasa240p</a> 18 minutes ago</div>
+  <div class="comment_text">Oh wow didn&#x27;t expect someone my age to try out Enlightenment. Every so often I try to use Enlightenment (either e16&#x2F;moksha or the latest version) but I always leave because it requires Connman and setting it up properly is a pain imo. Might try it again because of this blogpost.</div>
+  
+  <div class="replies-container" id="replies-47779741"></div>
+</div>
+<div class="comment" id="comment-47776977">
+  <div class="comment_head"><a href="/user/cheschire">cheschire</a> 4 hours ago</div>
+  <div class="comment_text"><a href="https:&#x2F;&#x2F;www.enlightenment.org&#x2F;" rel="nofollow">https:&#x2F;&#x2F;www.enlightenment.org&#x2F;</a> Seems down at the moment.<p>Coincidence, or collateral hug?</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47776977,this)">2 replies</button>
+  <div class="replies-container" id="replies-47776977"></div>
+</div>
+<div class="comment" id="comment-47778816">
+  <div class="comment_head"><a href="/user/kkaske">kkaske</a> 1 hour ago</div>
+  <div class="comment_text">These are exactly the kinds of posts I love. It seems technical posts like this are less and less on the internet. Is this a result of &quot;vibe coding&quot;? We don&#x27;t feel like writing up posts like this when a machine did the work? Maybe it&#x27;s a result of fewer and fewer people blogging. Maybe I&#x27;m just old and yelling about things changing.</div>
+  
+  <div class="replies-container" id="replies-47778816"></div>
+</div>
+<div class="comment" id="comment-47779295">
+  <div class="comment_head"><a href="/user/lateralux">lateralux</a> 47 minutes ago</div>
+  <div class="comment_text">e16 was truly unique... honestly the best Linux desktop ever made !</div>
+  
+  <div class="replies-container" id="replies-47779295"></div>
+</div>
+<div class="comment" id="comment-47775163">
+  <div class="comment_head"><a href="/user/madaxe_again">madaxe_again</a> 9 hours ago</div>
+  <div class="comment_text">E16 was the hook that caught me and landed me, flopping and writhing, on the decks of Linux - I saw a black and white printout of someone’s desktop, and immediately set about figuring out how to get this unbelievable coolness working on my laptop. By the time I was done I was muttering modelines in my sleep, and had already committed my first patches to a kernel module.<p>I wonder how many other teenagers got catfished into becoming software devs and sysadmins by the siren song of rasterman.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47775163,this)">2 replies</button>
+  <div class="replies-container" id="replies-47775163"></div>
+</div>
+<div class="comment deleted">
+  <div class="comment_head">[deleted] 5 hours ago</div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47774789?all=1">Show all 105 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

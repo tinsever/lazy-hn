@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rare concert recordings are landing on the Internet Archive | Hacker News</title>
+  <style>*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f6f6ef; --fg: #000; --muted: #828282; --accent: #ff6600;
+  --link: #000; --link-visited: #828282; --card-bg: #fff; --border: #e0e0e0;
+  --comment-bg: #fafafa; --font-sans: Verdana, Geneva, sans-serif;
+  --font-mono: "Courier New", monospace; --max-width: 85vw;
+}
+html { font-size: 10px; -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-sans); font-size: 1.4rem; line-height: 1.6; min-height: 100vh; }
+a { color: var(--link); text-decoration: none; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration: underline; }
+.header { background: var(--accent); padding: 0.4rem 1rem; display: flex; align-items: center; gap: 1rem; }
+.header a { color: #000; font-weight: bold; }
+.header .logo { font-size: 1.5rem; font-weight: bold; border: 1px solid #000; padding: 0 0.3rem; margin-right: 0.5rem; }
+.header nav { display: flex; gap: 0.6rem; font-size: 1.2rem; }
+.header nav a { color: #000; }
+.main { max-width: var(--max-width); margin: 0 auto; padding: 1rem 0; }
+.item-page { max-width: 85vw; margin: 0 auto; }
+.item-header { margin-bottom: 1rem; }
+.item-title { font-size: 1.6rem; margin-bottom: 0.3rem; }
+.item-meta { font-size: 1.2rem; color: var(--muted); }
+.item-meta a { color: var(--muted); }
+.item-actions { margin-top: 0.8rem; }
+.comment-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.comment-button:visited { color: #000; }
+.comment-button:hover { text-decoration: none; filter: brightness(0.95); }
+.comment-tree { margin-left: 0; }
+.comment { margin-bottom: 0.5rem; padding: 0.3rem 0; }
+.comment_head { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.2rem; }
+.comment_head a { color: var(--muted); }
+.comment_text { font-size: 1.3rem; line-height: 1.5; margin-bottom: 0.3rem; }
+.comment_text p { margin-bottom: 0.5rem; }
+.comment-replies-toggle { font-size: 1.1rem; color: var(--accent); cursor: pointer; background: none; border: none; font-family: var(--font-sans); padding: 0; }
+.comment-replies-toggle:hover { text-decoration: underline; }
+.replies-container:empty { display: none; }
+.replies-container .comment { margin-left: 2rem; }
+.footer { text-align: center; padding: 1rem; font-size: 1.1rem; color: var(--muted); border-top: 1px solid var(--border); margin-top: 2rem; }
+.deleted { color: var(--muted); font-style: italic; }
+.dead { color: var(--muted); font-style: italic; }
+.more-comments { font-size: 1.2rem; padding: 0.5rem 0; }
+.job-title a { color: var(--accent); }</style>
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="logo">HN</a>
+    <nav>
+      <a href="/">top</a>
+      <a href="/newest">new</a>
+      <a href="/best">best</a>
+      <a href="/ask">ask</a>
+      <a href="/show">show</a>
+      <a href="/jobs">jobs</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="item-page">
+      <div class="item-header">
+        <span class="item-title"><a href="https://techcrunch.com/2026/04/13/thousands-of-rare-concert-recordings-are-landing-on-the-internet-archive-listen-now/" rel="noopener noreferrer">Rare concert recordings are landing on the Internet Archive</a> <span class="story-domain">(techcrunch.com)</span></span>
+        <div class="item-meta">
+          680 points &bull; <a href="/user/jrm-veris">jrm-veris</a> &bull; 1 day ago &bull; 199 comments
+        </div>
+        <div class="item-actions">
+          <a class="comment-button" href="https://news.ycombinator.com/item?id=47765604">Write a comment on HN</a>
+        </div>
+      </div>
+      <div class="comment-tree">
+        <div class="comment" id="comment-47767452">
+  <div class="comment_head"><a href="/user/rigonkulous">rigonkulous</a> 23 hours ago</div>
+  <div class="comment_text">I am an active and enthusiastic recordist and have decades of stuff I&#x27;ve accumulated over the years.<p>One of the concerts I captured in the 90&#x27;s, lives on as a bootleg which I often see around the scene of this one particularly great live electronic dance band, whose punters have created true value out of the hour and a half of live concert input I managed to record, standing right there front stage and center, with the band looking right at me.<p>It was a hilarious experience - I expected to get booted out pretty fast, so I held my ground as still as I could, DAT-tape rolling by, shotgun mike held in front of me like it was just normal, as if I belonged there.<p>The lead singer caught my eye and gave me a wide grin.  I survived the concert, it was awesome, but boy was I relieved to have made it home with that DAT - which I of course, proceeded to digitize with my brand new spdf&#x2F;io ..<p>The next year the band (who are big and famous, btw) were in the same city and I happened to be around, I got invited backstage to meet the band, participate in a bit of nerdery regarding their live setup and gear and so on, and talk about that recording I&#x27;d made.<p>I&#x27;d put it out as a pure bootleg, no questions asked.<p>Turns out they&#x27;d heard it and enjoyed it and came to appreciate the nature of their bootleggers, as avid fans who gave the band themselves something extra to think about in what was then, a burgeoning digital&#x2F;online universe about to explode.<p>So, seeing it around, almost 30 years now .. here and there, again and again .. is quite hilarious.  Youtube often recommends it to me in my playlist, its just there.<p>And at a certain spot in the recording, I tell my mate to stop standing so close to me (he was blocking the shottie), and prepare for my ass getting bounced - which never happened, thankfully.<p>So yeah, I just wanna say, if you personally have the desire to be a recordist, and have a pure purpose in it, I&#x27;d say just freakin&#x27; go for it.<p>Record All The Things.<p>Its <i>good</i> for the Artists, yo.  And also their fans.  (Its how we get rid of the managers, <i>cough cough</i>..)</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767452,this)">11 replies</button>
+  <div class="replies-container" id="replies-47767452"></div>
+</div>
+<div class="comment" id="comment-47766076">
+  <div class="comment_head"><a href="/user/tclancy">tclancy</a> 1 day ago</div>
+  <div class="comment_text">Source article is more enjoyable <a href="http:&#x2F;&#x2F;blockclubchicago.org&#x2F;2026&#x2F;04&#x2F;10&#x2F;from-early-nirvana-to-phish-a-chicago-fans-secret-recordings-of-10000-shows-are-now-online&#x2F;" rel="nofollow">http:&#x2F;&#x2F;blockclubchicago.org&#x2F;2026&#x2F;04&#x2F;10&#x2F;from-early-nirvana-to...</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766076,this)">2 replies</button>
+  <div class="replies-container" id="replies-47766076"></div>
+</div>
+<div class="comment" id="comment-47766262">
+  <div class="comment_head"><a href="/user/alsetmusic">alsetmusic</a> 1 day ago</div>
+  <div class="comment_text">This is one of the best things I&#x27;ve read about in a bit. It wasn&#x27;t uncommon to buy marked-up (overpriced) bootlegs of live performances on CDs in the 90s. You never knew in advance if it&#x27;d be a quality recording or total garbage. We&#x27;ve lost that.<p>I still love when one of my live bootlegs of Faith No More comes on with them doing (sometimes mocking) parodies of popular music (their rendition of Nothing Compares to You by Sinead OConnor has been in my head as I type this). When I got to see them in 2010 (I think) they were true to form and played a bunch of short (reinterpretations) covers and it was one of the best aspects of the show. And I still have a Mr Bungle bootleg with them covering Existential Blues by Tom &quot;T-Bone&quot; Stankus (I always thought it was Doctor Demento&#x27;s Wizard of Oz until just now when I looked it up).<p>How would you even know about these awesome gems without bootlegs or access to see all their live shows? YouTube is less likely to capture an entire show than a clip, whereas the bootlegs were typically the full show. There are probably areas of the internet where this stuff gets shared and traded, but having it in my local music shop meant everyone had access without requiring special knowledge.<p>I just did two searches, one Google and one Kagi, and neither turned up the FNM Nothing Compares to You. Who knows how many copies of it exist in the world. If my music library gets nuked, who will even know about it? I think I&#x27;m gonna start uploading my bootleg recordings of live shows to IA.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766262,this)">5 replies</button>
+  <div class="replies-container" id="replies-47766262"></div>
+</div>
+<div class="comment" id="comment-47766202">
+  <div class="comment_head"><a href="/user/HelloUsername">HelloUsername</a> 1 day ago</div>
+  <div class="comment_text">Previous discussion: &quot;Volunteers turn a fan&#x27;s recordings of 10K concerts into an online treasure trove&quot; <a href="https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47687443">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47687443</a> 8-apr-2026 76 comments</div>
+  
+  <div class="replies-container" id="replies-47766202"></div>
+</div>
+<div class="comment" id="comment-47767279">
+  <div class="comment_head"><a href="/user/schwartzworld">schwartzworld</a> 23 hours ago</div>
+  <div class="comment_text">It&#x27;s funny to think how much effort was put into preventing bootlegging, when now everything is being recorded all the time.<p>The few bands that didn&#x27;t care or even encouraged it reaped the benefits. I was a huge Ween fan in the 90s and bootlegged a show of theirs myself. Camera and recording devices were allowed and the result was a tremendous amount of live content available online. For some bands this might not matter, but they rarely played the same set list twice and often played songs differently from show to show. In the early internet days, there was more ween content online than you could ever hope to listen to.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767279,this)">2 replies</button>
+  <div class="replies-container" id="replies-47767279"></div>
+</div>
+<div class="comment" id="comment-47777220">
+  <div class="comment_head"><a href="/user/washadjeffmad">washadjeffmad</a> 4 hours ago</div>
+  <div class="comment_text">I&#x27;m heartened that so much tape is still around. The lot of digital is often binary - it exists or it doesn&#x27;t, but even a shred of flaking analog media can retain complete information.<p>I was a member of a few tape sharing communities at the turn of the millennium and spent those years digitizing scores of board and bootleg live recordings (APE or FLAC... the great debate). We&#x27;d trade our strategies for getting gear into shows, who was working door and board and was cool with what, stories of getting caught. When recorders got small enough, we started sneaking MiniDisc players into venues with microphones down our sleeves for stereo. I&#x27;ve still got a few stacks of those.<p>Leading up to that, at the dawn of LAME, I was doing the same over on IRC. Everyone with an fserve had a few tracks or albums of their favorite bands, tons local with no other distribution, and you could always message them for more info. There was a lot of love, and I found a lot of great people across the world that way.<p>When the RIAA crackdowns started, I archived as much as I could but lost everything in the mid-2000s when a Windows upgrade overwrote my external storage. The irony that hundreds of gigs (of both kids) would have survived if I&#x27;d put them on tape hasn&#x27;t eluded me.</div>
+  
+  <div class="replies-container" id="replies-47777220"></div>
+</div>
+<div class="comment" id="comment-47767004">
+  <div class="comment_head"><a href="/user/reenorap">reenorap</a> 23 hours ago</div>
+  <div class="comment_text">I remember back in the early 90s I think on the internet when it was only accessible via my university, reading on a newsgroup about how people traded bootlegs from various concerts. People would mail cassette tapes around the country and would use double cassette recorders to make a copy of their bootleg and mail it back to people. It was definitely a different time</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767004,this)">3 replies</button>
+  <div class="replies-container" id="replies-47767004"></div>
+</div>
+<div class="comment" id="comment-47778313">
+  <div class="comment_head"><a href="/user/saysjonathan">saysjonathan</a> 2 hours ago</div>
+  <div class="comment_text">The National put out a official &#x27;bootleg&#x27; recording of two nights of concerts using the Mike &quot;the Mike&quot; Millard method, called Juicy Sonic Magic[0]. Only physically released on triple cassette though I think you can stream it. Sort of tangential to this conversation but it really captures the energy of a live show in a completely different way. Highly recommend checking out if you&#x27;re a fan of the band, old bootleg recording techniques, or live recordings in general.<p>0: <a href="https:&#x2F;&#x2F;www.discogs.com&#x2F;master&#x2F;1664187-The-National-Juicy-Sonic-Magic" rel="nofollow">https:&#x2F;&#x2F;www.discogs.com&#x2F;master&#x2F;1664187-The-National-Juicy-So...</a></div>
+  
+  <div class="replies-container" id="replies-47778313"></div>
+</div>
+<div class="comment" id="comment-47766765">
+  <div class="comment_head"><a href="/user/darknavi">darknavi</a> 23 hours ago</div>
+  <div class="comment_text">I enjoyed &quot;live albums&quot; a lot growing up.<p>The Mark, Tom, and Travis show was always a blast to listen to with my friends.<p><a href="https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;The_Mark,_Tom,_and_Travis_Show_(The_Enema_Strikes_Back" rel="nofollow">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;The_Mark,_Tom,_and_Travis_Show...</a>!)</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766765,this)">2 replies</button>
+  <div class="replies-container" id="replies-47766765"></div>
+</div>
+<div class="comment" id="comment-47773002">
+  <div class="comment_head"><a href="/user/sailfast">sailfast</a> 15 hours ago</div>
+  <div class="comment_text">How did they make these tapes sound so incredible? I&#x27;m getting more fidelity out of these tapes than just about any cassette I&#x27;ve ever listened to - even new in the shrink wrap. Amazing.<p>This is like all of the great shows I couldn&#x27;t go to in my childhood. Incredible.</div>
+  
+  <div class="replies-container" id="replies-47773002"></div>
+</div>
+<div class="comment" id="comment-47767776">
+  <div class="comment_head"><a href="/user/strickinato">strickinato</a> 22 hours ago</div>
+  <div class="comment_text">I can&#x27;t more highly recommend this book for getting into the headspace of the era a lot of these recordings.<p>11 chapters about DIY &#x2F; Punk &#x2F; Hardcore bands of the 1980s underground scene.<p>(The audiobook in particular is fun as it&#x27;s read by musicians influenced by the artists in their respective chapters)<p><a href="https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Our_Band_Could_Be_Your_Life" rel="nofollow">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Our_Band_Could_Be_Your_Life</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767776,this)">1 replies</button>
+  <div class="replies-container" id="replies-47767776"></div>
+</div>
+<div class="comment" id="comment-47766595">
+  <div class="comment_head"><a href="/user/LargeWu">LargeWu</a> 1 day ago</div>
+  <div class="comment_text">For those interested, Relisten is another repository of live concert recordings. It skews heavily towards improvisational music, ie jambands, but there&#x27;s some indie rock on there as well.<p><a href="https:&#x2F;&#x2F;relisten.net&#x2F;" rel="nofollow">https:&#x2F;&#x2F;relisten.net&#x2F;</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766595,this)">1 replies</button>
+  <div class="replies-container" id="replies-47766595"></div>
+</div>
+<div class="comment" id="comment-47767488">
+  <div class="comment_head"><a href="/user/bilekas">bilekas</a> 22 hours ago</div>
+  <div class="comment_text">I have my worries about Internet Archive more and more recently.<p>I&#x27;m wondering though is there any decentralized IPFS or P2P Archive of the entire archive that can be helped with for preservation ?<p><a href="https:&#x2F;&#x2F;www.wired.com&#x2F;story&#x2F;the-internets-most-powerful-archiving-tool-is-in-mortal-peril&#x2F;" rel="nofollow">https:&#x2F;&#x2F;www.wired.com&#x2F;story&#x2F;the-internets-most-powerful-arch...</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767488,this)">2 replies</button>
+  <div class="replies-container" id="replies-47767488"></div>
+</div>
+<div class="comment" id="comment-47775327">
+  <div class="comment_head"><a href="/user/crashbunny">crashbunny</a> 8 hours ago</div>
+  <div class="comment_text">Kind of loosely related to the article. Many years ago someone uploaded to youtube an old video of Neil Young going into a record store and finding a bootleg vinyl of one of his concerts for sale.<p>I think this is the video <a href="https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=AdOITpaQvZI" rel="nofollow">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=AdOITpaQvZI</a>
+&quot;This is a part from autobiographical film Neil made in 1972.&quot;<p>I found the video fascinating and thinking about how and who made these bootlegs is a fascinating mystery to me. It would have to someone in the industry with lots of contacts to get it made and distributed.</div>
+  
+  <div class="replies-container" id="replies-47775327"></div>
+</div>
+<div class="comment deleted">
+  <div class="comment_head">[deleted] 3 hours ago</div>
+</div>
+<div class="comment" id="comment-47767013">
+  <div class="comment_head"><a href="/user/criddell">criddell</a> 23 hours ago</div>
+  <div class="comment_text">&gt; he has to use anachronistic cassette decks to play the tapes, which get converted into digital files<p>Anachronistic?<p>It seems like a complicated way of saying &quot;the tapes were digitized&quot;.</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47767013,this)">1 replies</button>
+  <div class="replies-container" id="replies-47767013"></div>
+</div>
+<div class="comment" id="comment-47766642">
+  <div class="comment_head"><a href="/user/lokar">lokar</a> 23 hours ago</div>
+  <div class="comment_text">Tangent idea: musicians should record every live show, and then put it on a streaming service, only for people who bought tickets to the show (possibly for an extra small fee on the ticket).  Extra revenue for the artist, and a cool benefit for the fan (the liver performance you attended).</div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766642,this)">12 replies</button>
+  <div class="replies-container" id="replies-47766642"></div>
+</div>
+<div class="comment" id="comment-47766018">
+  <div class="comment_head"><a href="/user/monooso">monooso</a> 1 day ago</div>
+  <div class="comment_text">A discussion from six days ago (same story, different source):<p><a href="https:&#x2F;&#x2F;apnews.com&#x2F;article&#x2F;aadam-jacobs-collection-concerts-internet-archive-chicago-b1c9c4466a2db409a83523ad84b79d62" rel="nofollow">https:&#x2F;&#x2F;apnews.com&#x2F;article&#x2F;aadam-jacobs-collection-concerts-...</a></div>
+  <button class="comment-replies-toggle" onclick="loadReplies(47766018,this)">1 replies</button>
+  <div class="replies-container" id="replies-47766018"></div>
+</div>
+<div class="comment" id="comment-47771561">
+  <div class="comment_head"><a href="/user/soneil">soneil</a> 17 hours ago</div>
+  <div class="comment_text">2100 entries over 40 years is pretty much a show a week.  Talk about artefacts of a life well lived.</div>
+  
+  <div class="replies-container" id="replies-47771561"></div>
+</div>
+<div class="comment" id="comment-47766099">
+  <div class="comment_head"><a href="/user/pimlottc">pimlottc</a> 1 day ago</div>
+  <div class="comment_text">Really interesting to see how far this story has spread, I saw it in my Chicago groups first and now it’s popped up in outlets all over the world. I guess it shows how nostalgic we are for an earlier time, both in music and internet culture.</div>
+  
+  <div class="replies-container" id="replies-47766099"></div>
+</div>
+      </div>
+      <p class="more-comments"><a href="/item/47765604?all=1">Show all 199 comments</a></p>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>lazy-hn &mdash; fast HN frontend &bull; <a href="https://news.ycombinator.com">original</a></p>
+  </footer>
+  <script>
+window.loadReplies=function(parentId,btn){
+  var container=document.getElementById('replies-'+parentId);
+  if(!container||container.dataset.loaded)return;
+  container.dataset.loaded='1';
+  btn.textContent='loading...';
+  fetch('/fragment/replies/'+parentId)
+    .then(function(r){return r.text();})
+    .then(function(html){
+      container.innerHTML=html;
+      btn.style.display='none';
+    })
+    .catch(function(){
+      btn.textContent='retry';
+      container.dataset.loaded='';
+    });
+};
+(function(){
+  var PREFIX='lazy-hn:v1:';
+  var LRU_KEY='lazy-hn:lru';
+  var MAX_ENTRIES=14;
+  var MAX_BYTES=450000;
+  var saveData=typeof navigator!=='undefined'&&navigator.connection&&navigator.connection.saveData;
+  var NAV_PAGES=['/','/newest','/best','/ask','/show','/jobs'];
+
+  function skey(h){return PREFIX+h;}
+  function getDisk(h){
+    try{return sessionStorage.getItem(skey(h));}catch(e){return null;}
+  }
+  function touch(h){
+    try{
+      var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+      k=k.filter(function(x){return x!==h;});
+      k.unshift(h);
+      while(k.length>MAX_ENTRIES){sessionStorage.removeItem(skey(k.pop()||''));}
+      sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+    }catch(e){}
+  }
+  function putDisk(h,html){
+    if(!html||html.length>MAX_BYTES)return;
+    try{
+      sessionStorage.setItem(skey(h),html);
+      touch(h);
+    }catch(e){
+      try{
+        var k=JSON.parse(sessionStorage.getItem(LRU_KEY)||'[]');
+        while(k.length){
+          sessionStorage.removeItem(skey(k.pop()||''));
+          sessionStorage.setItem(LRU_KEY,JSON.stringify(k));
+          try{sessionStorage.setItem(skey(h),html);touch(h);break;}catch(e2){}
+        }
+      }catch(e3){}
+    }
+  }
+
+  var mem=new Map();
+
+  function prefetch(href){
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var m=mem.get(href);
+    if(typeof m==='string')return;
+    var disk=getDisk(href);
+    if(disk){mem.set(href,disk);return;}
+    if(m===null)return;
+    mem.set(href,null);
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(html){
+      mem.set(href,html);
+      putDisk(href,html);
+      var l=document.createElement('link');
+      l.rel='prefetch';
+      l.href=href;
+      document.head.appendChild(l);
+    }).catch(function(){mem.delete(href);});
+  }
+
+  function preloadNavPages(){
+    if(saveData)return;
+    var cur=location.pathname+location.search;
+    var q=[];
+    for(var i=0;i<NAV_PAGES.length;i++){
+      if(NAV_PAGES[i]!==cur)q.push(NAV_PAGES[i]);
+    }
+    function run(){
+      if(!q.length)return;
+      prefetch(q.shift());
+      if(q.length){
+        if(typeof requestIdleCallback==='function'){
+          requestIdleCallback(run,{timeout:3500});
+        }else{
+          setTimeout(run,20);
+        }
+      }
+    }
+    if(typeof requestIdleCallback==='function'){
+      requestIdleCallback(run,{timeout:1200});
+    }else{
+      setTimeout(run,0);
+    }
+  }
+  preloadNavPages();
+
+  document.addEventListener('pointerdown',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  document.addEventListener('mouseover',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    prefetch(a.getAttribute('href'));
+  },{passive:true,capture:true});
+
+  if(!saveData&&'IntersectionObserver'in window){
+    var seen=new WeakSet();
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        var el=en.target;
+        if(!el||el.tagName!=='A')return;
+        var h=el.getAttribute('href');
+        if(h&&h.charAt(0)==='/'&&h.indexOf('/fragment/')!==0)prefetch(h);
+      });
+    },{rootMargin:'240px'});
+    var t=null;
+    function scan(){
+      if(t)return;
+      t=setTimeout(function(){
+        t=null;
+        document.querySelectorAll('a[href^="/"]').forEach(function(a){
+          var ah=a.getAttribute('href')||'';
+          if(ah.indexOf('/fragment/')===0)return;
+          if(seen.has(a))return;
+          seen.add(a);
+          io.observe(a);
+        });
+      },50);
+    }
+    scan();
+    if('MutationObserver'in window){
+      new MutationObserver(scan).observe(document.documentElement,{childList:true,subtree:true});
+    }
+  }
+
+  function applyDoc(href,html,push){
+    if(push)history.pushState(null,'',href);
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  document.addEventListener('click',function(e){
+    if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+    var a=e.target.closest&&e.target.closest('a[href]');
+    if(!a)return;
+    var href=a.getAttribute('href');
+    if(!href||href.charAt(0)!=='/'||href.indexOf('/fragment/')===0)return;
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html===null)return;
+    if(html===undefined||html==='')return;
+    mem.set(href,html);
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    applyDoc(href,html,true);
+  },{capture:true});
+
+  window.addEventListener('popstate',function(){
+    var href=location.pathname+location.search;
+    if(href.charAt(0)!=='/'){location.reload();return;}
+    var html=mem.get(href);
+    if(html===undefined)html=getDisk(href);
+    if(html){
+      applyDoc(href,html,false);
+      return;
+    }
+    fetch(href,{headers:{'X-Requested-With':'lazy-hn'}}).then(function(r){return r.text();}).then(function(h){
+      mem.set(href,h);
+      putDisk(href,h);
+      applyDoc(href,h,false);
+    }).catch(function(){location.reload();});
+  });
+})();</script>
+</body>
+</html>

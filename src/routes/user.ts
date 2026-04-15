@@ -11,7 +11,7 @@ userRoute.get("/user/:id", async (c) => {
     return c.text("Invalid user ID", 400);
   }
 
-  const hit = await matchEdgeHtml(new URL(c.req.url).toString());
+  const hit = await matchEdgeHtml(new URL(c.req.url).toString(), c.env.DISABLE_HTML_CACHE ?? false);
   if (hit) return hit;
 
   const { fetchUserProfile } = await import("../hn/users.ts");
